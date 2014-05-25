@@ -1,0 +1,16 @@
+<script src="http://code.jquery.com/jquery-1.9.1.js">
+</script>
+
+<script>
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'http://files.rainbowdressup.com/games/upload/14185/5931098531.swf', true);
+xhr.send(null);
+
+
+
+</script>
