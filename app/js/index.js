@@ -61,6 +61,8 @@ $(".content1").on({
     'mouseout' : function () {if(contentstatus===1){$(".content1").animate({width:"23.23176%"});$("#imgleftside").show();contentstatus=0;}clearTimeout(timer);}
 });
 $(".pin").on({'mouseover': function () {flag=0;},'mouseout' : function () {flag=1;}});
+$("#menuindex").on({'mouseover': function () {flag=0;},'mouseout' : function () {flag=1;}});
+$(".content13").on({'mouseover': function () {flag=0;},'mouseout' : function () {flag=1;}});
 
 $("#map_canvas").on("click",function(){$(".auto_map_info").animate({height:"0px"});$(".auto_map_info iframe").animate({height:"0px"});});
 $("#tbrshow").html("");
