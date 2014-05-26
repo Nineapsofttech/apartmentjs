@@ -64,7 +64,7 @@ $(".pin").on({'mouseover': function () {flag=0;},'mouseout' : function () {flag=
 
 $("#map_canvas").on("click",function(){$(".auto_map_info").animate({height:"0px"});$(".auto_map_info iframe").animate({height:"0px"});});
 $("#tbrshow").html("");
-$.ajax({type:'GET',url:'/getdb',success:function(data) {for(var i=0;i<10;i++){
+$.ajax({type:'GET',url:'http://122.155.191.233/getdb',success:function(data) {for(var i=0;i<10;i++){
 					if(i==0)
 					$("#tbrshow").append("<tr style='margin-bottom:2em; border-bottom-style: solid;border-width: 1px;border-color: #79bd9a;white-space: normal;'><td ><li style='padding-bottom:0.7em;'  class='linkme' id='"+data[i]._id+"'>"+data[i].title+"</li></ld></tr>");
 					else
