@@ -74,7 +74,7 @@ $.ajax({type:'GET',url:'http://122.155.191.233/getdb',success:function(data) {fo
     'mouseover': function () {$(this).addClass("hover");},
     'mouseout' : function () {$(this).removeClass("hover");}
 });
-                     $(".linkme").bind("tap",function(){window.open("/info.html?id="+$(this).attr('id'),"_blank");});
+                     $(".linkme").bind("tap",function(){window.open("http://122.155.191.233/info.html?id="+$(this).attr('id'),"_blank");});
 
 
 				},
