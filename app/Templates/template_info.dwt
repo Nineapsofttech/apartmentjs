@@ -6,7 +6,7 @@
 <title>POS prototype Page</title>
 <!-- TemplateEndEditable -->
 <link  href="../css/style.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="../css/info.css">
-
+<link rel="stylesheet" type="text/css" href="../font/stylesheet.css">
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
 </head>
@@ -76,9 +76,9 @@
     </form>
     </div>
   </div>  
-<!--Content-->
+<!--Content--><div class="outter">
 <div class="maincontent"><!-- TemplateBeginEditable name="EditRegion1" -->EditRegion1<!-- TemplateEndEditable --></div>
-
+</div>
 <!--Footer-->
 <footer class="footer-2">
   <div class="footer-logo">
@@ -94,6 +94,7 @@
       <ul>
         <li><a href="javascript:void(0)">Terms and Conditions</a></li>
         <li><a href="javascript:void(0)">Privacy Policy</a></li>
+        <li><a href="http://www.f0nt.com/release/wdb-bangna/" target="_blank">Font by f0nt.com</a></li>
       </ul>
 
       <ul class="footer-social">

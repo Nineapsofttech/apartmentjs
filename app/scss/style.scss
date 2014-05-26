@@ -1,5 +1,6 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+
 //---------------------------------------------------------------------------------------------------------
 //header
 $basecolor:linear-gradient(color-stops(white, blue 33%, black));
@@ -13,7 +14,8 @@ $default-line:#79BD9A;
 //---------------------------------------------------------------------------------------------------------
 //imgheader
 $base-font-size:2em;
-$large-screen:767px;
+$large-screen:1080px;
+$for-ipad:768px;
 //---------------------------------------------------------------------------------------------------------
 //content
 $base-accent-color:#A8DBA8;
@@ -38,15 +40,23 @@ $footer-link-color:transparentize($footer-color, .6);
         margin:0em;
         margin-bottom:0.3em;      
 }
-h2{
-
-  @extend .allh;
-  font-size: 2em;
+h2{@extend .allh;
+      @include media($large-screen){
+        margin-left: 0em;
+        font-size: 2em;
+      }
+  margin-left: 0.5em;
+  font-size: 4em;
 }
 h3{
-
   @extend .allh;
-  font-size: 1.5em;
+  @include media($large-screen){
+        margin-left: 0em;
+        font-size: 1.5em;
+      }
+  margin-left: 0.5em;
+  font-size: 3.5em;
+  
 }
 
 a:link {color: #A8DBA8;
@@ -63,7 +73,8 @@ a:active {color: #A8DBA8;
 html, body{
 margin:0px;
 padding:0px;
-font-family:sans-serif;
+font-family:wdb_bangnaregular;
+font-weight:400;
 background-color:#FFF;
 color:#000;
 height:auto;
@@ -76,10 +87,10 @@ width:auto;
     @include linear-gradient($toColor, $fromColor);
     border-bottom:2px solid darken(#79BD9A,10);
     p {
-      font-family: sans-serif;
+      font-family: wdb_bangnaregular;
       color:$font-color-indark;
       font-size: 1.5em;
-      padding-top:$navigation-height/4;
+      padding-top:$navigation-height/6;
       margin:0em;
     }  
         .logohead{
@@ -98,6 +109,7 @@ width:auto;
                 font-size: 1em;
                 color: $footer-link-color;
                 padding-right:2em;
+                font-weight: 900;
 
                 &:hover {
                   color: transparentize($footer-color, 0);
@@ -146,12 +158,12 @@ width:auto;
       text-align: center;
       
       h1 {
-        //font-size: 1.8em;
+          @include media($large-screen) {
+          font-size: 4em;
+          }
         margin-bottom: .2em;
 text-shadow: 2px 2px 5px #000;
-        @include media($large-screen) {
-          font-size: 4em;
-        }
+        
       }
 
 
@@ -162,10 +174,16 @@ text-shadow: 2px 2px 5px #000;
 
 //--------------------------------------------------------------------------------------------------------------
 //Content
-
+.outter{
+/*@include media($large-screen) {
+          @include outer-container;
+        }*/
+  
 .maincontent{
+  @include media($large-screen) {
         @include span-columns(9);
         @include shift(1.5);
+      }
         height:auto;
          background-color:#FFF;
         margin-top:1em;
@@ -180,7 +198,7 @@ text-shadow: 2px 2px 5px #000;
           text-decoration:none;}
 
            
-      }
+      }}
 
 .searchbox{
 height: auto;
@@ -194,13 +212,13 @@ border-radius:5px;
 z-index:10;
 margin-right:15%;
 margin-left:15%;
-top:7em;
+top:6em;
 
 
       h1{
         margin-top:0.5em;
         text-align: center;
-        font-family: sans-serif;
+        font-family: wdb_bangnaregular;
         font-size: 2em;
         color:#79BD9A;
         text-shadow: 1px 1px 2px #000;
@@ -287,8 +305,11 @@ top:7em;
 
 
   .content1{
+     @include media($large-screen){
     @include span-columns(3);
-    
+              
+       }
+      
 
     #imgleftside{
       width: 100%;
@@ -325,15 +346,17 @@ top:7em;
         }
 
     .content13{
-
+@include media($large-screen){
+              visibility: visible;
       width:100%;
-      height:30em;
+      height:35em;
       border-radius:5px;
       border:1px solid $default-line;
       overflow: scroll;
       scroll:hidden;
       -webkit-scroll:hidden;
           .smallbox_detail{
+
             margin: 0.5em 5% 0.5em 5%;
             //background-color:#000;
             width: 90%;
@@ -345,20 +368,30 @@ top:7em;
             h1{
               color: #000;
               font-size: 1.2em;
+              @include media($large-screen){
+                font-size: 1em;
+
+               }
             }
             p{
               color: transparentize(#000,0.2);
-              font-size: 0.8em;
+               @include media($large-screen){
+                font-size: 0.9em;
+
+               }
             }
             img{
               width: 80%;
               margin:0 10% 0 10%;
               height:auto;
 
-            }
+              }
+            
+            
            }
-  
-
+  }
+  height: 0em;
+visibility: hidden;
       }
 
 
@@ -368,22 +401,51 @@ top:7em;
 
     }
     .content2{
-    @include span-columns(6);
-//display:inline;
-        //width: 100%;
+      
+       @include media($large-screen){
+        @include span-columns(6);
+        }
+
+
+        p{  
+
+            @include media($large-screen){
+               margin: 0 1em 0 1em;
+                   font-size: 1em;
+                 }
+             margin: 0 1em 0 1em;
+                   font-size: 1.5em;
+        }       
+
   
         margin: 0em;
         height: auto;
         
         #tbrshow{
+          @include media($large-screen){
           height: 20em;
+          }
+          height: 50em;
+          width: 100%;
           overflow:scroll;
-            tr td{
+            tr td{width:100%;
                 border-bottom-style:solid;
                 border-width:1px;
                 border-color: $default-line;
                 white-space:normal;
+
+                    li{
+                        @include media($large-screen){
+               margin: 0 1em 0 1em;
+                   font-size: 1em;
+                 }
+             margin: 0 1em 0 1em;
+                   font-size: 2em;
+
+                      }
                 }
+
+              
         }
            
       
@@ -392,7 +454,8 @@ top:7em;
     
 
 .content3{
-    @include span-columns(3);
+   @include media($large-screen){
+    @include span-columns(3);}
     }
 .adscenter{
   width:100%;
@@ -425,10 +488,14 @@ top:7em;
 
 
    }
-   p{
+   p{       color: transparentize(#000,0.3);
            margin:0em;
-           font-size: 0.8em;
-           color: transparentize(#000,0.3);
+           @include media($large-screen){
+              font-size: 0.9em;
+           }
+           font-size: 1.5em;
+
+      
       }
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -452,7 +519,7 @@ top:7em;
     margin-top: 0.6em;
     margin-left: 0.5em; 
 
-    @include media($large-screen) {
+    @include media(768px) {
       float: left;
       margin-bottom: 0em;
     }
@@ -465,7 +532,7 @@ top:7em;
   ul {
     margin-bottom: 10em;
 
-    @include media($large-screen) {
+    @include media(768px) {
       float: left;
       margin-left: 1em;
       margin-bottom: 1em;
@@ -476,7 +543,7 @@ top:7em;
     padding-right: 1em;
     font-weight: 800;
 
-    @include media($large-screen) {
+    @include media(768px) {
       display: inline;
       text-align: left;
     }
@@ -491,7 +558,7 @@ top:7em;
   }
 
   .footer-secondary-links {
-    @include media($large-screen) {
+    @include media(768px) {
       float: right;
     }
 
@@ -503,7 +570,7 @@ top:7em;
     ul.footer-social {
       margin-top: 1em;
 
-      @include media($large-screen) {
+      @include media(768px) {
         float: right;
         margin-top: 1em;
         margin-right: 0.5em;
@@ -557,7 +624,7 @@ margin-bottom:0.3em;
   z-index: 9999;
   position:absolute;
   top: $navigation-height;
-  height: 6em;
+  height: 5em;
     .loginfrm{
            visibility:hidden;
            border-radius:5px;
@@ -625,5 +692,13 @@ margin-bottom:0.3em;
                   color: transparentize(#000, 0.3);
                 }
 
+      #banner_right{
+          /* @include media($large-screen) {
+              visibility: visible;
+              height: auto;
+           }
+           visibility: hidden;
+           height: 0em;*/
+      }
 
 //----------------------------------------------------------------------------------------------------------

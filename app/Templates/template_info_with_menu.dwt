@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/template_info.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/template_info.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta charset="utf-8">
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>POS prototype Page</title>
 <!-- InstanceEndEditable -->
 <link  href="../css/style.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="../css/info.css">
-
+<link rel="stylesheet" type="text/css" href="../font/stylesheet.css">
 <!-- InstanceBeginEditable name="head" -->
 <!-- TemplateBeginEditable name="head" -->
-
 <!-- TemplateEndEditable -->
 <!-- InstanceEndEditable -->
 </head>
@@ -17,12 +16,12 @@
   <!--menubar header-->
   <div class="navigation">
    <div class="logohead">
-   <p><a href="../index.php" target="_self">Worldresiden.net</a></p>
-   </div><div id="menutop"><a href="index.php">Home</a>
-   <a href="apartment_list.php?page=1">List</a>
-   <a href="aboutme.php">About me</a>
-   <a href="contactme.php">Contect me</a>
-   <a href="faq.php">FAQ</a>
+   <p><a href="../index.html" target="_self">Worldresiden.net</a></p>
+   </div><div id="menutop"><a href="index.html">Home</a>
+   <a href="apartment_list.html?page=1">List</a>
+   <a href="aboutme.html">About me</a>
+   <a href="contactme.html">Contect me</a>
+   <a href="faq.html">FAQ</a>
    <a id="loginopen">Login</a></div>
    
     
@@ -79,14 +78,14 @@
     </form>
     </div>
   </div>  
-<!--Content-->
+<!--Content--><div class="outter">
 <div class="maincontent"><!-- InstanceBeginEditable name="EditRegion1" --><!--Left Content for Information-->
 <div class="auto_map_info"><iframe src = "http://180.183.53.183:3000/" width="100%" height="450" frameborder="0" scrolling="no"></iframe></div>
 <div id="infoleft-content"><h2>Menu</h2>
 <ul>
-<li><a href="../index.php">Home</a></li>
-<li><a href="../aboutme.php">About me</a></li>
-<li><a href="../contactme.php">Contact me</a></li>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../aboutme.html">About me</a></li>
+<li><a href="../contactme.html">Contact me</a></li>
 <li>Login</li>
 </ul>
 <div id="underline"></div>
@@ -110,11 +109,8 @@
 <div id="inforight-content">
 <div class="margininfomation"><!-- TemplateBeginEditable name="EditRegion2" -->EditRegion2<!-- TemplateEndEditable --></div>
 </div>
-<!--Right Content for Information-->
-
-
-<!-- InstanceEndEditable --></div>
-
+<!--Right Content for Information--><!-- InstanceEndEditable --></div>
+</div>
 <!--Footer-->
 <footer class="footer-2">
   <div class="footer-logo">
@@ -130,6 +126,7 @@
       <ul>
         <li><a href="javascript:void(0)">Terms and Conditions</a></li>
         <li><a href="javascript:void(0)">Privacy Policy</a></li>
+        <li><a href="http://www.f0nt.com/release/wdb-bangna/" target="_blank">Font by f0nt.com</a></li>
       </ul>
 
       <ul class="footer-social">

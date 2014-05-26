@@ -125,7 +125,7 @@ if(values[0]==="page"&&values[1]!=null)
 {
    $.ajax({
                 type:'GET',
-                url:'page?'+values[0]+"="+values[1],
+                url:'http://122.155.191.233/page?'+values[0]+"="+values[1],
                 success:function(data) {
 					
             for(var i=0;i<15;i++)
