@@ -106,7 +106,7 @@ var values = parameter.split("=");
                     $("#detailaprt").html(data.detail);
                        if(data.location!=null)
                        {
-                    $("#locationaprt").html('<iframe src="122.155.191.233/map.html?location='+lat+','+loong+'" width="400" height="300" frameborder="0" style="border:0"></iframe>');
+                    $("#locationaprt").html('<iframe src="http://122.155.191.233/map.html?location='+lat+','+loong+'" width="400" height="300" frameborder="0" style="border:0"></iframe>');
                    }
                    else
                    {
@@ -165,7 +165,7 @@ $(window).scroll(function() {
 	   page++;
         $.ajax({
                 type:'GET',
-                url:'122.155.191.233/page?page='+page,
+                url:'http://122.155.191.233/page?page='+page,
                 success:function(data) {
                    		
             for(var i=0;i<15;i++)
