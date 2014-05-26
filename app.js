@@ -9,7 +9,6 @@ var lagoon = require('./controllers/lagoon.js');
 var property = require('./controllers/property.js');
 
 app.use(express.static('app'));
-
 app.set('databaseIP', 'localhost');
 app.set('databasePort', '27017');
 app.set('databaseName', 'apartment');
@@ -28,7 +27,7 @@ app.all('http://apsoftapi.no-ip.org', function(req, res, next) {
  });
 
 app.get('/', function (req, res) {
-  res.sendfile('app/index.html');
+  res.sendfile('/index.html');
 });
 
 app.get('/page',lagoon.getpage);
@@ -44,7 +43,7 @@ app.get('/createjobs', lagoon.createJobs);
 app.get('/bot', lagoon.bot);
 
 // Set server port
-app.listen(3000);
+app.listen(80);
 console.log('server is running');
 
 kue.app.listen(3001);

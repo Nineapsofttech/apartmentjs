@@ -1,0 +1,95 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+//---------------------------------------------------------------------------------------------------------
+$default-line: #79BD9A;
+//----------------------------------------------------------------------------------------------------------
+.hero{
+  height: 10em;
+}
+.searchbox{
+  top:1.6em;
+}
+.auto_map_info{
+  visibility: visible;
+  @media screen and (max-width: 1024px){
+    position:absolute;
+  width:75%;
+  height:0em;
+  visibility: visible;
+  background-color:#000;
+  }
+  
+      }
+
+#infoleft-content{
+      @include span-columns(2 of 9);
+      height: auto;
+     margin-right: 0em;
+     margin-left: 1em;
+     li {
+        padding-bottom: 0.5em;
+     }
+}
+
+#inforight-content{
+      @include span-columns(7 of 9);
+      height:auto;
+      margin-right:0em;
+      background-color:transparentize(#bfbfbf,0.8);
+      border-radius:5px;
+      border:1px solid $default-line;
+
+      .margininfomation{
+
+        margin:1em;
+      }
+
+      #tableinformation{
+        border-radius:5px;
+        border:1px dotted $default-line;
+        width: 100%;
+
+          #bullet_left{
+                text-align: right;
+
+
+            }
+
+        td{
+          border-bottom: 1px dotted $default-line;
+        }
+        p{
+          margin: 0.5em 0em 0.5em 0.5em;
+
+
+        }
+
+      }
+      
+}
+
+ .imgcollum{
+          margin:1em 10% 1em 0%;
+            width: 90%;
+            height: auto;
+            border-radius:5px;
+           
+        }
+
+        #nameaprt{
+
+        }
+        #detailaprt{
+
+        margin:0.5em 0em 0.5em 0em;
+
+        }
+        #locateionaprt{
+          margin:0.5em 0em 0.5em 0em;
+        }
+        #imageaprt{
+
+
+        }
+        
+//----------------------------------------------------------------------------------------------------------

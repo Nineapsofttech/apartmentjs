@@ -1,0 +1,85 @@
+/*
+Syntax error: Undefined mixin 'media'.
+        on line 41 of scss/style.scss, in `media'
+        from line 41 of scss/style.scss
+
+36:     border-left: $grid-item-border-size /2 solid $grid-items-background;
+37:     border-right: $grid-item-border-size /2 solid $grid-items-background;
+38:     text-align: center;
+39:     cursor: pointer;
+40: 
+41:     @include media($large-screen) {
+42:       @include grid-item-columns($grid-item-columns);
+43:     }
+44: 
+45:     @for $i from 1 to 8 { // assign colors from $grid-item-colors list
+46:       &:nth-child(#{$i}) {
+
+Backtrace:
+scss/style.scss:41:in `media'
+scss/style.scss:41
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:320:in `block in visit_mixin'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:98:in `block in with_mixin'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:98:in `with_mixin'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:318:in `visit_mixin'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `block (2 levels) in visit_rule'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `map'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `block in visit_rule'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `block (2 levels) in visit_rule'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `map'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `block in visit_rule'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `map'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:151:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/root_node.rb:20:in `render'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/engine.rb:274:in `render'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `each'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:221:in `watch'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/plugin.rb:108:in `method_missing'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/exec.rb:509:in `watch_or_update'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/exec.rb:346:in `process_result'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/exec.rb:43:in `parse'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/exec.rb:22:in `parse!'
+c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/bin/sass:13:in `<top (required)>'
+c:/Ruby200-x64/bin/sass:23:in `load'
+c:/Ruby200-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'media'.\A         on line 41 of scss/style.scss, in `media'\A         from line 41 of scss/style.scss\A \A 36:     border-left: $grid-item-border-size /2 solid $grid-items-background;\A 37:     border-right: $grid-item-border-size /2 solid $grid-items-background;\A 38:     text-align: center;\A 39:     cursor: pointer;\A 40: \A 41:     @include media($large-screen) {\A 42:       @include grid-item-columns($grid-item-columns);\A 43:     }\A 44: \A 45:     @for $i from 1 to 8 { // assign colors from $grid-item-colors list\A 46:       &:nth-child(#{$i}) {"; }

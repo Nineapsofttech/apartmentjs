@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>POS prototype Page</title>
+<link  href="css/style.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<script src="js/index.js"> </script>
+
+</head>
+<body>
+  <!--menubar header-->
+  <div class="navigation">
+   <div class="logohead">
+   <p><a href="index.php" target="_self">Worldresiden.net</a></p>
+   </div><div id="menutop"><a href="#">Home</a>
+   
+   <a href="#">Gallery</a>
+   <a href="#">About me</a>
+   <a href="#">Contect me</a>
+   <a href="#">FAQ</a>
+   <a id="loginopen">Login</a></div>
+   
+    
+  </div>
+  <div class="menubar">
+   <div class="loginfrm">
+    <form name="form2" method="post" action="">
+      <input type="text" name="username_txt" id="username_txt" placeholder="Username :">
+      <input type="password" name="password_txt" id="password_txt" placeholder="Password :">
+      <input type="submit" name="submit_btn" id="submit_btn" value="Login">
+    </form>
+    </div></div>
+  <!--img header-->
+  <div class="hero">
+  <div class="hero-inner">
+    
+    
+    <div class="hero-copy">
+      
+    </div> 
+  </div>
+</div>
+<div class="searchbox">
+    <h1>Apartment Search</h1>
+    <div class="searchtools">
+    <form name="form1" method="post" action="#"> 
+      <input name="search_txt" type="text" id="search_txt" placeholder="Name, City, Provine, Zip code" size="25" maxlength="255">
+    <select name="province_select" id="bedrooms_select">
+      <option>Select: Provine</option>
+      <option>Chaingmai</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+     <select name="zone_select" id="bathrooms_select">
+       <option>Select: Zone</option>
+       <option>Khannayao</option>
+       <option>3</option>
+       <option>4</option>
+       <option>5</option>
+       <option>6</option>
+       <option>7</option>
+       <option>8</option>
+       <option>9</option>
+       <option>10</option>
+     </select>
+    <input name="tent_max_txt" type="text" id="tent_max_txt" placeholder="Rate" size="6" maxlength="7">
+    <input name="search_btn" type="submit" value="Search" id="search_btn">
+    </form>
+    </div>
+  </div>  
+<!--Content-->
+<div class="maincontent">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top"><table width="100%" id="menuleft"><tr><td><h2>Menu</h2></td></tr>
+    <tr><td><a href="index.php"><li>Home</li></a></td></tr>
+    <tr><td><a href="#"><li>About me</li></a></td></tr>
+     <tr><td><a href="#"><li>Contact me</li></a></td></tr>
+      <tr><td><a href="#"><li>Popular</li></a></td></tr>
+       <tr><td><a href="#"><li>Gallery</li></a></td></tr>
+        <tr><td><a href="#"><li>FAQ</li></a></td></tr>
+        
+    </table><div class="adscenter">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- web.niyay.publish.a4 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-6361354298982092"
+         data-ad-slot="8102509202"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script></div></td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="infotbr">
+        <tr>
+          <td height="60px" colspan="2" valign="top"><div class="adscenter"><script type="text/javascript"><!--
+							google_ad_client = "ca-pub-6361354298982092";
+							/* 468x60 */
+							google_ad_slot = "1224945846";
+							google_ad_width = 468;
+							google_ad_height = 60;
+							//-->
+							</script>
+            <script type="text/javascript"
+							src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+							</script></div></td>
+          </tr>
+        <tr>
+          <td width="30%" align="center">Name :</td>
+          <td width="70%">ขายอพาร์ทเม้นท์ ใกล้มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ทุ่งครุ เป็นห้องแอร์ทั้งหมด มี27 ห้อง</td>
+        </tr>
+        <tr>
+          <td align="center">Detail :</td>
+          <td>รายละเอียด :ขายอพาร์ทเม้นท์ เนื้อที่ : 126 ตารางวา ถนนพุทธบูชาใกล้มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ทุ่งครุ เป็นห้องแอร์ทั้งหมด มี27 ห้อง ผู้เช่าเต็ม มีรายได้แน่นอนเดือนละแสนกว่าบาท มีอินเตอร์เน็ต เฟอร์นิเจอร์ครบ สนใจติดต่อ คุณณชพัฒน์ 091-7859494</td>
+        </tr>
+        <tr>
+          <td align="center" valign="top">Image :</td>
+          <td><table width="100%">
+<tr><td><img src="img/apartment/142156-1.jpg"></td></tr>
+<tr><td><img src="img/apartment/142156-3.jpg"></td></tr>
+<tr><td><img src="img/apartment/142156-2.jpg"></td></tr>
+</table></td>
+        </tr>
+       
+      </table></td>
+  </tr>
+</table>
+
+</div>
+
+<!--Footer-->
+<footer class="footer-2">
+  <div class="footer-logo">
+    <img src="https://raw.github.com/Magnus-G/Random/master/placeholder_logo_1.png" alt="">
+  </div>
+    <ul>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+      <li><a href="javascript:void(0)">Products</a></li>
+    </ul>
+
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/facebook-logo-circle.png" alt="">
+          </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/twitter-logo-circle.png" alt="">
+        </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/youtube-logo-circle.png" alt="">
+        </a></li>
+      </ul>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
