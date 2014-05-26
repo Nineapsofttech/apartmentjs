@@ -607,3 +607,9 @@ html, body {
    }
    visibility: hidden;
    height: 0em;*/ }
+
+#menu_index {
+  width: 100%;
+  height: auto; }
+  #menu_index li {
+    padding-bottom: 0.5em; }
