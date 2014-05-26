@@ -97,7 +97,7 @@ var values = parameter.split("=");
    
     $.ajax({
                 type:'GET',
-                url:'info?'+values[0]+"="+values[1],
+                url:'http://122.155.191.233/info?'+values[0]+"="+values[1],
                 success:function(data) {
                      lat = data.location[0];
                      loong = data.location[1];
