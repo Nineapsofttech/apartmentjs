@@ -31,7 +31,17 @@ app.get('/', function (req, res) {
   res.sendfile('/index.html');
 });
 
+app.post('/readfile',function(req,res){
+fs.readFile('zipcodes.xml', function (err, data) {
+if (err){
+console.log(err);
+if(err.errno==34){
+res.end('No such file exist');;
+}
 
+}else{
+res.end(data);
+}
 
 app.get('/page',lagoon.getpage);
 // Restful API
