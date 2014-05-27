@@ -68,7 +68,7 @@ res.end('No such file exist');;
     });
 
 
-      res.send( data + province + district+amphur);
+      res.send( zipcode + province + district+amphur);
 
 }
 
