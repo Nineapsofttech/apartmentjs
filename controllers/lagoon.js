@@ -53,10 +53,15 @@ res.end('No such file exist');
       var Sid = mongoose.Types.ObjectId;
       var newId = new Sid();
       Ziparray._id = newId;
-      Ziparray.zipcode = result.test_server.zipcodes[i].zipcode[0];
-      Ziparray.province_name = result.test_server.zipcodes[i].province_name[0];
-      Ziparray.amphur_name = result.test_server.zipcodes[i].amphur_name[0];
-      Ziparray.district_name = result.test_server.zipcodes[i].district_name[0];
+       var iconv = new Iconv('UTF-8', 'WINDOWS-874');
+         var zipcode = iconv.convert(result.test_server.zipcodes[i].zipcode[0]);
+      Ziparray.zipcode =zipcode ;
+      var province_name = iconv.convert(result.test_server.zipcodes[i].province_name[0]);
+      Ziparray.province_name =province_name;
+      var amphur_name = iconv.convert(result.test_server.zipcodes[i].amphur_name[0]);
+      Ziparray.amphur_name =amphur_name;
+      var district_name = iconv.convert(result.test_server.zipcodes[i].district_name[0]);
+      Ziparray.district_name = district_name;
 
    var newZip = new Zip(Ziparray);
                     newZip.save(function (err) {
