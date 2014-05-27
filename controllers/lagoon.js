@@ -10,6 +10,7 @@ var parseString = require('xml2js').parseString;
 var ObjectId = mongoose.Types.ObjectId;
 var Property = require('../models/property.js');
 var PP = require('../controllers/property.js');
+var Zip = require('../controllers/zipcode.js');
 exports.test = function(req, res) {
   var iconv = new Iconv('UTF-8', 'WINDOWS-874');
   var iconv2 = new Iconv('WINDOWS-874', 'UTF-8');
@@ -44,11 +45,31 @@ res.end('No such file exist');
 var conn = mongoose.connection();
  parseString(html, function (err, result) {
     data=result;
-     console.log(result.test_server.zipcodes);
-    for(var i = 0 ; i< result.test_server.zipcodes.length;i++)
+     console.log(result.zipcodes);
+ /*   for(var i = 0 ; i< result.length;i++)
     {
-      console.log(result.test_server.zipcodes);
-    }
+      var newId = new ObjectId();
+      var Ziparray = {}
+      var ObjectId = mongoose.Types.ObjectId;
+       zipcode: String,
+  province: String,
+  district: String,
+  amphur: String
+      Ziparray._id = newId
+      Ziparray.zipcode = result
+
+
+   var newZip = new Zip(Ziparray);
+                    newZip.save(function (err) {
+                      if (err) {
+                        res.send(200, err);
+                        return;
+                      };
+                      res.send(200, propertyData);
+                      return;
+                    });
+
+    }*/
 });
 }}
 
