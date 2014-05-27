@@ -42,7 +42,7 @@ res.end('No such file exist');
 }else{
 
  parseString(html, function (err, result) {
-    console.dir(result.zipcode[0]);
+    console.dir(JSON.parse(result));
 });
 
 
