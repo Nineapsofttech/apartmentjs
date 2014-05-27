@@ -45,10 +45,10 @@ res.end('No such file exist');;
 
     var $ = cheerio.load(body.toString('utf-8'));
 
-    $('zipcodes').filter(function() {
-      var data = $('zipcode', this);
+    //$('zipcodes').filter(function() {
+    //  var data = $('zipcode', this);
       res.send( data.html());
-    });
+   // });
 
 }
 
