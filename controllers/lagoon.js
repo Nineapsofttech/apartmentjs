@@ -50,23 +50,23 @@ res.end('No such file exist');;
     var $ = cheerio.load(body.toString('utf-8'));
 
     $('zipcodes').filter(function() {
-       zipcode.push($('zipcode', this));
+       zipcode= $('zipcode', this);
 
     });
 
     $('zipcodes').filter(function() {
-       province.push($('province_name', this));
+       province=$('province_name', this);
 
     });
      $('zipcodes').filter(function() {
-       amphur.push($('amphur_name', this));
+       amphur=($('amphur_name', this);
 
     });
       $('zipcodes').filter(function() {
-       district.push($('district_name', this));
+       district=$('district_name', this);
 
     });
-      
+
 console.log(zipcode + province + amphur+district);
 
     
