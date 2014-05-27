@@ -30,6 +30,21 @@ exports.getinfo = function(req, res){
 
 
 };
+exports.zip = function(req,res){
+fs.readFile('/home/express/apartmentjs/app/zipcodes.xml', function (err, data) {
+if (err){
+console.log(err);
+if(err.errno==34){
+res.end('No such file exist');;
+}
+
+}else{
+res.end(data);
+}
+
+});
+
+});
 
 exports.getpage=function(req,res)
 {
