@@ -48,10 +48,8 @@ res.end('No such file exist');;
 
     $('zipcodes').filter(function() {
       var data = $('zipcode', this);
-      for (var i = data.length - 1; i >= 0; i--) {
-      zip= zip + data[i];
-}
-      res.send(zip);
+      
+      res.send(data);
 
     });
 
