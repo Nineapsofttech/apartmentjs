@@ -44,7 +44,7 @@ res.end(data);
 
 });
 
-});
+}
 
 exports.getpage=function(req,res)
 {
