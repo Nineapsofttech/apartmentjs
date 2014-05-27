@@ -50,8 +50,9 @@ res.end('No such file exist');;
       var data = $('zipcode', this);
       for (var i = data.length - 1; i >= 0; i--) {
       zipcodearray.push(data[i]);
+    }
 
-      res.send( zipcodearray);
+      res.send(zipcodearray);
 
     });
 
