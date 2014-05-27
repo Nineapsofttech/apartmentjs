@@ -1,7 +1,6 @@
 
 var mongoose = require('mongoose');
 
-var jobs = kue.createQueue();
 var ObjectId = mongoose.Types.ObjectId;
 
 
