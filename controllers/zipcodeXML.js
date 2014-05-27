@@ -4,6 +4,7 @@ var request = require('request');
 var ObjectId = mongoose.Types.ObjectId;
 var Iconv  = require('iconv').Iconv;
 var cheerio = require('cheerio');
+var fs = require('fs');
 
 
 
