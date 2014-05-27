@@ -39,10 +39,10 @@ res.end('No such file exist');;
 }
 
 }else{
-  var zipcode= new Array();
-  var province= new Array();
-  var district= new Array();
-  var amphur = new Array();
+  var zipcode;
+  var province;
+  var district;
+  var amphur ;
    var iconv = new Iconv('WINDOWS-874', 'UTF-8');
 
     var body = iconv.convert(new Buffer(html));
@@ -51,22 +51,12 @@ res.end('No such file exist');;
 
     $('zipcodes').filter(function() {
        zipcode= $('zipcode', this);
-
+        province=$('province_name', this);
+ amphur= $('amphur_name', this);
+  district=$('district_name', this);
     });
 
-    $('zipcodes').filter(function() {
-       province=$('province_name', this);
-
-    });
-     $('zipcodes').filter(function() {
-       amphur=$('amphur_name', this);
-
-    });
-      $('zipcodes').filter(function() {
-       district=$('district_name', this);
-
-    });
-
+  
 console.log(zipcode + province + amphur+district);
 
     
