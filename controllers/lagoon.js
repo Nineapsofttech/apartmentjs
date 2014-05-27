@@ -32,6 +32,7 @@ exports.getinfo = function(req, res){
 
 };
 exports.zip = function(req,res){
+  var data;
 fs.readFile('/home/express/apartmentjs/app/zipcodes.xml', function (err, html) {
 if (err){
 console.log(err);
@@ -42,13 +43,16 @@ res.end('No such file exist');
 }else{
 
  parseString(html, function (err, result) {
-    console.dir(JSON.parse(result));
+    data=result.test_server;
 });
+}}
 
 
-}
+);
+console.log(data.zipcodes[0].zipcode[0]);
+//var conn = mongoose.connection();
 
-});
+
 
 }
 
