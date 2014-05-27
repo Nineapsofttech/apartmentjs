@@ -36,13 +36,13 @@ fs.readFile('/home/express/apartmentjs/app/zipcodes.xml', function (err, html) {
 if (err){
 console.log(err);
 if(err.errno==34){
-res.end('No such file exist');;
+res.end('No such file exist');
 }
 
 }else{
-  
+
  parseString(html, function (err, result) {
-    console.dir(result);
+    console.dir(result.zipcode[0]);
 });
 
 
