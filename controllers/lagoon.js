@@ -47,7 +47,7 @@ res.end('No such file exist');;
     var $ = cheerio.load(body.toString('utf-8'));
 
     $('zipcodes').filter(function() {
-       data = $('zipcode', this);
+       data += $('zipcode', this);
 
     });
 
