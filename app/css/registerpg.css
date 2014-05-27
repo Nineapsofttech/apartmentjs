@@ -58,6 +58,16 @@
     font-size: .8em;
     font-style: italic;
     height: 20px; }
+  #tableregister input[type=password], #tableregister select[type=password] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    padding: 0em 0.8em 0em 0.4em;
+    font-size: .8em;
+    font-style: italic;
+    height: 20px; }
   #tableregister select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -96,7 +106,7 @@
     border-width: 1px;
     border-color: #79bd9a; }
     #tableregister input[type=submit]:hover, #tableregister select[type=submit]:hover {
-      background-color: transparent(black, 0.8);
+      background-color: rgba(0, 0, 0, 0.2);
       color: #FFF; }
   #tableregister input[type=reset], #tableregister select[type=reset] {
     -webkit-appearance: none;
@@ -112,5 +122,19 @@
     border-width: 1px;
     border-color: #79bd9a; }
     #tableregister input[type=reset]:hover, #tableregister select[type=reset]:hover {
-      background-color: transparent(black, 0.8);
+      background-color: rgba(0, 0, 0, 0.2);
       color: #FFF; }
+
+#confacebook {
+  margin: 0.5em; }
+
+#regiscommon {
+  width: 60%;
+  height: 8em;
+  margin: 1em 20% 0em 20%;
+  border: 1px solid #79bd9a;
+  border-radius: 5px;
+  background-color: rgba(168, 219, 168, 0.2);
+  text-align: center; }
+  #regiscommon h1 {
+    font-size: 4em; }

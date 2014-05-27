@@ -116,7 +116,7 @@ $large-screen:1080px;
               border-color:$default-line;
 
 		              &:hover{
-		              	background-color:transparent(#000,0.8);
+		              	background-color:transparentize(#000,0.8);
 		              	color:#FFF;
 		              }
             	}
@@ -131,13 +131,41 @@ $large-screen:1080px;
               border-color:$default-line;
               
               &:hover{
-		              	background-color:transparent(#000,0.8);
+		              	background-color:transparentize(#000,0.8);
 		              	color:#FFF;
 		              }
             	}
         
 
       }
+      #confacebook{
+
+        margin: 0.5em;
+            
+      }
+      #commonuser{
+
+      }
+      #apartmentowner_nonecop{
+        
+      }
+      #apartmentowner_cop{
+        
+      }
+      #regiscommon{
+        width: 60%;
+        height: 8em;
+        margin: 1em 20% 0em 20%;
+        border:1px solid $default-line;
+        border-radius:5px;
+        background-color: transparentize( #A8DBA8 , 0.8);
+        text-align: center;
+
+          h1{
+            font-size: 4em;
+          }
+        }
+        
 //----------------------------------------------------------------------------------------------------------
 
 //----------------------------------------------------------------------------------------------------------
