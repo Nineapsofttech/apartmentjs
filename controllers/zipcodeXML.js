@@ -20,12 +20,12 @@ exports.add = function(req, res){
  request({url: "zipcodes.xml", encoding:null}, function (err, response, html) {
     //console.log(html);
     
-    var iconv = new Iconv('WINDOWS-874', 'UTF-8//TRANSLIT//IGNORE');
+    var iconv = new Iconv('WINDOWS-874', 'UTF-8');
 
-    var body = iconv.convert(new Buffer(html));
+    //var body = iconv.convert(new Buffer(html));
 
-    var $ = cheerio.load(body.toString('utf-8'));
-    send("200",body);
+  //  var $ = cheerio.load(body.toString('utf-8'));
+    send("200",html);
 
 /*
 var x=xmlDoc.getElementsByTagName("zipcodes");

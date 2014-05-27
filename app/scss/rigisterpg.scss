@@ -70,6 +70,15 @@ $large-screen:1080px;
               height: 20px;
               
             }
+            input[type=radio] {
+              //@include appearance(none);
+              padding: 0em 0.8em 0em 0.4em;
+              font-size: .8em;
+              font-style: italic;
+              height: 1em;
+              width: 1em;
+              
+            }
             input[type=password] {
               @include appearance(none);
               padding: 0em 0.8em 0em 0.4em;

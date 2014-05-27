@@ -58,6 +58,12 @@
     font-size: .8em;
     font-style: italic;
     height: 20px; }
+  #tableregister input[type=radio], #tableregister select[type=radio] {
+    padding: 0em 0.8em 0em 0.4em;
+    font-size: .8em;
+    font-style: italic;
+    height: 1em;
+    width: 1em; }
   #tableregister input[type=password], #tableregister select[type=password] {
     -webkit-appearance: none;
     -moz-appearance: none;
