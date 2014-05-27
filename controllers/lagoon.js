@@ -43,13 +43,13 @@ res.end('No such file exist');
 }else{
 
  parseString(html, function (err, result) {
-    data=result.test_server.zipcodes;
+    data=result;
 });
 }}
 
 
 );
-console.log(data[0].zipcode[0]);
+console.log(data.test_server.zipcodes[0].zipcode[0]);
 //var conn = mongoose.connection();
 
 
