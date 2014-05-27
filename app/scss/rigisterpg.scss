@@ -154,14 +154,21 @@ $large-screen:1080px;
       }
       #regiscommon{
         width: 60%;
-        height: 8em;
+        height: auto;
         margin: 1em 20% 0em 20%;
         border:1px solid $default-line;
         border-radius:5px;
         background-color: transparentize( #A8DBA8 , 0.8);
         text-align: center;
 
-          h1{
+          h1{ 
+            margin: 0.5em;
+            @include media($large-screen) {
+                 
+            font-size: 2em;
+              }
+
+            
             font-size: 4em;
           }
         }

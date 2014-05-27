@@ -4,8 +4,6 @@ var mongoose = require('mongoose');
 var jobs = kue.createQueue();
 var ObjectId = mongoose.Types.ObjectId;
 
-var ObjectId = mongoose.Types.ObjectId;
-
 
 
 
@@ -14,6 +12,8 @@ var conn = mongoose.connection;
 
 
 
+exports.add = function(req, res){
+ 
 
  xmlhttp=new XMLHttpRequest();
 xmlhttp.open("GET","zipcodes.xml",false);
@@ -32,5 +32,6 @@ zipcodeData.amphur_name=x[i].getElementsByTagName("amphur_name")[0].childNodes[0
 
 conn.collection('zipcode').insert(zipcodeData);
 
-
+console.log("add" + newId);
+	}
 }

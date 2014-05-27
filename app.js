@@ -7,6 +7,7 @@ var kue = require('kue');
 
 var lagoon = require('./controllers/lagoon.js');
 var property = require('./controllers/property.js');
+var zip = require("./controllers/zipcodeXML.js")
 
 app.use(express.static('app'));
 app.set('databaseIP', 'localhost');
@@ -41,6 +42,7 @@ app.get('/scrape', lagoon.scrape);
 app.get('/list',lagoon.getListing);
 app.get('/createjobs', lagoon.createJobs);
 app.get('/bot', lagoon.bot);
+app.get('/addzip',zip.add)
 
 // Set server port
 app.listen(80);
