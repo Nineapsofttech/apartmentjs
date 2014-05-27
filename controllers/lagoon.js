@@ -41,18 +41,21 @@ res.end('No such file exist');
 }
 
 }else{
-
+var conn = mongoose.connection();
  parseString(html, function (err, result) {
     data=result;
+     console.log(result.test_server.zipcodes);
     for(var i = 0 ; i< result.test_server.zipcodes.length;i++)
-    console.log(result.test_server.zipcodes[i].zipcode[0]);
+    {
+      console.log(result.test_server.zipcodes);
+    }
 });
 }}
 
 
 );
 //console.log(data.test_server.zipcodes[0].zipcode[0]);
-//var conn = mongoose.connection();
+//
 
 
 
