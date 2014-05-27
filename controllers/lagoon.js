@@ -51,7 +51,7 @@ res.end('No such file exist');;
 
     });
 
-      res.send( data.html());
+      res.send( data);
 
 }
 
