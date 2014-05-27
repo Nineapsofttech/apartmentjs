@@ -66,7 +66,7 @@ $(".content13").on({'mouseover': function () {flag=0;},'mouseout' : function () 
 
 $("#map_canvas").on("click",function(){$(".auto_map_info").animate({height:"0px"});$(".auto_map_info iframe").animate({height:"0px"});});
 $("#tbrshow").html("");
-$.ajax({type:'GET',url:'http://122.155.191.233/getdb',success:function(data) {for(var i=0;i<10;i++){
+$.ajax({type:'GET',url:'http://www.worldresident.net/getdb',success:function(data) {for(var i=0;i<10;i++){
 					if(i==0)
 					$("#tbrshow").append("<tr style='margin-bottom:2em; border-bottom-style: solid;border-width: 1px;border-color: #79bd9a;white-space: normal;'><td ><li style='padding-bottom:0.7em;'  class='linkme' id='"+data[i]._id+"'>"+data[i].title+"</li></ld></tr>");
 					else
@@ -76,7 +76,7 @@ $.ajax({type:'GET',url:'http://122.155.191.233/getdb',success:function(data) {fo
     'mouseover': function () {$(this).addClass("hover");},
     'mouseout' : function () {$(this).removeClass("hover");}
 });
-                     $(".linkme").bind("tap",function(){window.open("http://122.155.191.233/info.html?id="+$(this).attr('id'),"_blank");});
+                     $(".linkme").bind("tap",function(){window.open("http://www.worldresident.net/info.html?id="+$(this).attr('id'),"_blank");});
 
 
 				},
@@ -99,7 +99,7 @@ var values = parameter.split("=");
    
     $.ajax({
                 type:'GET',
-                url:'http://122.155.191.233/info?'+values[0]+"="+values[1],
+                url:'http://www.worldresident.net/info?'+values[0]+"="+values[1],
                 success:function(data) {
                      lat = data.location[0];
                      loong = data.location[1];
@@ -108,7 +108,7 @@ var values = parameter.split("=");
                     $("#detailaprt").html(data.detail);
                        if(data.location!=null)
                        {
-                    $("#locationaprt").html('<iframe src="http://122.155.191.233/map.html?location='+lat+','+loong+'" width="400" height="300" frameborder="0" style="border:0"></iframe>');
+                    $("#locationaprt").html('<iframe src="http://www.worldresident.net/map.html?location='+lat+','+loong+'" width="400" height="300" frameborder="0" style="border:0"></iframe>');
                    }
                    else
                    {
@@ -127,7 +127,7 @@ if(values[0]==="page"&&values[1]!=null)
 {
    $.ajax({
                 type:'GET',
-                url:'http://122.155.191.233/page?'+values[0]+"="+values[1],
+                url:'http://www.worldresident.net/page?'+values[0]+"="+values[1],
                 success:function(data) {
 					
             for(var i=0;i<15;i++)
@@ -151,9 +151,12 @@ if(values[0]==="page"&&values[1]!=null)
               			
 						}
 
-            $("#"+data[i]._id).on("click",window.open("http://122.155.191.233/info.html?id="+data[i]._id));
+          
+            
 					
                 }
+                 $(".pin").on("click",function(){window.open("http://www.worldresident.net/info.html?id="+$(this).attr('id'),"_blank")});
+          
                 },
                 error:function(err) {
                     alert("Something bad happend, IN " +url );   
@@ -169,7 +172,7 @@ $(window).scroll(function() {
 	   page++;
         $.ajax({
                 type:'GET',
-                url:'http://122.155.191.233/page?page='+page,
+                url:'http://www.worldresident.net/page?page='+page,
                 success:function(data) {
                    		
             for(var i=0;i<15;i++)
@@ -179,7 +182,7 @@ $(window).scroll(function() {
 					{ try{
 						if(data[i].images[j].match(/jpg/g)||data[i].images[j].match(/png/g))
 						{
-						$("#columns").append('<div class="pin"><img src="'+data[i].images[j]+'""><p>'+data[i].title+'</p></div>');
+						$("#columns").append('<div id="'+data[i]._id+'" class="pin"><img src="'+data[i].images[j]+'""><p>'+data[i].title+'</p></div>');
               						j=20;
 									stat=1;
 						}
@@ -188,17 +191,23 @@ $(window).scroll(function() {
 					}
 					if(stat===0)
 					{
-						$("#columns").append('<div class="pin"><p>'+data[i].title+'</p></div>');
+						$("#columns").append('<div id="'+data[i]._id+'" class="pin"><p>'+data[i].title+'</p></div>');
               			
 						}
-					
+              
                 }
+
+          $(".pin").unbind();      
+           $(".pin").bind("click",function(){window.open("http://www.worldresident.net/info.html?id="+$(this).attr('id'))});
+          
+
                 },
                 error:function(err) {
                     alert("Something bad happend, IN " +url );   
 
 
                 }
+
             });
    }
 });
