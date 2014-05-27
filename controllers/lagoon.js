@@ -51,10 +51,6 @@ res.end('No such file exist');
       var newId = new ObjectId();
       var Ziparray = {}
       var ObjectId = mongoose.Types.ObjectId;
-       zipcode: String,
-  province: String,
-  district: String,
-  amphur: String
       Ziparray._id = newId;
       Ziparray.zipcode = result.test_server.zipcodes[i].zipcode[0];
       Ziparray.province_name = result.test_server.zipcodes[i].province_name[0];
