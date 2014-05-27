@@ -48,9 +48,11 @@ res.end('No such file exist');
     
    for(var i = 0 ; i< result.test_server.zipcodes.length;i++)
     {
-      
+
       var Ziparray = {}
-      var ObjectId = mongoose.Types.ObjectId;
+      var Sid = mongoose.Types.ObjectId;
+      var newId = new Sid();
+      Ziparray._id = newId;
       Ziparray.zipcode = result.test_server.zipcodes[i].zipcode[0];
       Ziparray.province_name = result.test_server.zipcodes[i].province_name[0];
       Ziparray.amphur_name = result.test_server.zipcodes[i].amphur_name[0];
