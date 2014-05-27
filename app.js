@@ -31,18 +31,6 @@ app.get('/', function (req, res) {
   res.sendfile('/index.html');
 });
 
-app.get( "/crossdomain.xml", onCrossDomainHandler )
-function onCrossDomainHandler( req, res ) {
-  var xml = '<?xml version="1.0"?>\n<!DOCTYPE cross-domain-policy SYSTEM' + 
-            ' "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">\n<cross-domain-policy>\n';
-      xml += '<allow-access-from domain="*" to-ports="*"/>\n';
-      xml += '</cross-domain-policy>\n';
-  
-  req.setEncoding('utf8');
-  res.writeHead( 200, {'Content-Type': 'text/xml'} );
-  res.end( xml );  
-}
-
 app.get('/page',lagoon.getpage);
 // Restful API
 app.get('/properties', property.getProperties);
@@ -54,7 +42,7 @@ app.get('/scrape', lagoon.scrape);
 app.get('/list',lagoon.getListing);
 app.get('/createjobs', lagoon.createJobs);
 app.get('/bot', lagoon.bot);
-app.get('/addzip',zip.add)
+app.get('/addzip',lagoon.zip)
 
 // Set server port
 app.listen(80);
