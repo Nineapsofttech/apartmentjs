@@ -45,8 +45,8 @@ res.end('No such file exist');
 
  parseString(html, function (err, result) {
     data=result;
-     console.log(result.zipcodes);
- /*   for(var i = 0 ; i< result.length;i++)
+    
+   for(var i = 0 ; i< result.test_server.zipcodes.length;i++)
     {
       var newId = new ObjectId();
       var Ziparray = {}
@@ -55,9 +55,11 @@ res.end('No such file exist');
   province: String,
   district: String,
   amphur: String
-      Ziparray._id = newId
-      Ziparray.zipcode = result
-
+      Ziparray._id = newId;
+      Ziparray.zipcode = result.test_server.zipcodes[i].zipcode[0];
+      Ziparray.province_name = result.test_server.zipcodes[i].province_name[0];
+      Ziparray.amphur_name = result.test_server.zipcodes[i].amphur_name[0];
+      Ziparray.district_name = result.test_server.zipcodes[i].district_name[0];
 
    var newZip = new Zip(Ziparray);
                     newZip.save(function (err) {
@@ -65,11 +67,11 @@ res.end('No such file exist');
                         res.send(200, err);
                         return;
                       };
-                      res.send(200, propertyData);
+                      res.send(200, newZip);
                       return;
                     });
 
-    }*/
+    }
 });
 }}
 
