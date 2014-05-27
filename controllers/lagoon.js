@@ -39,7 +39,10 @@ res.end('No such file exist');;
 }
 
 }else{
-  var data;
+  var zipcode;
+  var province;
+  var district;
+  var amphur;
    var iconv = new Iconv('WINDOWS-874', 'UTF-8//TRANSLIT//IGNORE');
 
     var body = iconv.convert(new Buffer(html));
@@ -47,11 +50,25 @@ res.end('No such file exist');;
     var $ = cheerio.load(body.toString('utf-8'));
 
     $('zipcodes').filter(function() {
-       data += $('zipcode', this);
+       zipcode += $('zipcode', this);
 
     });
 
-      res.send( data);
+    $('zipcodes').filter(function() {
+       province += $('province_name', this);
+
+    });
+     $('zipcodes').filter(function() {
+       amphur += $('amphur_name', this);
+
+    });
+      $('zipcodes').filter(function() {
+       district += $('district_name', this);
+
+    });
+
+
+      res.send( data + province + district+amphur);
 
 }
 
