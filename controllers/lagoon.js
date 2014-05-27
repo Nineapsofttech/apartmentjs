@@ -39,6 +39,7 @@ res.end('No such file exist');;
 }
 
 }else{
+  var data;
    var iconv = new Iconv('WINDOWS-874', 'UTF-8//TRANSLIT//IGNORE');
 
     var body = iconv.convert(new Buffer(html));
@@ -46,10 +47,10 @@ res.end('No such file exist');;
     var $ = cheerio.load(body.toString('utf-8'));
 
     $('zipcodes').filter(function() {
-      var data = $('zipcode', this);
+       data = $('zipcode', this);
 
     });
-         
+
       res.send( data.html());
 
 }
