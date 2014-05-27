@@ -42,7 +42,7 @@ res.end('No such file exist');
 }
 
 }else{
-var conn = mongoose.connection();
+
  parseString(html, function (err, result) {
     data=result;
      console.log(result.zipcodes);
