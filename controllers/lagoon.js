@@ -31,7 +31,7 @@ exports.getinfo = function(req, res){
 
 };
 exports.zip = function(req,res){
-fs.readFile('/home/express/apartmentjs/app/zipcodes.xml', function (err, data) {
+fs.readFile('/home/express/apartmentjs/app/zipcodes.xml', function (err, html) {
 if (err){
 console.log(err);
 if(err.errno==34){
@@ -39,7 +39,17 @@ res.end('No such file exist');;
 }
 
 }else{
-res.end(data);
+   var iconv = new Iconv('WINDOWS-874', 'UTF-8//TRANSLIT//IGNORE');
+
+    var body = iconv.convert(new Buffer(html));
+
+    var $ = cheerio.load(body.toString('utf-8'));
+
+    $('zipcodes').filter(function() {
+      var data = $('zipcode', this);
+      res.send( data.html());
+    });
+
 }
 
 });
