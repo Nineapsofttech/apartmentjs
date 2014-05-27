@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/readfile',function(req,res){
-fs.readFile('zipcodes.xml', function (err, data) {
+fs.readFile(req.body.file_name+'.txt', function (err, data) {
 if (err){
 console.log(err);
 if(err.errno==34){
@@ -42,6 +42,39 @@ res.end('No such file exist');;
 }else{
 res.end(data);
 }
+
+});
+//The below is the synchronous version
+// It should be written in try catch to avoid any error
+/* try{
+var data=fs.readFileSync(req.body.file_name+'.txt');
+res.end(data);
+}catch(e){
+res.end("No such file or directory");
+} */
+});
+app.post('/createfile',function(req,res){
+if(req.body.file_name !="" && req.body.file_data !=""){
+fs.writeFile(req.body.file_name+'.txt', req.body.file_data, function (err) {
+if (err){
+console.log(err);
+res.end('File could not be saved');
+}else{
+res.end('File has been saved');
+}
+});
+}else{
+res.end('Please provide file name and or content');
+}
+//The below is the synchronous version
+// It should be written in try catch to avoid any error
+/* try{
+var data=fs.writeFileSync(req.body.file_name+'.txt');
+res.end("Data has been written sucessfully");
+}catch(e){
+res.end("Error occurred");
+} */
+});
 
 app.get('/page',lagoon.getpage);
 // Restful API
