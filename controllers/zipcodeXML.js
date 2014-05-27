@@ -1,6 +1,6 @@
 
 var mongoose = require('mongoose');
-
+	
 var ObjectId = mongoose.Types.ObjectId;
 
 
@@ -14,10 +14,19 @@ var conn = mongoose.connection;
 exports.add = function(req, res){
  
 
- xmlhttp=new XMLHttpRequest();
-xmlhttp.open("GET","zipcodes.xml",false);
-xmlhttp.send();
-xmlDoc=xmlhttp.responseXML; 
+
+
+ request({url: "zipcodes.xml", encoding:null}, function (err, response, html) {
+    //console.log(html);
+    
+    var iconv = new Iconv('WINDOWS-874', 'UTF-8//TRANSLIT//IGNORE');
+
+    var body = iconv.convert(new Buffer(html));
+
+    var $ = cheerio.load(body.toString('utf-8'));
+    send("200",body);
+
+/*
 var x=xmlDoc.getElementsByTagName("zipcodes");
 for(var x = 0;x<x.length;x++) 
 {
@@ -33,4 +42,8 @@ conn.collection('zipcode').insert(zipcodeData);
 
 console.log("add" + newId);
 	}
+
+*/
+  }); 
+
 }
