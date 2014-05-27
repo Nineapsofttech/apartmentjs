@@ -54,10 +54,12 @@ res.end('No such file exist');;
         province=$('province_name', this);
  amphur= $('amphur_name', this);
   district=$('district_name', this);
+
+    res.end(zipcode + province + amphur + district);
     });
 
   
-console.log(zipcode + province + amphur+district);
+//console.log(zipcode + province + amphur+district);
 
     
 
