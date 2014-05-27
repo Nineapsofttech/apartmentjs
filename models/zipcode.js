@@ -10,4 +10,4 @@ var zipcodeSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('property', propertySchema);
+module.exports = mongoose.model('zip', zipcodeSchema);
