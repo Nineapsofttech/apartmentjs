@@ -42,7 +42,7 @@ app.get('/scrape', lagoon.scrape);
 app.get('/list',lagoon.getListing);
 app.get('/createjobs', lagoon.createJobs);
 app.get('/bot', lagoon.bot);
-app.get('/addzip',zip.add)
+app.get('/addzip',lagoon.zip)
 
 // Set server port
 app.listen(80);
