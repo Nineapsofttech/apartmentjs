@@ -47,7 +47,7 @@ res.end('No such file exist');;
 
     //$('zipcodes').filter(function() {
     //  var data = $('zipcode', this);
-      res.send( data.html());
+      res.send( html);
    // });
 
 }
