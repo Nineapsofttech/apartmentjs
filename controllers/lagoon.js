@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var Iconv  = require('iconv').Iconv;
 var kue = require('kue');
 var jobs = kue.createQueue();
+var parseString = require('xml2js').parseString;
 
 var ObjectId = mongoose.Types.ObjectId;
 var Property = require('../models/property.js');
@@ -39,16 +40,11 @@ res.end('No such file exist');;
 }
 
 }else{
-   var iconv = new Iconv('WINDOWS-874', 'UTF-8//TRANSLIT//IGNORE');
+  
+ parseString(html, function (err, result) {
+    console.dir(result);
+});
 
-    var body = iconv.convert(new Buffer(html));
-
-    var $ = cheerio.load(body.toString('utf-8'));
-
-    //$('zipcodes').filter(function() {
-    //  var data = $('zipcode', this);
-      res.send( html);
-   // });
 
 }
 
