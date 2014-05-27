@@ -44,14 +44,14 @@ res.end('No such file exist');;
     var body = iconv.convert(new Buffer(html));
 
     var $ = cheerio.load(body.toString('utf-8'));
-    var zipcodearray = "";
+    var zip = "";
 
     $('zipcodes').filter(function() {
       var data = $('zipcode', this);
       for (var i = data.length - 1; i >= 0; i--) {
-      zipcodearray+=data[i];
+      zip= zip + data[i];
 }
-      res.send(zipcodearray);
+      res.send(zip);
 
     });
 
