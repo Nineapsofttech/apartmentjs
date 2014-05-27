@@ -44,7 +44,8 @@ res.end('No such file exist');
 
  parseString(html, function (err, result) {
     data=result;
-    console.log(result.test_server.zipcodes[0].zipcode[0]);
+    for(var i = 0 ; i< result.test_server.zipcodes.length;i++)
+    console.log(result.test_server.zipcodes[i].zipcode[0]);
 });
 }}
 
