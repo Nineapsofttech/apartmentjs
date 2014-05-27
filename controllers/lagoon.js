@@ -62,7 +62,7 @@ res.end('No such file exist');
       Ziparray.amphur_name =amphur_name;
       var district_name = iconv.convert(result.test_server.zipcodes[i].district_name[0]);
       Ziparray.district_name = district_name;
-
+      console.log(Ziparray);
    var newZip = new Zip(Ziparray);
                     newZip.save(function (err) {
                       if (err) {
