@@ -66,9 +66,10 @@ res.end('No such file exist');;
        district.push($('district_name', this));
 
     });
+      
 console.log(zipcode + province + amphur+district);
 
-    // res.send( zipcode + province + district+amphur);
+    
 
 }
 
