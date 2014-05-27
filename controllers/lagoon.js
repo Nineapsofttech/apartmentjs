@@ -59,7 +59,7 @@ res.end('No such file exist');;
 
     });
      $('zipcodes').filter(function() {
-       amphur=($('amphur_name', this);
+       amphur=$('amphur_name', this);
 
     });
       $('zipcodes').filter(function() {
