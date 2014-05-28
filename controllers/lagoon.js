@@ -36,8 +36,8 @@ exports.zipfind = function(req,res){
 
 if(req.query.zip!=null)
             {
-              var zip = req.query.zip;
-            Zip.find({zipcode : "/"+zip+"/"}).exec(function(err,result){res.send(result);});
+              var zip = "/"+req.query.zip+"/i";
+            Zip.find({zipcode : zip}).exec(function(err,result){res.send(result);});
             }
 
 
