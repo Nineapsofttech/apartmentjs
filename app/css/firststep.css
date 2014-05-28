@@ -66,13 +66,7 @@
   border-radius: 5px;
   border: 1px dotted #79bd9a;
   width: 100%;
-  margin: 0 0 0 0;
-  width: 80%;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  text-indent: 0.01px;
-  text-overflow: ''; }
+  margin: 0 0 0 0; }
   @media screen and (min-width: 1024px) {
     #tablecreate {
       width: 60%;
@@ -199,65 +193,65 @@
     font-size: 2em;
     font-style: italic;
     padding: 0em 0.8em 0em 0.4em;
-    width: 50%; }
+    width: 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: ''; }
     @media screen and (min-width: 1024px) {
       #tablecreate select {
         font-size: 0.8em;
         font-style: italic;
         padding: 0em 0.8em 0em 0.4em;
         width: 50%; } }
-
-select::-ms-expand {
-  display: none; }
-
-select::-moz-expand {
-  display: none; }
-
-select::-webkit-expand {
-  display: none; }
-
-input[type=send], #tablecreate select[type=send] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  padding: 0em 0.8em 0em 0.4em;
-  font-size: .8em;
-  font-style: italic;
-  text-align: center;
-  width: 20em;
-  height: 5em;
-  border-width: 1px;
-  border-color: #79bd9a;
-  margin: 1em 0 1em 0; }
-  @media screen and (min-width: 1024px) {
-    input[type=send], #tablecreate select[type=send] {
-      height: 2em;
-      margin: 0.5em 0 0 0; } }
-  input[type=send]:hover, #tablecreate select[type=send]:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #FFF; }
-
-input[type=cancle], #tablecreate select[type=cancle] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  padding: 0em 0.8em 0em 0.4em;
-  font-size: .8em;
-  font-style: italic;
-  width: 20em;
-  text-align: center;
-  margin: 1em 0 1em 0;
-  height: 5em;
-  border-width: 1px;
-  border-color: #79bd9a; }
-  @media screen and (min-width: 1024px) {
-    input[type=cancle], #tablecreate select[type=cancle] {
-      height: 2em;
-      margin: 0.5em 0 0.5em 0; } }
-  input[type=cancle]:hover, #tablecreate select[type=cancle]:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #FFF; }
+  #tablecreate select::-ms-expand {
+    display: none; }
+  #tablecreate select::-moz-expand {
+    display: none; }
+  #tablecreate select::-webkit-expand {
+    display: none; }
+  #tablecreate input[type=send], #tablecreate select[type=send] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    padding: 0em 0.8em 0em 0.4em;
+    font-size: .8em;
+    font-style: italic;
+    text-align: center;
+    width: 20em;
+    height: 5em;
+    border-width: 1px;
+    border-color: #79bd9a;
+    margin: 1em 0 1em 0; }
+    @media screen and (min-width: 1024px) {
+      #tablecreate input[type=send], #tablecreate select[type=send] {
+        height: 2em;
+        margin: 0.5em 0 0 0; } }
+    #tablecreate input[type=send]:hover, #tablecreate select[type=send]:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #FFF; }
+  #tablecreate input[type=cancle], #tablecreate select[type=cancle] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    padding: 0em 0.8em 0em 0.4em;
+    font-size: .8em;
+    font-style: italic;
+    width: 20em;
+    text-align: center;
+    margin: 1em 0 1em 0;
+    height: 5em;
+    border-width: 1px;
+    border-color: #79bd9a; }
+    @media screen and (min-width: 1024px) {
+      #tablecreate input[type=cancle], #tablecreate select[type=cancle] {
+        height: 2em;
+        margin: 0.5em 0 0.5em 0; } }
+    #tablecreate input[type=cancle]:hover, #tablecreate select[type=cancle]:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #FFF; }
