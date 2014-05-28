@@ -99,8 +99,8 @@ $.ajax({type:'GET',url:'http://www.worldresident.net/getdb',success:function(dat
                    
 });
 ///////////////////////zipcode request//////////////////////////////////////////////////////////
-$('#txt_zipcode').on('input', function() {
-if($(txt_zipcode).val().length>2)
+$('.txt_zipcode').on('input', function() {
+if($(".txt_zipcode").val().length>2)
 {
 $.ajax({
                 type:'GET',
@@ -109,9 +109,9 @@ $.ajax({
                     var pro = new Array();
                     var amp =new Array();
                     var dis = new Array();
- $('#sel_district').html("");
-  $('#sel_provine').html("");   
-  $('#sel_amphures').html("");         
+ $('.sel_district').html("");
+  $('.sel_provine').html("");   
+  $('.sel_amphures').html("");         
   for(var i=0;i<data.length;i++)
   {
     pro.push(data[i].province_name);
@@ -123,19 +123,19 @@ $.ajax({
    dis = eliminateDuplicates(dis);
 
    $.each(dis, function(key, value) {   
-     $('#sel_district')
+     $('.sel_district')
          .append($("<option></option>")
          .attr("value",key)
          .text(value)); 
 });
      $.each(pro, function(key, value) {   
-     $('#sel_provine')
+     $('.sel_provine')
          .append($("<option></option>")
          .attr("value",key)
          .text(value)); 
 });
        $.each(amp, function(key, value) {   
-     $('#sel_amphures')
+     $('.sel_amphures')
          .append($("<option></option>")
          .attr("value",key)
          .text(value)); 
@@ -153,6 +153,13 @@ $.ajax({
 
                 }
             });
+}
+if($(".txt_zipcode").val().length==0)
+{
+  $('.sel_district').html("");
+  $('.sel_provine').html("");   
+  $('.sel_amphures').html("");    
+
 }
 
 });
