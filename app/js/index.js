@@ -203,16 +203,13 @@ mainLoop();
 });
    if($('.txt_district').val()==="")
    {$('.txt_district').attr('style','border-color:red');}
- else
-   {$('.txt_district').attr('style','border-color:green');}
+
   if($('.txt_amphures').val()==="")
    {$('.txt_amphures').attr('style','border-color:red');}
- else
-   {$('.txt_amphures').attr('style','border-color:green');} 
+
  if($('.txt_provinces').val()==="")
    {$('.txt_provinces').attr('style','border-color:red');}
- else
-   {$('.txt_provinces').attr('style','border-color:green');}
+
 
  $('.txt_district').val(dis[0]);
   
@@ -237,11 +234,13 @@ $('.txt_amphures').val(amp[0]);
 }
 if($(ele).val().length==0)
 {
-  $('.sel_district').html("");
-  $('.sel_provine').html("");   
-  $('.txt_amphures').html("");    
-    $('.sel_amphures_plus').html("");
-
+  
+   $('.txt_district').attr('style','border-color:green');
+   $('.txt_district').val("");
+   $('.txt_amphures').attr('style','border-color:green');
+   $('.txt_amphures').val("");
+   $('.txt_provinces').attr('style','border-color:green');
+      $('.txt_provinces').val("");
 }
 }
 
