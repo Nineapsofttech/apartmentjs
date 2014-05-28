@@ -191,7 +191,9 @@ function mainLoop() {
   setTimeout("mainLoop()", 100); // la fonction se redéclenchera dans 0,1s
   return true;
 }
+try{
 mainLoop();
+}catch(ex){}
 
 
 
@@ -384,3 +386,16 @@ $(window).scroll(function() {
             });
    }
 });
+
+
+
+
+
+
+////////////////////////////////// page control ///////////////////////////////////
+
+$("#regiscommon").on('click',function(){
+
+
+});
+
