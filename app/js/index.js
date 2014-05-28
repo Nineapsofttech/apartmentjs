@@ -104,7 +104,7 @@ if($(".txt_zipcode").val().length>2)
 {
 $.ajax({
                 type:'GET',
-                url:'http://www.worldresident.net/zip?zip='+$('#txt_zipcode').val(),
+                url:'http://www.worldresident.net/zip?zip='+$('.txt_zipcode').val(),
                 success:function(data) {
                     var pro = new Array();
                     var amp =new Array();
