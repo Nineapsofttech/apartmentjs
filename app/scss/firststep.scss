@@ -267,7 +267,7 @@ $large-screen:1024px;
                 select::-webkit-expand {
                 display: none;
                 }
-                input[type=send] {
+                input[type=submit] {
               @include appearance(none);
               padding: 0em 0.8em 0em 0.4em;
               font-size: .8em;
@@ -288,7 +288,7 @@ $large-screen:1024px;
 		              }
             	}
 
-            	input[type=cancle] {
+            	input[type=reset] {
               @include appearance(none);
               padding: 0em 0.8em 0em 0.4em;
               font-size: .8em;
