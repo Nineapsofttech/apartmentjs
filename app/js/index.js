@@ -110,7 +110,7 @@ $('.sel_amphures_plus').change(function(){
 
   $('.txt_amphures').val($(this).val());
 });
-$('.sel_district_plus').change(function(){
+$('.sel_District_plus').change(function(){
 
   $('.txt_district').val($(this).val());
 });
@@ -197,7 +197,7 @@ mainLoop();
 
 
    $.each(dis, function(key, value) {   
-     $('.sel_district_plus')
+     $('.sel_District_plus')
          .append($("<option></option>")
          .attr("value",value)
          .text(value)); 
