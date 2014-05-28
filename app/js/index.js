@@ -135,19 +135,19 @@ $.ajax({
    $.each(dis, function(key, value) {   
      $('.sel_district')
          .append($("<option></option>")
-         .attr("value",key)
+         .attr("value",value)
          .text(value)); 
 });
      $.each(pro, function(key, value) {   
      $('.sel_provine')
          .append($("<option></option>")
-         .attr("value",key)
+         .attr("value",value)
          .text(value)); 
 });
        $.each(amp, function(key, value) {   
      $('.sel_amphures_plus')
          .append($("<option></option>")
-         .attr("value",key)
+         .attr("value",value)
          .text(value)); 
 });
 
