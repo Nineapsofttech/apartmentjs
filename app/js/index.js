@@ -89,15 +89,15 @@ $.ajax({type:'GET',url:'http://www.worldresident.net/getdb',success:function(dat
 });
 ///////////////////////zipcode request//////////////////////////////////////////////////////////
 $('#txt_zipcode').on('input', function() {
-if($(this).val()!="")
+if($(txt_zipcode).val()!="")
 {
 $.ajax({
                 type:'GET',
                 url:'http://www.worldresident.net/zip?zip='+values[1],
                 success:function(data) {
-                    var pro = {};
-                    var amp ={};
-                    var dis = {};
+                    var pro = new Array();
+                    var amp =new Array();
+                    var dis = new Array();
                     
   for(var i=0;i<data.length;i++)
   {
