@@ -137,9 +137,7 @@
         font-size: 0.8em;
         font-style: italic;
         padding: 0em 0.8em 0em 0.4em;
-        width: 50%; }
-        #tableregister select .sel_amphures_plus {
-          width: 20%; } }
+        width: 50%; } }
   #tableregister select::-ms-expand {
     display: none; }
   #tableregister select::-moz-expand {
