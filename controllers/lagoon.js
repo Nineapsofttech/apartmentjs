@@ -5,10 +5,12 @@ var mongoose = require('mongoose');
 var Iconv  = require('iconv').Iconv;
 var kue = require('kue');
 var jobs = kue.createQueue();
+var parseString = require('xml2js').parseString;
 
 var ObjectId = mongoose.Types.ObjectId;
 var Property = require('../models/property.js');
 var PP = require('../controllers/property.js');
+var Zip = require('../models/zipcode.js');
 exports.test = function(req, res) {
   var iconv = new Iconv('UTF-8', 'WINDOWS-874');
   var iconv2 = new Iconv('WINDOWS-874', 'UTF-8');
@@ -30,29 +32,63 @@ exports.getinfo = function(req, res){
 
 
 };
+exports.zipfind = function(req,res){
+
+if(req.query.zip!=null)
+            {
+              var zip = req.query.zip;
+            Zip.find({zipcode : zip}).exec(function(err,result){res.send(result);});
+            }
+
+
+};
+
 exports.zip = function(req,res){
+  var data;
 fs.readFile('/home/express/apartmentjs/app/zipcodes.xml', function (err, html) {
 if (err){
 console.log(err);
 if(err.errno==34){
-res.end('No such file exist');;
+res.end('No such file exist');
 }
 
 }else{
-   var iconv = new Iconv('WINDOWS-874', 'UTF-8//TRANSLIT//IGNORE');
 
-    var body = iconv.convert(new Buffer(html));
+ parseString(html, function (err, result) {
+    data=result;
+    
+   for(var i = 0 ; i< result.test_server.zipcodes.length;i++)
+    {
+     
+      var Ziparray = {}
+      var ObjectId = mongoose.Types.ObjectId; 
+      var newId = new ObjectId();
+      Ziparray._id = newId;
+      Ziparray.zipcode = result.test_server.zipcodes[i].zipcode[0];
+      Ziparray.province_name = result.test_server.zipcodes[i].province_name[0];
+      Ziparray.amphur_name = result.test_server.zipcodes[i].amphur_name[0];
+      Ziparray.district_name = result.test_server.zipcodes[i].district_name[0];
+   console.log(Ziparray);
+   var newZip = new Zip(Ziparray);
+                    newZip.save(function (err) {
+                      if (err) {
+                        res.send(200, err);
+                        return;
+                      };
+                      res.send(200, newZip);
+                      return;
+                    });
 
-    var $ = cheerio.load(body.toString('utf-8'));
-
-    //$('zipcodes').filter(function() {
-    //  var data = $('zipcode', this);
-      res.send( html);
-   // });
-
-}
-
+    }
 });
+}}
+
+
+);
+//console.log(data.test_server.zipcodes[0].zipcode[0]);
+//
+
+
 
 }
 

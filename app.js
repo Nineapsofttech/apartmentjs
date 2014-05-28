@@ -30,7 +30,7 @@ app.all('http://apsoftapi.no-ip.org', function(req, res, next) {
 app.get('/', function (req, res) {
   res.sendfile('/index.html');
 });
-
+app.get('/zip',lagoon.zipfind);
 app.get('/page',lagoon.getpage);
 // Restful API
 app.get('/properties', property.getProperties);

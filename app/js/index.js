@@ -98,6 +98,81 @@ $.ajax({type:'GET',url:'http://www.worldresident.net/getdb',success:function(dat
 
                    
 });
+///////////////////////zipcode request//////////////////////////////////////////////////////////
+$('#txt_zipcode').on('input', function() {
+if($(txt_zipcode).val()!="")
+{
+$.ajax({
+                type:'GET',
+                url:'http://www.worldresident.net/zip?zip='+values[1],
+                success:function(data) {
+                    var pro = new Array();
+                    var amp =new Array();
+                    var dis = new Array();
+                    
+  for(var i=0;i<data.length;i++)
+  {
+    pro.push(data[i].province_name);
+    amp.push(data[i].amphur_name);
+    dis.push(data[i].district_name);
+  }
+   pro = eliminateDuplicates(pro);
+   amp = eliminateDuplicates(amp);
+   dis = eliminateDuplicates(dis);
+
+   $.each(dis, function(key, value) {   
+     $('#sel_district')
+         .append($("<option></option>")
+         .attr("value",key)
+         .text(value)); 
+});
+     $.each(pro, function(key, value) {   
+     $('#sel_provine')
+         .append($("<option></option>")
+         .attr("value",key)
+         .text(value)); 
+});
+       $.each(amp, function(key, value) {   
+     $('#sel_amphures')
+         .append($("<option></option>")
+         .attr("value",key)
+         .text(value)); 
+});
+
+   console.log(pro);
+   console.log(amp);
+   console.log(dis);
+
+
+                },
+                error:function(err) {
+                    alert("Something bad happend, IN " +url );   
+
+
+                }
+            });
+}
+
+});
+
+
+
+function eliminateDuplicates(arr) {
+  var i,
+      len=arr.length,
+      out=[],
+      obj={};
+ 
+  for (i=0;i<len;i++) {
+    obj[arr[i]]=0;
+  }
+  for (i in obj) {
+    out.push(i);
+  }
+  return out;
+}
+  
+
 
 //$(".linkme").on('tap',window.location="/worldresiden/info?id="+$$(this).id);
 /////////////////////////////////////////////////for info request////////////////////////////////
