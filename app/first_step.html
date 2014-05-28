@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Worldresident.net ::List::</title>
+<title>Worldresident.net ::First step::</title>
 <!-- InstanceEndEditable -->
 <link  href="css/style.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="css/info.css">
 <link rel="stylesheet" type="text/css" href="font/stylesheet.css">
 <!-- InstanceBeginEditable name="head" -->
-<link rel="stylesheet" type="text/css" href="css/aprt_list.css">
+<link rel="stylesheet" type="text/css" href="css/firststep.css">
 <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -78,12 +78,118 @@
     </div>
   </div>  
 <!--Content--><div class="outter">
-<div class="maincontent"><!-- InstanceBeginEditable name="EditRegion1" --><div class="content_aprt_list"><div id="wrapper">
-	<div id="columns">
-    
-    
-    
-    </div></div></div><!-- InstanceEndEditable --></div>
+<div class="maincontent"><!-- InstanceBeginEditable name="EditRegion1" --><div class="breadcrumb">
+  <a href="#">Create Building</a>
+  <a href="#">Cost of utilities</a>
+  <a href="#">Service</a>
+  <a href="#">Asset</a>
+  <a href="#">Room Type</a>
+  <a href="#">Fine</a>
+  <a href="#">Document</a>
+</div>
+<div id="box1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="tablecreate">
+  <tr>
+    <td colspan="2" align="center"><h6>Create Building</h6></td>
+    </tr>
+  <tr>
+    <td width="30%" align="right"><h6>Name of Building :</h6></td>
+    <td width="70%"><input name="txt_building" type="text" size="20" maxlength="100" width="80%"></td>
+  </tr>
+  <tr>
+    <td align="right"><h6>Address :</h6></td>
+    <td><textarea name="txt_building_address" rows="6"></textarea></td>
+  </tr>
+  <tr>
+    <td align="right"><h6>Tel. :</h6></td>
+    <td><input name="txt_building_tel" type="text" maxlength="10"></td>
+  </tr>
+  <tr>
+    <td align="right"><h6>Fax. :</h6></td>
+    <td><input name="txt_building_fax" type="text" maxlength="30"></td>
+  </tr>
+  <tr>
+    <td align="right"><h6>Detail :</h6></td>
+    <td><textarea name="txt_building_detail" rows="6"></textarea></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="btn_next" id="btn_submit" value="Next">
+        <input type="reset" name="btn_cancle" id="btn_cancle" value="Cancle"></td>
+  </tr>
+  
+</table>
+</div>
+
+<div id="box2">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="tablecreate">
+  <tr>
+    <td colspan="2" align="center"><h6>Cost of utilities</h6></td>
+    </tr>
+  <tr>
+    <td width="30%" align="right"><h6>water bills :</h6></td>
+    <td width="70%"><input name="txt_water_bills" type="text" size="20" maxlength="100" placeholder="per unit"></td>
+  </tr>
+  <tr>
+    <td align="right"><h6>Vat :</h6></td>
+    <td valign="middle">
+      <input type="radio" name="radio" id="rdo_include_vat" value="rdo_include_vat"> <p>No</p>
+      <input type="radio" name="radio" id="rdo_notinclude_vat" value="rdo_notinclude_vat">
+      <p>Yes :</p><input name="txt_vat" type="text" size="10" maxlength="3" placeholder="0"></td>
+  </tr>
+  <tr>
+    <td align="right"></td>
+    <td align="left" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td colspan="2"><input name="chb_min_bills" type="checkbox" value="" checked>
+            1.1 Minimum Bills</td>
+          </tr>
+        <tr>
+          <td>minimum
+            </td>
+          <td><input name="txt_min_water_bills" type="text" maxlength="10" placeholder="unit"></td>
+          </tr>
+        <tr>
+          <td width="16%">pay</td>
+          <td width="47%"><input name="txt_min_water_bills_pay" type="text" maxlength="10" placeholder="Bath"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input name="chb_package_bills" type="checkbox" value="">
+1.2 Package</td>
+          </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+  <tr>
+    <td align="right"><h6>Fax. :</h6></td>
+    <td><input name="txt_building_fax" type="text" maxlength="30"></td>
+  </tr>
+  <tr>
+    <td align="right"><h6>Detail :</h6></td>
+    <td><textarea name="txt_building_detail" rows="6"></textarea></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="btn_next" id="btn_submit" value="Next">
+        <input type="reset" name="btn_cancle" id="btn_cancle" value="Cancle"></td>
+  </tr>
+  
+</table>
+</div>
+<!-- InstanceEndEditable --></div>
 </div>
 <!--Footer-->
 <footer class="footer-2">

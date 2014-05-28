@@ -1,14 +1,108 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+$base-border-color:#79BD9A;
+$base-line-height:2em;
+$base-body-color:#FFF;
+$medium-gray: #000;
+$base-accent-color:#212;
+$breadcrumb-color:#331;
+$base-border-radius:5px;
 $default-line:#79BD9A;
-$large-screen:1080px;
+$large-screen:1024px;
 //---------------------------------------------------------------------------------------------------------
-#tableregister{
+
+  .breadcrumb { 
+  $breadcrumb-border-color: $base-border-color;
+  $breadcrumb-border: 1px solid $breadcrumb-border-color;
+  $breadcrumb-height: $base-line-height * 1.5;
+  $breadcrumb-arrow-color: $breadcrumb-border-color;
+  $breadcrumb-background: $base-body-color;
+  $breadcrumb-inactive-hover-color: $breadcrumb-background;
+  $breadcrumb-color: $medium-gray;
+  $breadcrumb-color-hover: $base-accent-color;
+  $breadcrumb-color-active: $breadcrumb-color;
+
+  @include inline-block;
+  text-align: center;
+  margin-bottom: $base-line-height;
+  width: 100%;
+  height: auto;
+
+  a {
+    @include inline-block;
+    background-color: $breadcrumb-background;
+    border: $breadcrumb-border;
+    color: $breadcrumb-color;
+    line-height: $breadcrumb-height;
+    margin-right: -5px;
+    font-size: .8em;
+    padding: 0 $breadcrumb-height/4 0 $breadcrumb-height/2;
+    position: relative;
+    text-decoration: none;
+    margin-bottom: 2px;
+
+    &:first-child {
+      padding-left: $breadcrumb-height/2;
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    &:last-child {
+      background-color: $breadcrumb-background;
+      color: $breadcrumb-color-active;
+      border-bottom-right-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      padding-right: $breadcrumb-height/2;
+    }
+
+    &:hover {
+      color: $breadcrumb-color-hover;
+      background-color: $breadcrumb-inactive-hover-color;
+    }
+
+    &:hover:after {
+      border-left-color: $breadcrumb-inactive-hover-color;;
+    }
+
+    &:after,
+    &:before {
+      @include position(absolute, 0px auto 0px 100%);
+      border-bottom: $breadcrumb-height/2 solid transparent;
+      border-left: $breadcrumb-height/4 solid transparent;
+      border-top: $breadcrumb-height/2 solid transparent;
+      content: '';
+      display: block;
+      margin: auto;
+      z-index: 2;
+    }
+
+    &:last-child:after,
+    &:last-child:before {
+       border: none;
+    }
+
+    &:before {
+      border-left-color: $breadcrumb-arrow-color;
+      margin-left: 1px;
+      z-index: 1;
+    }
+    &:after {
+      border-left-color: $breadcrumb-background;
+    }
+
+    @include media(1024px) {
+      font-size: 1em;
+      padding: 0 $breadcrumb-height/2 0 $breadcrumb-height/1.5;
+    }
+  }
+}
+
+#tablecreate{
         border-radius:5px;
         border:1px dotted $default-line;
         @include media($large-screen) {
         width: 60%;
-        margin: 0 20% 0 20%;}
+        margin: 0 20% 3em 20%;}
 			width: 100%;
         margin: 0 0 0 0;
           #bullet_left{
@@ -19,19 +113,20 @@ $large-screen:1080px;
 
         td{
           border-bottom: 1px dotted $default-line;
+
         }
         p{
           margin: 0.5em 0em 0.5em 0.5em;
-    @include media($large-screen) {
-          font-size: 1em;
-          width: 1em;
-          margin: 0em;
-          display: inline;
-          }
-          display: inline;
-          width: 1em;
-          margin: 0em;
-          font-size: 2.5em;
+		@include media($large-screen) {
+					font-size: 1em;
+					width: 1em;
+					margin: 0em;
+					display: inline;
+					}
+					display: inline;
+					width: 1em;
+					margin: 0em;
+					font-size: 2.5em;
         }
         h6{
         	@include media($large-screen) {
@@ -47,7 +142,7 @@ $large-screen:1080px;
         
 
         	input {
-        		//background-color:#FFF;
+        		margin: 0.5em;
               border-radius: 4px;
               border: 1px solid $default-line;
               color: #000;
@@ -55,9 +150,10 @@ $large-screen:1080px;
               @include box-sizing(border-box);
               
               width: 50%;
-              
+              height: 2em;
           		}
-              width: 80%;
+              width: 50%;
+              height: 2em;
               
             }
             textarea{
@@ -70,26 +166,26 @@ $large-screen:1080px;
               width: 60%;
               margin-top: 0.5em;
               @include media($large-screen) {
-                  font-size: 0.8em;
-                  font-style: italic;
-                  padding: 0em 0.8em 0em 0.4em;
-                }
+		              font-size: 1em;
+		              font-style: italic;
+		          		padding: 0em 0.8em 0em 0.4em;
+		          	}
               font-size: 2em;
               font-style: italic;
-                padding: 0em 0.8em 0em 0.4em;
+                padding: 0em;
             }
             input[type=text] {
               @include appearance(none);
               
-                  @include media($large-screen) {
-                  font-size: 0.8em;
-                  font-style: italic;
-                  padding: 0em 0.8em 0em 0.4em;
-                }
+		              @include media($large-screen) {
+		              font-size: 0.8em;
+		              font-style: italic;
+		          		padding: 0em 0.8em 0em 0.4em;
+		          	}
               font-size: 2em;
               font-style: italic;
                 padding: 0em 0.8em 0em 0.4em;
-              
+
             }
             input[type=radio] {
               padding: 0em 0.8em 0em 0.4em;
@@ -110,19 +206,31 @@ $large-screen:1080px;
               }
               
             }
+            input[type=checkbox] {
+              padding: 0em 0.8em 0em 0.4em;
+              font-size: .8em;
+              font-style: italic;
+              @include media($large-screen) {
+                    height: 1em;
+                    width: 1em;
+                    }
+              height: 5em;
+              width: 5em;
+
+              label{
+                @include media($large-screen) {
+                    font-size: 1em;
+                    }
+                font-size: 3em;
+              }
+              
+            }
             input[type=password] {
               @include appearance(none);
-              @include media($large-screen) {
-                  font-size: 0.8em;
-                  font-style: italic;
-                  padding: 0em 0.8em 0em 0.4em;
-                  height: 1em;
-                }
-              font-size: 2em;
+              padding: 0em 0.8em 0em 0.4em;
+              font-size: .8em;
               font-style: italic;
-                padding: 0em 0.8em 0em 0.4em;
-              font-style: italic;
-              height: 1.2em;
+              //height: 20px;
               
             }
             select{
@@ -132,15 +240,15 @@ $large-screen:1080px;
               border: 1px solid $default-line;
               font-style: italic;
               @include media($large-screen) {
-                  font-size: 0.8em;
-                  font-style: italic;
-                  padding: 0em 0.8em 0em 0.4em;
-                  width: 50%;
-                }
+		              font-size: 0.8em;
+		              font-style: italic;
+		          		padding: 0em 0.8em 0em 0.4em;
+		          		width: 50%;
+		          	}
               font-size: 2em;
               font-style: italic;
                 padding: 0em 0.8em 0em 0.4em;
-              width: 80%;
+          		width: 80%;
               -moz-appearance: none;
               -webkit-appearance:none;
               -ms-appearance:none;
@@ -172,12 +280,12 @@ $large-screen:1080px;
               border-width:1px;
               border-color:$default-line;
               margin: 1em 0 1em 0;
-                  &:hover{
-                    background-color:transparentize(#000,0.8);
-                    color:#FFF;
-                  }
-              }
-              input[type=reset] {
+		              &:hover{
+		              	background-color:transparentize(#000,0.8);
+		              	color:#FFF;
+		              }
+            	}
+            	input[type=reset] {
               @include appearance(none);
               padding: 0em 0.8em 0em 0.4em;
               font-size: .8em;
@@ -193,54 +301,11 @@ $large-screen:1080px;
               border-color:$default-line;
               
               &:hover{
-                    background-color:transparentize(#000,0.8);
-                    color:#FFF;
-                  }
-              }
+		              	background-color:transparentize(#000,0.8);
+		              	color:#FFF;
+		              }
+            	}
         
 
       }
-      #confacebook{
-
-        margin: 0.5em;
-            
-      }
-      #commonuser{
-
-      }
-      #apartmentowner_nonecop{
-        
-      }
-      #apartmentowner_cop{
-        
-      }
-      #regiscommon{
-        width: 60%;
-        height: auto;
-        margin: 1em 20% 0em 20%;
-        border:1px solid $default-line;
-        border-radius:5px;
-        background-color: transparentize( #A8DBA8 , 0.8);
-        text-align: center;
-
-          h1{ 
-            margin: 0.5em;
-            @include media($large-screen) {
-                 
-            font-size: 2em;
-              }
-
-            
-            font-size: 4em;
-          }
-        }
-
-        #check-none{
-          width: 10%;
-          color: red;
-
-        }
-        
-//----------------------------------------------------------------------------------------------------------
-
 //----------------------------------------------------------------------------------------------------------
