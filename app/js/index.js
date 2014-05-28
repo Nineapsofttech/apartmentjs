@@ -136,7 +136,7 @@ $.ajax({
 
 // globals
 var rawTags = pos;
-var inputField = $(this);
+var inputField = $(ele);
 var initInputFieldValue = inputField.value;
 var dataList = document.getElementById('htmlListTags');
 var initNbVirgules = (initInputFieldValue.match(/,/g)||[]).length;
