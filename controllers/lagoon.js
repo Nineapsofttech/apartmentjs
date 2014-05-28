@@ -32,6 +32,17 @@ exports.getinfo = function(req, res){
 
 
 };
+exports.zipfind = function(req,res){
+
+if(req.query.zip!=null)
+            {
+              var zip = req.query.zip;
+            Zip.find({zipcode : zip}).exec(function(err,result){res.send(result);});
+            }
+
+
+};
+
 exports.zip = function(req,res){
   var data;
 fs.readFile('/home/express/apartmentjs/app/zipcodes.xml', function (err, html) {
