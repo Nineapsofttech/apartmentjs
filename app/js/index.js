@@ -36,6 +36,13 @@ $('.hero').animate({ opacity: 1, top: "-10px" }, 2000);
 ///////////////////////////////////random img end///////////////////////////////////////
 
 $(document).ready(function(){
+
+///////////////init////////////////
+$(".sel_district").disable();
+$(".sel_provine").disable();
+$(".sel_amphures").disable();
+
+
 //////////////////////////////Moblie controller/////////////////////////////////////////////////////////////////////////
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 //alert(navigator.userAgent);
@@ -104,9 +111,9 @@ $('.sel_amphures_plus').change(function(){
   $('.txt_amphures').val($(this).val());
 });
 
-$('.txt_zipcode1').on('input',function(){fetchzip($('.txt_zipcode1'));});
-$('.txt_zipcode2').on('input',function(){fetchzip($('.txt_zipcode2'));});
-$('.txt_zipcode3').on('input',function(){fetchzip($('.txt_zipcode3'));});
+$('#txt_zipcode1').on('input',function(){fetchzip($('#txt_zipcode1'));});
+$('#txt_zipcode2').on('input',function(){fetchzip($('#txt_zipcode2'));});
+$('#txt_zipcode3').on('input',function(){fetchzip($('#txt_zipcode3'));});
 
 function fetchzip(ele){
 
@@ -122,7 +129,8 @@ $.ajax({
                     var pos = new Array();
  $('.sel_district').html("");
   $('.sel_provine').html("");   
-  $('.sel_amphures_plus').html("");         
+  $('.sel_amphures_plus').html("");
+   $('.sel_district_plus').html("");              
   for(var i=0;i<data.length;i++)
   {
     pos.push(data[i].zipcode);
@@ -136,8 +144,8 @@ $.ajax({
 
 // globals
 var rawTags = pos;
-var inputField = document.getElementsByClassName('txt_zipcode1').value;
-var initInputFieldValue = inputField.value;
+
+var initInputFieldValue = $(ele).val();
 var dataList = document.getElementById('htmlListTags');
 var initNbVirgules = (initInputFieldValue.match(/,/g)||[]).length;
 
@@ -183,7 +191,7 @@ mainLoop();
 
 
    $.each(dis, function(key, value) {   
-     $('.sel_district')
+     $('.sel_district_plus')
          .append($("<option></option>")
          .attr("value",value)
          .text(value)); 
