@@ -119,11 +119,13 @@ $.ajax({
                     var pro = new Array();
                     var amp =new Array();
                     var dis = new Array();
+                    var pos = new Array();
  $('.sel_district').html("");
   $('.sel_provine').html("");   
   $('.sel_amphures_plus').html("");         
   for(var i=0;i<data.length;i++)
   {
+    pos.push(data[i].zipcode);
     pro.push(data[i].province_name);
     dis.push(data[i].amphur_name);
      amp.push(data[i].district_name);
@@ -131,6 +133,9 @@ $.ajax({
    pro = eliminateDuplicates(pro);
    amp = eliminateDuplicates(amp);
    dis = eliminateDuplicates(dis);
+ $( ele ).autocomplete({
+      source: pos
+    });
 
    $.each(dis, function(key, value) {   
      $('.sel_district')
