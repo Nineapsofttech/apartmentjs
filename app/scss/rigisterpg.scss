@@ -122,11 +122,7 @@ $large-screen:1024px;
               font-style: italic;
                 padding: 0em 0.8em 0em 0.4em;
               font-style: italic;
-
-              height: 2.1em;
-
-
-              
+              height: 2.1em;   
             }
             select{
               @include appearance(none);
@@ -252,7 +248,12 @@ display:inline;
   height: auto;
   margin: 0.5em;
 
+  &:hover{
+    opacity:0.4;
+  }
+
  }
+
 }
         
 //----------------------------------------------------------------------------------------------------------

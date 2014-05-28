@@ -215,3 +215,5 @@
       #plus img {
         width: 1em;
         height: auto; } }
+    #plus img:hover {
+      opacity: 0.4; }
