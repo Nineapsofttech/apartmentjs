@@ -23,8 +23,16 @@ $large-screen:1024px;
         }
         p{
           margin: 0.5em 0em 0.5em 0.5em;
-
-
+    @include media($large-screen) {
+          font-size: 1em;
+          width: 1em;
+          margin: 0em;
+          display: inline;
+          }
+          display: inline;
+          width: 1em;
+          margin: 0em;
+          font-size: 2.5em;
         }
         h6{
         	@include media($large-screen) {
@@ -62,13 +70,26 @@ $large-screen:1024px;
               color: #000;
               width: 60%;
               margin-top: 0.5em;
+              @include media($large-screen) {
+                  font-size: 0.8em;
+                  font-style: italic;
+                  padding: 0em 0.8em 0em 0.4em;
+                }
+              font-size: 2em;
+              font-style: italic;
+                padding: 0em 0.8em 0em 0.4em;
             }
             input[type=text] {
               @include appearance(none);
-              padding: 0em 0.8em 0em 0.4em;
-              font-size: .8em;
+              
+                  @include media($large-screen) {
+                  font-size: 0.8em;
+                  font-style: italic;
+                  padding: 0em 0.8em 0em 0.4em;
+                }
+              font-size: 2em;
               font-style: italic;
-                
+                padding: 0em 0.8em 0em 0.4em;
             }
             input[type=radio] {
               padding: 0em 0.8em 0em 0.4em;
@@ -91,10 +112,20 @@ $large-screen:1024px;
             }
             input[type=password] {
               @include appearance(none);
-              padding: 0em 0.8em 0em 0.4em;
-              font-size: .8em;
+              @include media($large-screen) {
+                  font-size: 0.8em;
+                  font-style: italic;
+                  padding: 0em 0.8em 0em 0.4em;
+                  height: 1em;
+                }
+              font-size: 2em;
               font-style: italic;
-              //height: 20px;
+                padding: 0em 0.8em 0em 0.4em;
+              font-style: italic;
+
+              height: 1.2em;
+
+
               
             }
             select{
@@ -104,9 +135,15 @@ $large-screen:1024px;
               border: 1px solid $default-line;
               font-style: italic;
               @include media($large-screen) {
-              		width: 50%;
-          		}
-          		width: 80%;
+                  font-size: 0.8em;
+                  font-style: italic;
+                  padding: 0em 0.8em 0em 0.4em;
+                  width: 50%;
+                }
+              font-size: 2em;
+              font-style: italic;
+                padding: 0em 0.8em 0em 0.4em;
+              width: 80%;
               -moz-appearance: none;
               -webkit-appearance:none;
               -ms-appearance:none;
@@ -132,17 +169,18 @@ $large-screen:1024px;
               width: 20em;
               @include media($large-screen) {
                     height: 2em;
+                    margin: 0.5em 0 0 0;
                     }
               height: 5em;
               border-width:1px;
               border-color:$default-line;
-
-		              &:hover{
-		              	background-color:transparentize(#000,0.8);
-		              	color:#FFF;
-		              }
-            	}
-            	input[type=reset] {
+              margin: 1em 0 1em 0;
+                  &:hover{
+                    background-color:transparentize(#000,0.8);
+                    color:#FFF;
+                  }
+              }
+              input[type=reset] {
               @include appearance(none);
               padding: 0em 0.8em 0em 0.4em;
               font-size: .8em;
@@ -150,19 +188,23 @@ $large-screen:1024px;
               width: 20em;
               @include media($large-screen) {
                     height: 2em;
+
+                    margin: 0.5em 0 0.5em 0;
                     }
+                    margin: 1em 0 1em 0;
+
+                    }
+
               height: 5em;
               border-width:1px;
               border-color:$default-line;
               
               &:hover{
-		              	background-color:transparentize(#000,0.8);
-		              	color:#FFF;
-		              }
-            	}
-        
-
-      }
+                    background-color:transparentize(#000,0.8);
+                    color:#FFF;
+                  }
+              }
+      
       #confacebook{
 
         margin: 0.5em;

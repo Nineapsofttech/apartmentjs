@@ -240,6 +240,14 @@ $large-screen:1024px;
               border: 1px solid $default-line;
               font-style: italic;
               @include media($large-screen) {
+		              font-size: 0.8em;
+		              font-style: italic;
+		          		padding: 0em 0.8em 0em 0.4em;
+		          		width: 50%;
+		          	}
+              font-size: 2em;
+              font-style: italic;
+                padding: 0em 0.8em 0em 0.4em;
               		width: 50%;
           		}
           		width: 80%;
@@ -301,5 +309,5 @@ $large-screen:1024px;
             	}
         
 
-      }
+      
 //----------------------------------------------------------------------------------------------------------
