@@ -276,9 +276,15 @@ var values = parameter.split("=");
                 type:'GET',
                 url:'http://www.worldresident.net/info?'+values[0]+"="+values[1],
                 success:function(data) {
+                  try{
                      lat = data.location[0];
                      loong = data.location[1];
                      console.log(data.location[1]);
+                   }
+                   catch(ex){
+
+                    console.log(ex);
+                   }
                     $("#nameaprt").html(data.title);
                     $("#detailaprt").html(data.detail);
                        if(data.location!=null)
@@ -308,12 +314,12 @@ if(values[0]==="page"&&values[1]!=null)
             for(var i=0;i<15;i++)
 				{
 					var stat = 0;
-				for(var j =0;j<20;j++)
+				for(var j =20;j<0;j++)
 					{
 					try{	if(data[i].images[j].match(/jpg/g)||data[i].images[j].match(/png/g))
 						{
 						$("#columns").append('<div id="'+data[i]._id+'" class="pin"><img src="'+data[i].images[j]+'""><p>'+data[i].title+'</p></div>');
-              						j=20;
+              						j=0;
 									stat=1;
 						}
 					   }
@@ -353,12 +359,12 @@ $(window).scroll(function() {
             for(var i=0;i<15;i++)
 				{
 					var stat = 0;
-				for(var j =0;j<20;j++)
+				for(var j =20;j<0;j++)
 					{ try{
 						if(data[i].images[j].match(/jpg/g)||data[i].images[j].match(/png/g))
 						{
 						$("#columns").append('<div id="'+data[i]._id+'" class="pin"><img src="'+data[i].images[j]+'""><p>'+data[i].title+'</p></div>');
-              						j=20;
+              						j=0;
 									stat=1;
 						}
 						}
