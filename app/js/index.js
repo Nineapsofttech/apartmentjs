@@ -395,20 +395,20 @@ $(window).scroll(function() {
 ////////////////////////////////// page control ///////////////////////////////////
 
 $("#regiscommon").on('click',function(){
-$("#selector").attr("style","visibility:hidden");
-$("#box2").attr("style","visibility:hidden");
-$("#box3").attr("style","visibility:hidden");
+$("#selector").attr("style","display:none");
+$("#box1").attr("style","display:block");
+
 });
 $("#regisnon").on('click',function(){
-$("#selector").attr("style","visibility:hidden");
-$("#box1").attr("style","visibility:hidden");
-$("#box3").attr("style","visibility:hidden");
+$("#selector").attr("style","display:none");
+$("#box2").attr("style","display:block");
+
 
 });
 $("#regiscoop").on('click',function(){
-$("#selector").attr("style","visibility:hidden");
-$("#box2").attr("style","visibility:hidden");
-$("#box2").attr("style","visibility:hidden");
+$("#selector").attr("style","display:none");
+$("#box3").attr("style","display:block");
+
 
 });
 
