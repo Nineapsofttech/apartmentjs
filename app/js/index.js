@@ -135,7 +135,7 @@ $.ajax({
  $('.sel_district').html("");
   $('.sel_provine').html("");   
   $('.sel_amphures_plus').html("");
-   $('.sel_district_plus').html("");              
+   $('.sel_District_plus').html("");              
   for(var i=0;i<data.length;i++)
   {
     pos.push(data[i].zipcode);
@@ -203,7 +203,8 @@ mainLoop();
          .text(value)); 
 });
 
-   $(".txt_province").val(pro);
+   $(".txt_provinces").val(pro);
+
        $.each(amp, function(key, value) {   
      $('.sel_amphures_plus')
          .append($("<option></option>")
