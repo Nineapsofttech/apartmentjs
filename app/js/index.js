@@ -110,6 +110,11 @@ $('.sel_amphures_plus').change(function(){
 
   $('.txt_amphures').val($(this).val());
 });
+$('.sel_district_plus').change(function(){
+
+  $('.txt_district').val($(this).val());
+});
+
 
 $('#txt_zipcode1').on('input',function(){fetchzip($('#txt_zipcode1'));});
 $('#txt_zipcode2').on('input',function(){fetchzip($('#txt_zipcode2'));});
@@ -197,12 +202,8 @@ mainLoop();
          .attr("value",value)
          .text(value)); 
 });
-     $.each(pro, function(key, value) {   
-     $('.sel_provine')
-         .append($("<option></option>")
-         .attr("value",value)
-         .text(value)); 
-});
+
+   $(".txt_province").val(pro);
        $.each(amp, function(key, value) {   
      $('.sel_amphures_plus')
          .append($("<option></option>")
