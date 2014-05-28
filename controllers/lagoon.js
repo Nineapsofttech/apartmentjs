@@ -24,6 +24,7 @@ exports.getinfo = function(req, res){
 
             if(req.query.id!=null)
             {
+
             Property.findOne({_id: req.query.id}).exec(function(err,result){res.send(result);}); 
               console.log("search for ID"+req.query.id);
   
@@ -36,8 +37,8 @@ exports.zipfind = function(req,res){
 
 if(req.query.zip!=null)
             {
-              var zip = "/"+req.query.zip+"/i";
-            Zip.find({zipcode : zip}).exec(function(err,result){res.send(result);});
+              var zip = new RegExp(req.query.zip,"i");
+            Zip.find({zipcode : { $regex: zip }}).exec(function(err,result){res.send(result);});
             }
 
 
