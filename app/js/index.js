@@ -99,6 +99,11 @@ $.ajax({type:'GET',url:'http://www.worldresident.net/getdb',success:function(dat
                    
 });
 ///////////////////////zipcode request//////////////////////////////////////////////////////////
+$('.sel_amphures_plus').change(function(){
+
+  $('.sel_amphures').val() = $(this).val();
+});
+
 $('.txt_zipcode').on('input', function() {
 if($(".txt_zipcode").val().length>2)
 {
@@ -135,7 +140,7 @@ $.ajax({
          .text(value)); 
 });
        $.each(amp, function(key, value) {   
-     $('.sel_amphures')
+     $('.sel_amphures_plus')
          .append($("<option></option>")
          .attr("value",key)
          .text(value)); 
