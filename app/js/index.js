@@ -101,7 +101,7 @@ $.ajax({type:'GET',url:'http://www.worldresident.net/getdb',success:function(dat
 ///////////////////////zipcode request//////////////////////////////////////////////////////////
 $('.sel_amphures_plus').change(function(){
 
-  $('.txt_amphures').val() = $(this).val();
+  $('.txt_amphures').val($(this).text());
 });
 
 $('.txt_zipcode1').on('input',function(){fetchzip($('.txt_zipcode1'));});
