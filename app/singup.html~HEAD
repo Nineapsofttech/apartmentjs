@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>POS prototype Page</title>
+<title>Worldresident.net ::Singup::</title>
 <!-- InstanceEndEditable -->
 <link  href="css/style.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="css/info.css">
 <link rel="stylesheet" type="text/css" href="font/stylesheet.css">
@@ -91,7 +91,7 @@
 <h1>Register Apartment Owner</h1>
 <p style="color:red;">Corporation</p>
 </div>
-<form action="#" method="get" id="commonuser"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
 <tr>
       <td colspan="2" align="center" valign="middle"><h6>สมัครสมาชิกทั่วไป</h6></td>
       </tr>
@@ -106,32 +106,34 @@
         <h6></td>
     </tr>
       <td align="right"><h6>Name : <h6></td>
-      <td width="70%"><input type="text" name="txt_name" id="txt_name"></td>
+      <td width="70%"><input type="text" name="txt_name" class="txt_name"></td>
     </tr>
     <tr>
       <td align="right"><h6>Last Name : <h6></td>
       <td><label for="txt_lastname"></label>
-        <input type="text" name="txt_lastname" id="txt_lastname"></td>
+        <input type="text" name="txt_lastname" class="txt_lastname"></td>
     </tr>
     <tr>
       <td align="right"><h6>E-mail : <h6></td>
       <td><label for="txt_email"></label>
-        <input type="text" name="txt_email" id="txt_email"></td>
+        <input type="text" name="txt_email" class="txt_email"></td>
     </tr>
     <tr>
       <td align="right"><h6>Address : <h6></td>
       <td><label for="txt_address"></label>
-        <textarea name="txt_address" rows="4" id="txt_address"></textarea></td>
+        <textarea name="txt_address" rows="4" class="txt_address"></textarea></td>
     </tr>
      <tr>
       <td align="right"><h6>Post Code : <h6></td>
-      <td><input type="text" name="txt_zipcode" id="txt_zipcode"></td>
+      <td><input type="text" name="txt_zipcode" class="txt_zipcode"><select name="sel_amphures_plus" class="sel_amphures_plus">
+          <option>...</option>
+        </select></td>
     </tr>
     <tr>
       <td align="right"><h6>Provinces : <h6></td>
       <td><label for="txt_province"></label>
         <label for="sel_provine"></label>
-        <select name="sel_provine" id="sel_provine">
+        <select name="sel_provine" class="sel_provine">
           <option>กระบี่</option>
           <option>กรุงเทพฯ</option>
         </select></td>
@@ -139,51 +141,47 @@
     <tr>
       <td align="right"><h6>District : <h6></td>
       <td>
-        <select name="sel_district" id="sel_district">
+        <select name="sel_district" class="sel_district">
           <option>...</option>
         </select></td>
     </tr>
     <tr>
       <td align="right"><h6>Amphures : <h6></td>
       <td>
-        <select name="sel_amphures" id="sel_amphures">
+        <select name="sel_amphures" class="sel_amphures">
           <option>...</option>
         </select></td>
     </tr>
     <tr>
       <td align="right"><h6>Tel : <h6></td>
-      <td><label for="txt_tel"></label>
-        <input type="text" name="txt_tel" id="txt_tel"></td>
+      <td valign="middle"><label for="txt_tel"></label>
+        <input type="text" name="txt_tel" class="txt_tel"><img src="img/icon/plus-icon.gif" width="6%" ></td>
     </tr>
    
     <tr height="2" >
       <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
+      <td height="2" bgcolor="#D6D6D6"><h6>Username-Password<h6></td>
     </tr>
     <tr>
       <td align="right"><h6>Username : <h6></td>
-      <td><input type="text" name="txt_user" id="txt_user"><div id="check-none">*</div></td>
+      <td><input type="text" name="txt_user" class="txt_user"></td>
     </tr>
     <tr>
       <td align="right"><h6>Password : <h6></td>
-      <td><input type="password" name="txt_pass" id="txt_pass"></td>
+      <td><input type="password" name="txt_pass" class="txt_pass"></td>
     </tr>
      <tr>
       <td align="right"><h6>RePassword : <h6></td>
-      <td><input type="password" name="txt_repass" id="txt_repass"></td>
+      <td><input type="password" name="txt_repass" class="txt_repass"></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" name="btn_submit" id="btn_submit" value="Submit">
-        <input type="reset" name="btn_cancle" id="btn_cancle" value="Cancle"></td>
+      <td><input type="submit" name="btn_submit" class="btn_submit" value="Submit">
+        <input type="reset" name="btn_cancle" class="btn_cancle" value="Cancle"></td>
     </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td valign="middle"></td>
-    </tr>
-  </table></form>
+  </table>
   <div id="underline"></div>
-  <form action="#" method="get" id="apartmentowner_cop"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
 <tr>
       <td colspan="2" align="center" valign="middle"><h6>สมัครสมาชิกเจ้าของอพาร์ทเม้นนิติบุคคล</h6></td>
       </tr>
@@ -194,32 +192,36 @@
       <td height="2" bgcolor="#D6D6D6"><h6>Personal information<h6></td>
     </tr>
       <td align="right"><h6>Name : <h6></td>
-      <td width="70%"><input type="text" name="txt_name" id="txt_name"></td>
+      <td width="70%"><input type="text" name="txt_name" class="txt_name"></td>
     </tr>
     <tr>
       <td align="right"><h6>Last Name : <h6></td>
       <td><label for="txt_lastname"></label>
-        <input type="text" name="txt_lastname" id="txt_lastname"></td>
+        <input type="text" name="txt_lastname" class="txt_lastname"></td>
     </tr>
     <tr>
       <td align="right"><h6>E-mail : <h6></td>
       <td><label for="txt_email"></label>
-        <input type="text" name="txt_email" id="txt_email"></td>
+        <input type="text" name="txt_email" class="txt_email"></td>
     </tr>
     <tr>
       <td align="right"><h6>Address : <h6></td>
       <td><label for="txt_address"></label>
-        <textarea name="txt_address" rows="4" id="txt_address"></textarea></td>
+        <textarea name="txt_address" rows="4" class="txt_address"></textarea></td>
     </tr>
      <tr>
       <td align="right"><h6>Post Code : <h6></td>
-      <td><input type="text" name="txt_zipcode" id="txt_zipcode"></td>
+      <td>
+        <input type="text" name="txt_zipcode" class="txt_zipcode"><select name="sel_amphures_plus" class="sel_amphures_plus">
+            <option>...</option>
+          </select>
+        </td>
     </tr>
     <tr>
       <td align="right"><h6>Provinces : <h6></td>
       <td><label for="txt_province"></label>
         <label for="sel_provine"></label>
-        <select name="sel_provine" id="sel_provine">
+        <select name="sel_provine" class="sel_provine">
           <option>กระบี่</option>
           <option>กรุงเทพฯ</option>
         </select></td>
@@ -227,21 +229,21 @@
     <tr>
       <td align="right"><h6>District : <h6></td>
       <td>
-        <select name="sel_district" id="sel_district">
+        <select name="sel_district" class="sel_district">
           <option>...</option>
         </select></td>
     </tr>
     <tr>
       <td align="right"><h6>Amphures : <h6></td>
       <td>
-        <select name="sel_amphures" id="sel_amphures">
+        <select name="sel_amphures" class="sel_amphures">
           <option>...</option>
         </select></td>
     </tr>
     <tr>
       <td align="right"><h6>Tel : <h6></td>
       <td><label for="txt_tel"></label>
-        <input type="text" name="txt_tel" id="txt_tel"></td>
+        <input type="text" name="txt_tel" class="txt_tel"></td>
     </tr>
    
     <tr height="2" >
@@ -250,51 +252,47 @@
     </tr>
     <tr height="2" >
       <td height="2" align="right"><h6>Type :<h6></td>
-      <td height="2"><input type="radio" name="radio" id="rdo_store" value="rdo_store">
-        <label for="rdo_store">Store</label>
-        <input type="radio" name="radio" id="rdo_company" value="rdo_company">
-        <label for="rdo_company">Company</label>
-          <input type="radio" name="radio" id="rdo_limitedpartnership" value="rdo_limitedpartnership">
-        <label for="rdo_limitedpartnership">limited partnership</label><br>
-        <input type="radio" name="radio" id="rdo_registeredpartnership" value="rdo_registeredpartnership">
-        <label for="rdo_registeredpartnership">Registered partnership</label></td>
+      <td height="2"><input type="radio" name="radio" class="rdo_store" value="rdo_store">
+        <p>Store</p>
+        <input type="radio" name="radio" class="rdo_company" value="rdo_company">
+        <p>Company</p>
+          <input type="radio" name="radio" class="rdo_limitedpartnership" value="rdo_limitedpartnership">
+        <p>limited partnership</p><br>
+        <input type="radio" name="radio" class="rdo_registeredpartnership" value="rdo_registeredpartnership">
+        <p>Registered partnership</p></td>
     </tr>
     <tr height="2" >
       <td height="2" align="right" ><h6>Registration <br>number :<h6></td>
-      <td height="2" ><input name="txt_regis_no" type="text" id="txt_regis_no" maxlength="13"></td>
+      <td height="2" ><input name="txt_regis_no" type="text" class="txt_regis_no" maxlength="13"></td>
     </tr>
     <tr height="2" >
       <td height="2" align="right" ><h6>Capital :<h6></td>
-      <td height="2" ><input type="text" name="txt_capital" id="txt_capital"></td>
+      <td height="2" ><input type="text" name="txt_capital" class="txt_capital"></td>
     </tr>
     <tr height="2" >
       <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
+      <td height="2" bgcolor="#D6D6D6"><h6>Username-Password<h6></td>
     </tr>
     <tr>
       <td align="right"><h6>Username : <h6></td>
-      <td><input type="text" name="txt_user" id="txt_user"></td>
+      <td><input type="text" name="txt_user" class="txt_user"></td>
     </tr>
     <tr>
       <td align="right"><h6>Password : <h6></td>
-      <td><input type="password" name="txt_pass" id="txt_pass"></td>
+      <td><input type="password" name="txt_pass" class="txt_pass"></td>
     </tr>
      <tr>
       <td align="right"><h6>RePassword : <h6></td>
-      <td><input type="password" name="txt_repass" id="txt_repass"></td>
+      <td><input type="password" name="txt_repass" class="txt_repass"></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" name="btn_submit" id="btn_submit" value="Submit">
-        <input type="reset" name="btn_cancle" id="btn_cancle" value="Cancle"></td>
+      <td><input type="submit" name="btn_submit" class="btn_submit" value="Submit">
+        <input type="reset" name="btn_cancle" class="btn_cancle" value="Cancle"></td>
     </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td valign="middle"></td>
-    </tr>
-  </table></form>
+  </table>
     <div id="underline"></div>
-  <form action="#" method="get" id="apartmentowner_nonecop"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
 <tr>
       <td colspan="2" align="center" valign="middle"><h6>สมัครสมาชิกเจ้าของอพาร์ทเม้น</h6></td>
       </tr>
@@ -305,32 +303,34 @@
     </tr>
     <tr>   
       <td align="right"><h6>Name : <h6></td>
-      <td width="70%"><input type="text" name="txt_name" id="txt_name"></td>
+      <td width="70%"><input type="text" name="txt_name" class="txt_name"></td>
     </tr>
     <tr>
       <td align="right"><h6>Last Name : <h6></td>
       <td><label for="txt_lastname"></label>
-        <input type="text" name="txt_lastname" id="txt_lastname"></td>
+        <input type="text" name="txt_lastname" class="txt_lastname"></td>
     </tr>
     <tr>
       <td align="right"><h6>E-mail : <h6></td>
       <td><label for="txt_email"></label>
-        <input type="text" name="txt_email" id="txt_email"></td>
+        <input type="text" name="txt_email" class="txt_email"></td>
     </tr>
     <tr>
       <td align="right"><h6>Address : <h6></td>
       <td><label for="txt_address"></label>
-        <textarea name="txt_address" rows="4" id="txt_address"></textarea></td>
+        <textarea name="txt_address" rows="4" class="txt_address"></textarea></td>
     </tr>
      <tr>
       <td align="right"><h6>Post Code : <h6></td>
-      <td><input type="text" name="txt_zipcode" id="txt_zipcode"></td>
+      <td><input type="text" name="txt_zipcode" class="txt_zipcode"><select name="sel_amphures_plus" class="sel_amphures_plus">
+          <option>...</option>
+        </select></td>
     </tr>
     <tr>
       <td align="right"><h6>Provinces : <h6></td>
       <td><label for="txt_province"></label>
         <label for="sel_provine"></label>
-        <select name="sel_provine" id="sel_provine">
+        <select name="sel_provine" class="sel_provine">
           <option>กระบี่</option>
           <option>กรุงเทพฯ</option>
         </select></td>
@@ -338,49 +338,45 @@
     <tr>
       <td align="right"><h6>District : <h6></td>
       <td>
-        <select name="sel_district" id="sel_district">
+        <select name="sel_district" class="sel_district">
           <option>...</option>
         </select></td>
     </tr>
     <tr>
       <td align="right"><h6>Amphures : <h6></td>
       <td>
-        <select name="sel_amphures" id="sel_amphures">
+        <select name="sel_amphures" class="sel_amphures">
           <option>...</option>
         </select></td>
     </tr>
     <tr>
       <td align="right"><h6>Tel : <h6></td>
       <td><label for="txt_tel"></label>
-        <input type="text" name="txt_tel" id="txt_tel"></td>
+        <input type="text" name="txt_tel" class="txt_tel"></td>
     </tr>
    
     <tr height="2" >
       <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
+      <td height="2" bgcolor="#D6D6D6"><h6>Username-Password<h6></td>
     </tr>
     <tr>
       <td align="right"><h6>Username : <h6></td>
-      <td><input type="text" name="txt_user" id="txt_user"></td>
+      <td><input type="text" name="txt_user" class="txt_user"></td>
     </tr>
     <tr>
       <td align="right"><h6>Password : <h6></td>
-      <td><input type="password" name="txt_pass" id="txt_pass"></td>
+      <td><input type="password" name="txt_pass" class="txt_pass"></td>
     </tr>
      <tr>
       <td align="right"><h6>RePassword : <h6></td>
-      <td><input type="password" name="txt_repass" id="txt_repass"></td>
+      <td><input type="password" name="txt_repass" class="txt_repass"></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" name="btn_submit" id="btn_submit" value="Submit">
-        <input type="reset" name="btn_cancle" id="btn_cancle" value="Cancle"></td>
+      <td><input type="submit" name="btn_submit" class="btn_submit" value="Submit">
+        <input type="reset" name="btn_cancle" class="btn_cancle" value="Cancle"></td>
     </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td valign="middle"></td>
-    </tr>
-  </table></form>
+  </table>
 <!-- InstanceEndEditable --></div>
 </div>
 <!--Footer-->

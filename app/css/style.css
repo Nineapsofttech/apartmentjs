@@ -15,7 +15,7 @@
 h2 {
   margin-left: 0.5em;
   font-size: 4em; }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1024px) {
     h2 {
       margin-left: 0em;
       font-size: 2em; } }
@@ -23,7 +23,7 @@ h2 {
 h3 {
   margin-left: 0.5em;
   font-size: 3.5em; }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1024px) {
     h3 {
       margin-left: 0em;
       font-size: 1.5em; } }
@@ -147,7 +147,7 @@ html, body {
       .hero .hero-inner .hero-copy h1 {
         margin-bottom: .2em;
         text-shadow: 2px 2px 5px #000; }
-        @media screen and (min-width: 1080px) {
+        @media screen and (min-width: 1024px) {
           .hero .hero-inner .hero-copy h1 {
             font-size: 4em; } }
 
@@ -160,7 +160,7 @@ html, body {
     background-color: #FFF;
     margin-top: 1em;
     margin-bottom: 1em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       .outter .maincontent {
         float: left;
         display: block;
@@ -269,11 +269,11 @@ html, body {
       padding-right: 0.2em;
       padding-left: 0.2em;
       color: #000; }
-      @media screen and (min-width: 1080px) {
+      @media screen and (min-width: 1024px) {
         .searchbox div.searchtools p {
           font-size: 1em; } }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1024px) {
   .content1 {
     float: left;
     display: block;
@@ -305,15 +305,13 @@ html, body {
 .content1 .content13 {
   height: 0em;
   visibility: hidden; }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1024px) {
     .content1 .content13 {
       visibility: visible;
       width: 100%;
-      height: 35em;
+      height: auto;
       border-radius: 5px;
       border: 1px solid #79bd9a;
-      overflow: scroll;
-      scroll: hidden;
       -webkit-scroll: hidden; }
       .content1 .content13 .smallbox_detail {
         margin: 0.5em 5% 0.5em 5%;
@@ -326,16 +324,16 @@ html, body {
         .content1 .content13 .smallbox_detail h1 {
           color: #000;
           font-size: 1.2em; } }
-      @media screen and (min-width: 1080px) and (min-width: 1080px) {
+      @media screen and (min-width: 1024px) and (min-width: 1024px) {
         .content1 .content13 .smallbox_detail h1 {
           font-size: 1em; } }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1024px) {
         .content1 .content13 .smallbox_detail p {
           color: rgba(0, 0, 0, 0.8); } }
-      @media screen and (min-width: 1080px) and (min-width: 1080px) {
+      @media screen and (min-width: 1024px) and (min-width: 1024px) {
         .content1 .content13 .smallbox_detail p {
           font-size: 0.9em; } }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1024px) {
         .content1 .content13 .smallbox_detail img {
           width: 80%;
           margin: 0 10% 0 10%;
@@ -344,7 +342,7 @@ html, body {
 .content2 {
   margin: 0em;
   height: auto; }
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1024px) {
     .content2 {
       float: left;
       display: block;
@@ -355,7 +353,7 @@ html, body {
   .content2 p {
     margin: 0 1em 0 1em;
     font-size: 1.5em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       .content2 p {
         margin: 0 1em 0 1em;
         font-size: 1em; } }
@@ -363,7 +361,7 @@ html, body {
     height: 50em;
     width: 100%;
     overflow: scroll; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       .content2 #tbrshow {
         height: 20em; } }
     .content2 #tbrshow tr td {
@@ -375,12 +373,12 @@ html, body {
       .content2 #tbrshow tr td li {
         margin: 0 1em 0 1em;
         font-size: 2em; }
-        @media screen and (min-width: 1080px) {
+        @media screen and (min-width: 1024px) {
           .content2 #tbrshow tr td li {
             margin: 0 1em 0 1em;
             font-size: 1em; } }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1024px) {
   .content3 {
     float: left;
     display: block;
@@ -418,7 +416,7 @@ html, body {
     color: rgba(0, 0, 0, 0.7);
     margin: 0em;
     font-size: 1.5em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #sponsorcontent p {
         font-size: 0.9em; } }
 

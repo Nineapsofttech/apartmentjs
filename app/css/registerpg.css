@@ -7,8 +7,11 @@
   border-radius: 5px;
   border: 1px dotted #79bd9a;
   width: 100%;
-  margin: 0 0 0 0; }
-  @media screen and (min-width: 1080px) {
+  margin: 0 0 0 0;
+  height: 5em;
+  border-width: 1px;
+  border-color: #79bd9a; }
+  @media screen and (min-width: 1024px) {
     #tableregister {
       width: 60%;
       margin: 0 20% 0 20%; } }
@@ -22,7 +25,7 @@
     width: 1em;
     margin: 0em;
     font-size: 2.5em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #tableregister p {
         font-size: 1em;
         width: 1em;
@@ -32,7 +35,7 @@
     font-size: 2em;
     color: transparent(black, 0.7);
     margin: 0.5em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #tableregister h6 {
         font-size: 1em;
         color: transparent(black, 0.7);
@@ -41,13 +44,15 @@
     border-radius: 4px;
     border: 1px solid #79bd9a;
     color: #000;
-    width: 80%; }
-    @media screen and (min-width: 1080px) {
+    width: 80%;
+    height: 5em; }
+    @media screen and (min-width: 1024px) {
       #tableregister input, #tableregister select {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        width: 50%; } }
+        width: 50%;
+        height: 2em; } }
   #tableregister textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -61,7 +66,7 @@
     font-size: 2em;
     font-style: italic;
     padding: 0em 0.8em 0em 0.4em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #tableregister textarea {
         font-size: 0.8em;
         font-style: italic;
@@ -75,7 +80,7 @@
     font-size: 2em;
     font-style: italic;
     padding: 0em 0.8em 0em 0.4em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #tableregister input[type=text], #tableregister select[type=text] {
         font-size: 0.8em;
         font-style: italic;
@@ -86,13 +91,13 @@
     font-style: italic;
     height: 5em;
     width: 5em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #tableregister input[type=radio], #tableregister select[type=radio] {
         height: 1em;
         width: 1em; } }
     #tableregister input[type=radio] label, #tableregister select[type=radio] label {
       font-size: 3em; }
-      @media screen and (min-width: 1080px) {
+      @media screen and (min-width: 1024px) {
         #tableregister input[type=radio] label, #tableregister select[type=radio] label {
           font-size: 1em; } }
   #tableregister input[type=password], #tableregister select[type=password] {
@@ -106,7 +111,7 @@
     padding: 0em 0.8em 0em 0.4em;
     font-style: italic;
     height: 1.2em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #tableregister input[type=password], #tableregister select[type=password] {
         font-size: 0.8em;
         font-style: italic;
@@ -130,7 +135,7 @@
     -ms-appearance: none;
     text-indent: 0.01px;
     text-overflow: ''; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #tableregister select {
         font-size: 0.8em;
         font-style: italic;
@@ -156,7 +161,7 @@
     border-width: 1px;
     border-color: #79bd9a;
     margin: 1em 0 1em 0; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #tableregister input[type=submit], #tableregister select[type=submit] {
         height: 2em;
         margin: 0.5em 0 0 0; } }
@@ -173,17 +178,14 @@
     font-size: .8em;
     font-style: italic;
     width: 20em;
-    margin: 1em 0 1em 0;
-    height: 5em;
-    border-width: 1px;
-    border-color: #79bd9a; }
-    @media screen and (min-width: 1080px) {
+    margin: 1em 0 1em 0; }
+    @media screen and (min-width: 1024px) {
       #tableregister input[type=reset], #tableregister select[type=reset] {
         height: 2em;
         margin: 0.5em 0 0.5em 0; } }
-    #tableregister input[type=reset]:hover, #tableregister select[type=reset]:hover {
-      background-color: rgba(0, 0, 0, 0.2);
-      color: #FFF; }
+  #tableregister:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #FFF; }
 
 #confacebook {
   margin: 0.5em; }
@@ -199,10 +201,6 @@
   #regiscommon h1 {
     margin: 0.5em;
     font-size: 4em; }
-    @media screen and (min-width: 1080px) {
+    @media screen and (min-width: 1024px) {
       #regiscommon h1 {
         font-size: 2em; } }
-
-#check-none {
-  width: 10%;
-  color: red; }

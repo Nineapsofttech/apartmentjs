@@ -1,7 +1,7 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 $default-line:#79BD9A;
-$large-screen:1080px;
+$large-screen:1024px;
 //---------------------------------------------------------------------------------------------------------
 #tableregister{
         border-radius:5px;
@@ -19,6 +19,7 @@ $large-screen:1080px;
 
         td{
           border-bottom: 1px dotted $default-line;
+
         }
         p{
           margin: 0.5em 0em 0.5em 0.5em;
@@ -55,10 +56,10 @@ $large-screen:1080px;
               @include box-sizing(border-box);
               
               width: 50%;
-              
+              height: 2em;
           		}
               width: 80%;
-              
+              height: 5em;
             }
             textarea{
 
@@ -89,7 +90,6 @@ $large-screen:1080px;
               font-size: 2em;
               font-style: italic;
                 padding: 0em 0.8em 0em 0.4em;
-              
             }
             input[type=radio] {
               padding: 0em 0.8em 0em 0.4em;
@@ -122,7 +122,10 @@ $large-screen:1080px;
               font-style: italic;
                 padding: 0em 0.8em 0em 0.4em;
               font-style: italic;
+
               height: 1.2em;
+
+
               
             }
             select{
@@ -185,9 +188,13 @@ $large-screen:1080px;
               width: 20em;
               @include media($large-screen) {
                     height: 2em;
+
                     margin: 0.5em 0 0.5em 0;
                     }
                     margin: 1em 0 1em 0;
+
+                    }
+
               height: 5em;
               border-width:1px;
               border-color:$default-line;
@@ -197,9 +204,7 @@ $large-screen:1080px;
                     color:#FFF;
                   }
               }
-        
-
-      }
+      
       #confacebook{
 
         margin: 0.5em;
@@ -235,11 +240,7 @@ $large-screen:1080px;
           }
         }
 
-        #check-none{
-          width: 10%;
-          color: red;
 
-        }
         
 //----------------------------------------------------------------------------------------------------------
 
