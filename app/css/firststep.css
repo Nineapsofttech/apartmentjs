@@ -90,8 +90,8 @@
     border-radius: 4px;
     border: 1px solid #79bd9a;
     color: #000;
-    width: 80%;
-    height: 5em; }
+    width: 50%;
+    height: 1em; }
     @media screen and (min-width: 1024px) {
       #tablecreate input, #tablecreate select {
         -webkit-box-sizing: border-box;
@@ -115,9 +115,14 @@
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    padding: 0em 0.8em 0em 0.4em;
-    font-size: .8em;
-    font-style: italic; }
+    font-size: 3em;
+    font-style: italic;
+    padding: 0em; }
+    @media screen and (min-width: 1024px) {
+      #tablecreate input[type=text], #tablecreate select[type=text] {
+        font-size: 0.8em;
+        font-style: italic;
+        padding: 0em 0.8em 0em 0.4em; } }
   #tablecreate input[type=radio], #tablecreate select[type=radio] {
     padding: 0em 0.8em 0em 0.4em;
     font-size: .8em;
@@ -132,6 +137,21 @@
       font-size: 3em; }
       @media screen and (min-width: 1024px) {
         #tablecreate input[type=radio] label, #tablecreate select[type=radio] label {
+          font-size: 1em; } }
+  #tablecreate input[type=checkbox], #tablecreate select[type=checkbox] {
+    padding: 0em 0.8em 0em 0.4em;
+    font-size: .8em;
+    font-style: italic;
+    height: 5em;
+    width: 5em; }
+    @media screen and (min-width: 1024px) {
+      #tablecreate input[type=checkbox], #tablecreate select[type=checkbox] {
+        height: 1em;
+        width: 1em; } }
+    #tablecreate input[type=checkbox] label, #tablecreate select[type=checkbox] label {
+      font-size: 3em; }
+      @media screen and (min-width: 1024px) {
+        #tablecreate input[type=checkbox] label, #tablecreate select[type=checkbox] label {
           font-size: 1em; } }
   #tablecreate input[type=password], #tablecreate select[type=password] {
     -webkit-appearance: none;
@@ -178,7 +198,8 @@
     width: 20em;
     height: 5em;
     border-width: 1px;
-    border-color: #79bd9a; }
+    border-color: #79bd9a;
+    margin: 1em 0 1em 0; }
     @media screen and (min-width: 1024px) {
       #tablecreate input[type=submit], #tablecreate select[type=submit] {
         height: 2em;
@@ -196,6 +217,7 @@
     font-size: .8em;
     font-style: italic;
     width: 20em;
+    margin: 1em 0 1em 0;
     height: 5em;
     border-width: 1px;
     border-color: #79bd9a; }

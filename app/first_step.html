@@ -94,7 +94,7 @@
     </tr>
   <tr>
     <td width="30%" align="right"><h6>Name of Building :</h6></td>
-    <td width="70%"><input name="txt_building" type="text" maxlength="100"></td>
+    <td width="70%"><input name="txt_building" type="text" size="20" maxlength="100" width="80%"></td>
   </tr>
   <tr>
     <td align="right"><h6>Address :</h6></td>
@@ -128,15 +128,36 @@
     </tr>
   <tr>
     <td width="30%" align="right"><h6>water bills :</h6></td>
-    <td width="70%"><input name="txt_water_bills" type="text" maxlength="100"><h6>per unit</h6></td>
+    <td width="70%"><input name="txt_water_bills" type="text" size="20" maxlength="100" placeholder="per unit"></td>
   </tr>
   <tr>
-    <td align="right"><h6>Address :</h6></td>
-    <td><textarea name="txt_building_address" rows="6"></textarea></td>
+    <td align="right"><h6>Vat :</h6></td>
+    <td valign="middle">
+      <input type="radio" name="radio" id="rdo_include_vat" value="rdo_include_vat">
+      <label for="rdo_include_vat">No</label>
+      <input type="radio" name="radio" id="rdo_notinclude_vat" value="rdo_notinclude_vat">
+      <label for="rdo_notinclude_vat">Yes :
+      </label><br><input name="txt_vat" type="text" size="10" maxlength="3" placeholder="0"></td>
   </tr>
   <tr>
-    <td align="right"><h6>Tel. :</h6></td>
-    <td><input name="txt_building_tel" type="text" maxlength="10"></td>
+    <td align="right"></td>
+    <td align="left" valign="top">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td colspan="2"><input name="chb_min_bills" type="checkbox" value="" checked>
+            1.1 Minimum Bills</td>
+          </tr>
+        <tr>
+          <td>minimum
+            </td>
+          <td><input name="txt_min_water_bills" type="text" maxlength="10" placeholder="unit"></td>
+          </tr>
+        <tr>
+          <td width="16%">pay</td>
+          <td width="47%"><input name="txt_min_water_bills_pay" type="text" maxlength="10" placeholder="Bath"></td>
+        </tr>
+      </table>
+      </td>
   </tr>
   <tr>
     <td align="right"><h6>Fax. :</h6></td>
