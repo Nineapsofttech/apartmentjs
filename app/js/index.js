@@ -104,9 +104,9 @@ $('.sel_amphures_plus').change(function(){
   $('.txt_amphures').val() = $(this).val();
 });
 
-$('.txt_zipcode1').on('input',fetchzip($(this)));
-$('.txt_zipcode2').on('input',fetchzip($(this)));
-$('.txt_zipcode3').on('input',fetchzip($(this)));
+$('.txt_zipcode1').on('input',fetchzip($('.txt_zipcode1')));
+$('.txt_zipcode2').on('input',fetchzip($('.txt_zipcode2')));
+$('.txt_zipcode3').on('input',fetchzip($('.txt_zipcode3')));
 
 function fetchzip(ele){
 
