@@ -100,7 +100,7 @@ $.ajax({type:'GET',url:'http://www.worldresident.net/getdb',success:function(dat
 });
 ///////////////////////zipcode request//////////////////////////////////////////////////////////
 $('#txt_zipcode').on('input', function() {
-if($(txt_zipcode).val()!="")
+if($(txt_zipcode).val().length>2)
 {
 $.ajax({
                 type:'GET',
@@ -115,8 +115,8 @@ $.ajax({
   for(var i=0;i<data.length;i++)
   {
     pro.push(data[i].province_name);
-    amp.push(data[i].amphur_name);
-    dis.push(data[i].district_name);
+    dis.push(data[i].amphur_name);
+     amp.push(data[i].district_name);
   }
    pro = eliminateDuplicates(pro);
    amp = eliminateDuplicates(amp);
