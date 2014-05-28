@@ -98,6 +98,7 @@ $.ajax({
                     var pro = new Array();
                     var amp =new Array();
                     var dis = new Array();
+
                     
   for(var i=0;i<data.length;i++)
   {
@@ -128,7 +129,7 @@ $.ajax({
          .text(value)); 
 });
 
-   console.log(pro);
+   console.log("province_name"+pro);
    console.log(amp);
    console.log(dis);
 
