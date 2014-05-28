@@ -7,10 +7,7 @@
   border-radius: 5px;
   border: 1px dotted #79bd9a;
   width: 100%;
-  margin: 0 0 0 0;
-  height: 5em;
-  border-width: 1px;
-  border-color: #79bd9a; }
+  margin: 0 0 0 0; }
   @media screen and (min-width: 1024px) {
     #tableregister {
       width: 60%;
@@ -178,14 +175,17 @@
     font-size: .8em;
     font-style: italic;
     width: 20em;
-    margin: 1em 0 1em 0; }
+    margin: 1em 0 1em 0;
+    height: 5em;
+    border-width: 1px;
+    border-color: #79bd9a; }
     @media screen and (min-width: 1024px) {
       #tableregister input[type=reset], #tableregister select[type=reset] {
         height: 2em;
         margin: 0.5em 0 0.5em 0; } }
-  #tableregister:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #FFF; }
+    #tableregister input[type=reset]:hover, #tableregister select[type=reset]:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #FFF; }
 
 #confacebook {
   margin: 0.5em; }
