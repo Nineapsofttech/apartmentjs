@@ -201,14 +201,14 @@ mainLoop();
          .attr("value",value)
          .text(value)); 
 });
-   if($('.txt_district').val()==="")
-   {$('.txt_district').attr('style','border-color:red');}
+   if($('.txt_district').val()!="")
+   {$('.txt_district').attr('style','border-color:green');}
 
-  if($('.txt_amphures').val()==="")
-   {$('.txt_amphures').attr('style','border-color:red');}
+  if($('.txt_amphures').val()!="")
+   {$('.txt_amphures').attr('style','border-color:green');}
 
- if($('.txt_provinces').val()==="")
-   {$('.txt_provinces').attr('style','border-color:red');}
+ if($('.txt_provinces').val()!="")
+   {$('.txt_provinces').attr('style','border-color:green');}
 
 
  $('.txt_district').val(dis[0]);
@@ -235,11 +235,11 @@ $('.txt_amphures').val(amp[0]);
 if($(ele).val().length==0)
 {
   
-   $('.txt_district').attr('style','border-color:green');
+   $('.txt_district').attr('style','border-color:red');
    $('.txt_district').val("");
-   $('.txt_amphures').attr('style','border-color:green');
+   $('.txt_amphures').attr('style','border-color:red');
    $('.txt_amphures').val("");
-   $('.txt_provinces').attr('style','border-color:green');
+   $('.txt_provinces').attr('style','border-color:red');
       $('.txt_provinces').val("");
 }
 }
