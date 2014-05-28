@@ -132,8 +132,7 @@ $.ajax({
                     var amp =new Array();
                     var dis = new Array();
                     var pos = new Array();
- $('.sel_district').html("");
-  $('.sel_provine').html("");   
+
   $('.sel_amphures_plus').html("");
    $('.sel_District_plus').html("");              
   for(var i=0;i<data.length;i++)
@@ -202,7 +201,9 @@ mainLoop();
          .attr("value",value)
          .text(value)); 
 });
-
+ $('.txt_district').val(dis[0]);
+  
+$('.txt_amphures').val(amp[0]);  
    $(".txt_provinces").val(pro);
 
        $.each(amp, function(key, value) {   
