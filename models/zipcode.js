@@ -6,7 +6,7 @@ var zipcodeSchema = new Schema({
   zipcode: String,
   province_name: String,
   district_name: String,
-  amphur_namesssss: String,
+  amphur_names: String,
   updated: {type: Date, default: Date.now},
   date: {type: Date, default: Date.now}
 });
