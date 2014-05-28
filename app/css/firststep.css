@@ -216,7 +216,7 @@ select::-moz-expand {
 select::-webkit-expand {
   display: none; }
 
-input[type=submit], #tablecreate select[type=submit] {
+input[type=send], #tablecreate select[type=send] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -225,20 +225,21 @@ input[type=submit], #tablecreate select[type=submit] {
   padding: 0em 0.8em 0em 0.4em;
   font-size: .8em;
   font-style: italic;
+  text-align: center;
   width: 20em;
   height: 5em;
   border-width: 1px;
   border-color: #79bd9a;
   margin: 1em 0 1em 0; }
   @media screen and (min-width: 1024px) {
-    input[type=submit], #tablecreate select[type=submit] {
+    input[type=send], #tablecreate select[type=send] {
       height: 2em;
       margin: 0.5em 0 0 0; } }
-  input[type=submit]:hover, #tablecreate select[type=submit]:hover {
+  input[type=send]:hover, #tablecreate select[type=send]:hover {
     background-color: rgba(0, 0, 0, 0.2);
     color: #FFF; }
 
-input[type=reset], #tablecreate select[type=reset] {
+input[type=cancle], #tablecreate select[type=cancle] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -248,14 +249,15 @@ input[type=reset], #tablecreate select[type=reset] {
   font-size: .8em;
   font-style: italic;
   width: 20em;
+  text-align: center;
   margin: 1em 0 1em 0;
   height: 5em;
   border-width: 1px;
   border-color: #79bd9a; }
   @media screen and (min-width: 1024px) {
-    input[type=reset], #tablecreate select[type=reset] {
+    input[type=cancle], #tablecreate select[type=cancle] {
       height: 2em;
       margin: 0.5em 0 0.5em 0; } }
-  input[type=reset]:hover, #tablecreate select[type=reset]:hover {
+  input[type=cancle]:hover, #tablecreate select[type=cancle]:hover {
     background-color: rgba(0, 0, 0, 0.2);
     color: #FFF; }
