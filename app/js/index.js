@@ -276,12 +276,11 @@ var values = parameter.split("=");
                 type:'GET',
                 url:'http://www.worldresident.net/info?'+values[0]+"="+values[1],
                 success:function(data) {
+                  try{
                      lat = data.location[0];
                      loong = data.location[1];
                      console.log(data.location[1]);
-                    $("#nameaprt").html(data.title);
-                    $("#detailaprt").html(data.detail);
-                       if(data.location!=null)
+                      if(data.location!=null)
                        {
                     $("#locationaprt").html('<iframe src="http://www.worldresident.net/map.html?location='+lat+','+loong+'" width="400" height="300" frameborder="0" style="border:0"></iframe>');
                    }
@@ -289,6 +288,11 @@ var values = parameter.split("=");
                    {
                     $("#locationaprt").html(" ")
                    }
+                   }
+                   catch(ex){console.log(wx)}
+                    $("#nameaprt").html(data.title);
+                    $("#detailaprt").html(data.detail);
+                      
                     $("#imageaprt").html(data.image);
                 },
                 error:function(err) {
@@ -308,7 +312,7 @@ if(values[0]==="page"&&values[1]!=null)
             for(var i=0;i<15;i++)
 				{
 					var stat = 0;
-				for(var j =0;j<20;j++)
+				for(var j =20;j>1;j++)
 					{
 					try{	if(data[i].images[j].match(/jpg/g)||data[i].images[j].match(/png/g))
 						{
@@ -353,7 +357,7 @@ $(window).scroll(function() {
             for(var i=0;i<15;i++)
 				{
 					var stat = 0;
-				for(var j =0;j<20;j++)
+				for(var j =20;j>0;j++)
 					{ try{
 						if(data[i].images[j].match(/jpg/g)||data[i].images[j].match(/png/g))
 						{
