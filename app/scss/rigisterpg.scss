@@ -263,7 +263,7 @@ $large-screen:1024px;
             font-size: 4em;
           }
         }
-        #regiscommoncoop{
+        #regiscoop{
         width: 60%;
         height: auto;
         margin: 1em 20% 0em 20%;
@@ -284,6 +284,10 @@ $large-screen:1024px;
           }
         }
 
+        #box1{
+          visibility: height;
+        }
+
 #plus{
 display:inline;
 
@@ -302,6 +306,7 @@ display:inline;
  }
 
 }
+ 
 
 
         
