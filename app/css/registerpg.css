@@ -207,6 +207,36 @@
       #regiscommon h1 {
         font-size: 2em; } }
 
+#regisnone {
+  width: 60%;
+  height: auto;
+  margin: 1em 20% 0em 20%;
+  border: 1px solid #79bd9a;
+  border-radius: 5px;
+  background-color: rgba(168, 219, 168, 0.2);
+  text-align: center; }
+  #regisnone h1 {
+    margin: 0.5em;
+    font-size: 4em; }
+    @media screen and (min-width: 1024px) {
+      #regisnone h1 {
+        font-size: 2em; } }
+
+#regiscommoncoop {
+  width: 60%;
+  height: auto;
+  margin: 1em 20% 0em 20%;
+  border: 1px solid #79bd9a;
+  border-radius: 5px;
+  background-color: rgba(168, 219, 168, 0.2);
+  text-align: center; }
+  #regiscommoncoop h1 {
+    margin: 0.5em;
+    font-size: 4em; }
+    @media screen and (min-width: 1024px) {
+      #regiscommoncoop h1 {
+        font-size: 2em; } }
+
 #plus {
   display: inline; }
   #plus img {
