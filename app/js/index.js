@@ -110,7 +110,7 @@ $('.txt_zipcode3').on('input',function(){fetchzip($('.txt_zipcode3'));});
 
 function fetchzip(ele){
 
-  if($(ele).val().length>2)
+  if($(ele).val().length>=2)
 {
 $.ajax({
                 type:'GET',
