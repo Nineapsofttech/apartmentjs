@@ -98,7 +98,7 @@ $.ajax({
                     var pro = {};
                     var amp ={};
                     var dis = {};
-                    function eliminateDuplicates(arr) {
+                    
   for(var i=0;i<data.length;i++)
   {
     pro.push(data[i].province_name);
