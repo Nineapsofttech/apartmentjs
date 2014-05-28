@@ -133,9 +133,54 @@ $.ajax({
    pro = eliminateDuplicates(pro);
    amp = eliminateDuplicates(amp);
    dis = eliminateDuplicates(dis);
- $(ele).autocomplete({
-      source:pos 
-    });
+
+// globals
+var rawTags = pos;
+var inputField = $(this);
+var initInputFieldValue = inputField.value;
+var dataList = document.getElementById('htmlListTags');
+var initNbVirgules = (initInputFieldValue.match(/,/g)||[]).length;
+
+fillDatalist("");
+
+function fillDatalist(prefix) {
+  var nbRawList = rawTags.length;
+  // vide la liste initiale (pas utile si elle est vide au début) // FIXME
+  while(dataList.childNodes.length > 0) {
+    dataList.removeChild(dataList.childNodes[0]);
+  }
+  // la recréé avec les tags de l’array
+  for (i=0; i < nbRawList; i++ ) {
+    var nOpt = document.createElement("option");
+    nOpt.value = prefix+rawTags[i];
+    dataList.appendChild(nOpt);
+  }
+}
+
+function mainLoop() {
+  var currInputFieldValue = inputField.value;
+  var currInputFieldValueTrimed = inputField.value.replace(/^\s+|\s+$/g, "");
+  var currNbVirgules = (currInputFieldValue.match(/,/g)||[]).length;
+
+  // renouvelle les "option" uniquement si le contenu de l’input à changé.
+  if (currInputFieldValueTrimed != initInputFieldValue) {
+    // renouvelle que si on a tout juste ajouté ou retiré une virgule depuis le dernier passage.
+    if (initNbVirgules != currNbVirgules) {
+      // récupère l’emplacement de la dernière virgule
+      var lsIndex = currInputFieldValueTrimed.lastIndexOf(",");
+      // récupère la chaine contenant jusqu’au dernier tag entier dans le contenu du champ
+      var str = (lsIndex != -1) ? currInputFieldValueTrimed.substr(0, lsIndex)+", " : "";
+      fillDatalist(str);
+      initNbVirgules = currNbVirgules;
+    }
+    initInputFieldValue = currInputFieldValueTrimed;
+  }
+  setTimeout("mainLoop()", 100); // la fonction se redéclenchera dans 0,1s
+  return true;
+}
+mainLoop();
+
+
 
    $.each(dis, function(key, value) {   
      $('.sel_district')
