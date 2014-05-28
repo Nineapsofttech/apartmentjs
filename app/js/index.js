@@ -136,7 +136,7 @@ $.ajax({
 
 // globals
 var rawTags = pos;
-var inputField = document.getElementsByClassName('txt_zipcode1');
+var inputField = document.getElementsByClassName('txt_zipcode1').value;
 var initInputFieldValue = inputField.value;
 var dataList = document.getElementById('htmlListTags');
 var initNbVirgules = (initInputFieldValue.match(/,/g)||[]).length;
