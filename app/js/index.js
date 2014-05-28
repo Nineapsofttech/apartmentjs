@@ -138,14 +138,15 @@ $.ajax({
     dis.push(data[i].amphur_name);
      amp.push(data[i].district_name);
   }
+  pos = eliminateDuplicates(pos);
    pro = eliminateDuplicates(pro);
    amp = eliminateDuplicates(amp);
    dis = eliminateDuplicates(dis);
 
 // globals
 var rawTags = pos;
-
-var initInputFieldValue = $(ele).val();
+var inputField = $(ele);
+var initInputFieldValue = inputField.value;
 var dataList = document.getElementById('htmlListTags');
 var initNbVirgules = (initInputFieldValue.match(/,/g)||[]).length;
 
