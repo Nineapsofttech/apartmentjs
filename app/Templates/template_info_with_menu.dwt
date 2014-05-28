@@ -83,10 +83,11 @@
 <div class="auto_map_info"><iframe src = "http://180.183.53.183:3000/" width="100%" height="450" frameborder="0" scrolling="no"></iframe></div>
 <div id="infoleft-content"><h2>Menu</h2>
 <ul>
-<li><a href="../index.html">Home</a></li>
-<li><a href="../aboutme.html">About me</a></li>
-<li><a href="../contactme.html">Contact me</a></li>
-<li><a href="../singup.html">Register</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="aboutme.html">About me</a></li>
+<li><a href="contactme.html">Contact me</a></li>
+<li><a href="singup.html">Register</a></li>
+<li><a href="first_step.html">Test Step</a></li>
 </ul>
 <div id="underline"></div>
 
