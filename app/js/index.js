@@ -314,12 +314,12 @@ if(values[0]==="page"&&values[1]!=null)
             for(var i=0;i<15;i++)
 				{
 					var stat = 0;
-				for(var j =20;j<0;j++)
+				for(var j =0;j<20;j++)
 					{
 					try{	if(data[i].images[j].match(/jpg/g)||data[i].images[j].match(/png/g))
 						{
 						$("#columns").append('<div id="'+data[i]._id+'" class="pin"><img src="'+data[i].images[j]+'""><p>'+data[i].title+'</p></div>');
-              						j=0;
+              						j=20;
 									stat=1;
 						}
 					   }
@@ -359,12 +359,12 @@ $(window).scroll(function() {
             for(var i=0;i<15;i++)
 				{
 					var stat = 0;
-				for(var j =20;j<0;j++)
+				for(var j =0;j<20;j++)
 					{ try{
 						if(data[i].images[j].match(/jpg/g)||data[i].images[j].match(/png/g))
 						{
 						$("#columns").append('<div id="'+data[i]._id+'" class="pin"><img src="'+data[i].images[j]+'""><p>'+data[i].title+'</p></div>');
-              						j=0;
+              						j=20;
 									stat=1;
 						}
 						}
