@@ -133,8 +133,8 @@ $.ajax({
    pro = eliminateDuplicates(pro);
    amp = eliminateDuplicates(amp);
    dis = eliminateDuplicates(dis);
- $( ele ).autocomplete({
-      source: pos
+ $(ele).autocomplete({
+      source:pos 
     });
 
    $.each(dis, function(key, value) {   
