@@ -18,7 +18,7 @@ $large-screen:1024px;
   $breadcrumb-arrow-color: $breadcrumb-border-color;
   $breadcrumb-background: $base-body-color;
   $breadcrumb-inactive-hover-color: $breadcrumb-background;
-  $breadcrumb-color: $medium-gray;
+  $breadcrumb-color: $medium-gray !global; 
   $breadcrumb-color-hover: $base-accent-color;
   $breadcrumb-color-active: $breadcrumb-color;
 
@@ -247,16 +247,17 @@ $large-screen:1024px;
               font-style: italic;
                 padding: 0em 0.8em 0em 0.4em;
               		width: 50%;
-          		}
-          		width: 80%;
+
               -moz-appearance: none;
               -webkit-appearance:none;
               -ms-appearance:none;
                 text-indent: 0.01px;
                 text-overflow: '';
+          		}
+          		
 
 
-            }
+            
                 select::-ms-expand {
                 display: none;
                 }
@@ -308,7 +309,7 @@ $large-screen:1024px;
 		              	color:#FFF;
 		              }
             	}
-        
-
-      
+            
+}
+  
 //----------------------------------------------------------------------------------------------------------
