@@ -201,6 +201,19 @@ mainLoop();
          .attr("value",value)
          .text(value)); 
 });
+   if($('.txt_district').val.val()==="")
+   {$('.txt_district').attr('style','border-color:red');}
+ else
+   {$('.txt_district').attr('style','border-color:green');}
+  if($('.txt_amphures').val.val()==="")
+   {$('.txt_amphures').attr('style','border-color:red');}
+ else
+   {$('.txt_amphures').attr('style','border-color:green');} 
+ if($('.txt_provinces').val.val()==="")
+   {$('.txt_provinces').attr('style','border-color:red');}
+ else
+   {$('.txt_provinces').attr('style','border-color:green');}
+ 
  $('.txt_district').val(dis[0]);
   
 $('.txt_amphures').val(amp[0]);  
