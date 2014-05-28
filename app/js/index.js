@@ -38,9 +38,9 @@ $('.hero').animate({ opacity: 1, top: "-10px" }, 2000);
 $(document).ready(function(){
 
 ///////////////init////////////////
-$(".sel_district").disable();
-$(".sel_provine").disable();
-$(".sel_amphures").disable();
+$(".sel_district").attr('disabled','disabled');
+$(".sel_provine").attr('disabled','disabled');
+$(".sel_amphures").attr('disabled','disabled');
 
 
 //////////////////////////////Moblie controller/////////////////////////////////////////////////////////////////////////
