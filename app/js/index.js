@@ -395,7 +395,20 @@ $(window).scroll(function() {
 ////////////////////////////////// page control ///////////////////////////////////
 
 $("#regiscommon").on('click',function(){
+$("#selector").attr("style","visibility:hidden");
+$("#box2").attr("style","visibility:hidden");
+$("#box3").attr("style","visibility:hidden");
+});
+$("#regisnon").on('click',function(){
+$("#selector").attr("style","visibility:hidden");
+$("#box1").attr("style","visibility:hidden");
+$("#box3").attr("style","visibility:hidden");
 
+});
+$("#regiscoop").on('click',function(){
+$("#selector").attr("style","visibility:hidden");
+$("#box2").attr("style","visibility:hidden");
+$("#box2").attr("style","visibility:hidden");
 
 });
 
