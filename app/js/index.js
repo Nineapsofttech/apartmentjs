@@ -145,8 +145,8 @@ $.ajax({
 
 // globals
 var rawTags = pos;
-var inputField = $(ele);
-var initInputFieldValue = inputField.value;
+
+var initInputFieldValue = $(ele).val();
 var dataList = document.getElementById('htmlListTags');
 var initNbVirgules = (initInputFieldValue.match(/,/g)||[]).length;
 
@@ -167,8 +167,8 @@ function fillDatalist(prefix) {
 }
 
 function mainLoop() {
-  var currInputFieldValue = inputField.value;
-  var currInputFieldValueTrimed = inputField.value.replace(/^\s+|\s+$/g, "");
+  var currInputFieldValue = $(ele).val();
+  var currInputFieldValueTrimed = $(ele).val().replace(/^\s+|\s+$/g, "");
   var currNbVirgules = (currInputFieldValue.match(/,/g)||[]).length;
 
   // renouvelle les "option" uniquement si le contenu de l’input à changé.
