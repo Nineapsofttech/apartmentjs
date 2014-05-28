@@ -399,7 +399,7 @@ $("#selector").attr("style","display:none");
 $("#box1").attr("style","display:block");
 
 });
-$("#regisnon").on('click',function(){
+$("#regisnone").on('click',function(){
 $("#selector").attr("style","display:none");
 $("#box2").attr("style","display:block");
 
@@ -409,6 +409,15 @@ $("#regiscoop").on('click',function(){
 $("#selector").attr("style","display:none");
 $("#box3").attr("style","display:block");
 
+
+});
+
+
+$(".btn_cancle").on('click',function(){
+$("#box1").attr("style","display:none");
+$("#box2").attr("style","display:none");
+$("#box3").attr("style","display:none");
+$("#selector").attr("style","display:block");
 
 });
 
