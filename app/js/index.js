@@ -359,7 +359,7 @@ if(values[0]==="page"&&values[1]!=null)
 }
 /////////////////////////////////////////check page action ////////////////////////////////////////
 $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+   if($(window).scrollTop() + $(window).height() == $(document).height()+100) {
 	   page++;
         $.ajax({
                 type:'GET',
@@ -376,7 +376,7 @@ $(window).scroll(function() {
 						if(data[i].images[j].match(/jpg/g)||data[i].images[j].match(/png/g))
 						{
 						$("#columns").append('<div id="'+data[i]._id+'" class="pin"><img src="'+data[i].images[j]+'""><p>'+data[i].title+'</p></div>');
-              						j=0;
+              						j=20;
 									stat=1;
 						}
 						}
