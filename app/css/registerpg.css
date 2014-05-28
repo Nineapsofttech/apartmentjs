@@ -204,3 +204,14 @@
     @media screen and (min-width: 1024px) {
       #regiscommon h1 {
         font-size: 2em; } }
+
+#plus {
+  display: inline; }
+  #plus img {
+    width: 4em;
+    height: auto;
+    margin: 0.5em; }
+    @media screen and (min-width: 1024px) {
+      #plus img {
+        width: 1em;
+        height: auto; } }

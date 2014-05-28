@@ -241,7 +241,18 @@ $large-screen:1024px;
           }
         }
 
+#plus{
+display:inline;
 
+
+ img{@include media($large-screen) {
+  width: 1em;
+  height: auto;}
+  width: 4em;
+  height: auto;
+  margin: 0.5em;
+ }
+}
         
 //----------------------------------------------------------------------------------------------------------
 
