@@ -102,7 +102,7 @@ $.ajax({
   for(var i=0;i<data.length;i++)
   {
     pro.push(data[i].province_name);
-    amp.push(data[i]).amphur_name);
+    amp.push(data[i].amphur_name);
     dis.push(data[i].district_name);
   }
    pro = eliminateDuplicates(pro);
@@ -127,7 +127,7 @@ $.ajax({
          .attr("value",key)
          .text(value)); 
 });
-       
+
    console.log(pro);
    console.log(amp);
    console.log(dis);
