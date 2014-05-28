@@ -162,7 +162,7 @@ $large-screen:1024px;
               border: 1px solid $default-line;
               color: #000;
               width: 60%;
-              margin-top: 0.5em;
+              margin: 0.5em 0 0.5em 0.5em;
               @include media($large-screen) {
 		              font-size: 1em;
 		              font-style: italic;
