@@ -101,15 +101,20 @@ $.ajax({type:'GET',url:'http://www.worldresident.net/getdb',success:function(dat
 ///////////////////////zipcode request//////////////////////////////////////////////////////////
 $('.sel_amphures_plus').change(function(){
 
-  $('.sel_amphures').val() = $(this).val();
+  $('.txt_amphures').val() = $(this).val();
 });
 
-$('.txt_zipcode').on('input', function() {
-if($(".txt_zipcode").val().length>2)
+$('.txt_zipcode1').on('input',fetchzip($(this)));
+$('.txt_zipcode2').on('input',fetchzip($(this)));
+$('.txt_zipcode3').on('input',fetchzip($(this)));
+
+function fetchzip(ele){
+
+  if($(ele).val().length>2)
 {
 $.ajax({
                 type:'GET',
-                url:'http://www.worldresident.net/zip?zip='+$('.txt_zipcode').val(),
+                url:'http://www.worldresident.net/zip?zip='+$(ele).val(),
                 success:function(data) {
                     var pro = new Array();
                     var amp =new Array();
@@ -146,10 +151,6 @@ $.ajax({
          .text(value)); 
 });
 
-   console.log("province_name"+pro);
-   console.log(amp);
-   console.log(dis);
-
 
                 },
                 error:function(err) {
@@ -159,17 +160,15 @@ $.ajax({
                 }
             });
 }
-if($(".txt_zipcode").val().length==0)
+if($(ele).val().length==0)
 {
   $('.sel_district').html("");
   $('.sel_provine').html("");   
-  $('.sel_amphures').html("");    
+  $('.txt_amphures').html("");    
+    $('.sel_amphures_plus').html("");
 
 }
-
-});
-
-
+}
 
 function eliminateDuplicates(arr) {
   var i,
