@@ -42,7 +42,7 @@
     border: 1px solid #79bd9a;
     color: #000;
     width: 80%;
-    height: 5em; }
+    height: 2.1em; }
     @media screen and (min-width: 1024px) {
       #tableregister input, #tableregister select {
         -webkit-box-sizing: border-box;
@@ -107,7 +107,7 @@
     font-style: italic;
     padding: 0em 0.8em 0em 0.4em;
     font-style: italic;
-    height: 1.2em; }
+    height: 2.1em; }
     @media screen and (min-width: 1024px) {
       #tableregister input[type=password], #tableregister select[type=password] {
         font-size: 0.8em;
