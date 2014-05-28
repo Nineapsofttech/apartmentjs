@@ -116,7 +116,7 @@ $.ajax({
                     var dis = new Array();
  $('.sel_district').html("");
   $('.sel_provine').html("");   
-  $('.sel_amphures').html("");         
+  $('.sel_amphures_plus').html("");         
   for(var i=0;i<data.length;i++)
   {
     pro.push(data[i].province_name);
