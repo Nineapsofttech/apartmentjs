@@ -462,7 +462,7 @@ if (!elements || !elements.length) {
 for (var i = 0; i < elements.length; i++){
 
     //loop over element's classes
-    var classes = elements[i].className.split(' ');
+    var classes = elements[i].TagName.split(' ');
     for (var j = 0; j < classes.length; j++) {
 
         var name = classes[j];
@@ -550,10 +550,35 @@ var companyname = document.getElementsByClassName('txt_company_name')[0].value;
 
 });
 
-function check(browser)
-  {
-  document.getElementById("answer").value=browser;
-  }
+$('input[name=]') 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /////////////////////////////////////MD5//////////////////////////////////////
 
