@@ -459,12 +459,12 @@ $.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1]
  function(data,status){
   if(data!="") {
     $(ele).attr("style","border-color:red");
-    $(".check_user").attr("style","");
+    $(".check_user").attr("style","visibility:visible");
   }
      else 
      {
       $(ele).attr("style","border-color:green"); 
-          $(".check_user").attr("style","display:none");
+          $(".check_user").attr("style","visibility:hidden");
     }
 
 
