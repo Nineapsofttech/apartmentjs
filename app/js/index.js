@@ -476,6 +476,7 @@ $.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1]
 });
 
 $(".btn_submit").on('click',function(){
+if(window.location.pathname=="/signup.html"){
 
 var name = document.getElementsByClassName('txt_name')[user-1].value;
 var lastname = document.getElementsByClassName('txt_lastname')[user-1].value;
@@ -518,9 +519,8 @@ var companyname = document.getElementsByClassName('txt_company_name')[0].value;
     function(data,status){
       
     });
-
-});
-
+}
+else if(window.location.pathname=="/first_step.html"){
 $('.btn_submit').on('click',function(){
  var ele =  document.getElementsByClassName('box')[firststep];
  $(ele).attr("style","display:none");
@@ -529,6 +529,10 @@ ele =  document.getElementsByClassName('box')[firststep];
  $(ele).attr("style","display:block");
 
 });
+}
+});
+
+
 
   $('input[type=text]').on("input",function(){
 
