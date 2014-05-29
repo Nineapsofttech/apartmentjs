@@ -8,7 +8,7 @@ var User = require('../models/user.js');
 exports.check = function(req,res)
 {
 
-  User.find({username : req.query.username})exec(function(err,result){res.send(result);});
+  User.find({username : req.query.username}).exec(function(err,result){res.send(result);});
 }
 
 
