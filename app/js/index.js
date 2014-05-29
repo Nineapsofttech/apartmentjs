@@ -520,12 +520,10 @@ var companyname = document.getElementsByClassName('txt_company_name')[0].value;
 
 });
 
-if(window.location.pathname==="/first_step.html")
-{
 
   $('input[type=text]').on("input",function(){
 
-if($(this).val()==="")
+if($(this).val()=="")
 {
   $(this).attr("style","border-color:red");
 
@@ -537,7 +535,7 @@ else
 }
  $(':textarea').on("input",function(){
 
-if($(this).val()==="")
+if($(this).val()=="")
 {
   $(this).attr("style","border-color:red");
 
@@ -552,11 +550,6 @@ else
 
 
 
-
-
-
-
-}
 
 
 
