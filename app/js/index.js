@@ -475,7 +475,7 @@ var passwd = MD5(document.getElementByClassName('txt_pass')[0].value);
   province:province,
   tel:tel,
   mobile : mobile,
-  fax : fax;
+  fax : fax
     },
     function(data,status){
       
