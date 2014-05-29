@@ -7,6 +7,7 @@ var kue = require('kue');
 
 var lagoon = require('./controllers/lagoon.js');
 var property = require('./controllers/property.js');
+var user = require('./controllers/user.js');
 //var zip = require("./controllers/zipcodeXML.js")
 
 app.use(express.static('app'));
