@@ -27,6 +27,7 @@ app.all('http://apsoftapi.no-ip.org', function(req, res, next) {
   next();
  });
 
+app.post('/adduser',user.add);
 app.get('/', function (req, res) {
   res.sendfile('/index.html');
 });
