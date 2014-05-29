@@ -435,11 +435,22 @@ user=3;
 
 
 $(".btn_cancle").on('click',function(){
+  if(window.location.pathname=="/signup.html")
 $("#box1").attr("style","display:none");
 $("#box2").attr("style","display:none");
 $("#box3").attr("style","display:none");
 $("#selector").attr("style","display:block");
-
+}
+else if(window.location,pathname=="/first_step.html")
+{
+  if(firststep!=0){
+                   var ele =  document.getElementsByClassName('box')[firststep];
+                   $(ele).attr("style","display:none");
+                  firststep--;
+                  ele =  document.getElementsByClassName('box')[firststep];
+                   $(ele).attr("style","display:block");
+                  }
+}
 });
 
 
@@ -531,6 +542,8 @@ ele =  document.getElementsByClassName('box')[firststep];
 });
 }
 });
+
+
 
 
 
