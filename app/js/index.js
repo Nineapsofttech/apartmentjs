@@ -361,7 +361,7 @@ if(values[0]==="page"&&values[1]!=null)
 }
 /////////////////////////////////////////check page action ////////////////////////////////////////
 $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() > $(document).height()-200) {
+   if($(window).scrollTop() + $(window).height() > $(document).height()-200&&window.location == "apartment_list.html") {
 	   page++;
         $.ajax({
                 type:'GET',
