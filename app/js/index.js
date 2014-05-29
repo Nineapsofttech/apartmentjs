@@ -459,12 +459,12 @@ $.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1]
  function(data,status){
   if(data!="") {
     $(ele).attr("style","border-color:red");
-    $(ele).append('<p><font color="red">  มีชื่อผู้ใช้นี้แล้ว</font></p>');
+    $(".check_user").attr("style","display:block");
   }
      else 
      {
       $(ele).attr("style","border-color:green"); 
-      $(ele).html("");
+          $(".check_user").attr("style","display:none");
     }
 
 
