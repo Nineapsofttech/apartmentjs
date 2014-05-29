@@ -462,8 +462,8 @@ var passwd = MD5(document.getElementsByClassName('txt_pass')[0].value.toString()
 
  $.get("/adduser",
     {
-          username:username,
-  passwd:passwd,
+  username:username,
+  psswd:passwd,
   type: user,
   name: name,
   lastname:lastname,
