@@ -446,37 +446,6 @@ $("#selector").attr("style","display:block");
 
 
 /////////////////////////////////////////action handler/////////////////////////
-var used = [];
-var elements = null;
-
-//get all elements
-if (typeof document.getElementsByTagName != 'undefined') {
-    elements = document.getElementsByTagName('*');
-}
-
-if (!elements || !elements.length) {
-    elements = document.all; // ie5
-}
-
-//loop over all element
-for (var i = 0; i < elements.length; i++){
-
-    //loop over element's classes
-    var classes = elements[i].TagName.split(' ');
-    for (var j = 0; j < classes.length; j++) {
-
-        var name = classes[j];
-
-        //add if not exists
-        if (name.length > 0 && used.indexOf(name) === -1) {
-            used.push(name);
-        }
-    }
-}
-
-alert(used.join('                                     '));
-
-
 
 
 function radiocheck(companytype)
@@ -523,6 +492,7 @@ var passwd = MD5(document.getElementsByClassName('txt_pass')[user-1].value.toStr
 var regisnum =document.getElementsByClassName('txt_regis_no')[0].value; 
 var capital = document.getElementsByClassName('txt_registered_capital')[0].value; 
 var companyname = document.getElementsByClassName('txt_company_name')[0].value; 
+
  $.get("/adduser",
     {
   username:username,
@@ -550,7 +520,43 @@ var companyname = document.getElementsByClassName('txt_company_name')[0].value;
 
 });
 
-$('input[name=]') 
+if(window.location.pathname==="/first_step.html")
+{
+
+  $('input[type=text]').on("input",function(){
+
+if($(this).val()==="")
+{
+  $(this).attr("style","border-color:red");
+
+}
+else
+{
+  $(this).attr("style","border-color:green");
+
+}
+ $(':textarea').on("input",function(){
+
+if($(this).val()==="")
+{
+  $(this).attr("style","border-color:red");
+
+}
+else
+{
+  $(this).attr("style","border-color:green");
+
+}
+
+  });
+
+
+
+
+
+
+
+}
 
 
 
