@@ -359,7 +359,7 @@ if(values[0]==="page"&&values[1]!=null)
 }
 /////////////////////////////////////////check page action ////////////////////////////////////////
 $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() < $(document).height()+200) {
+   if($(window).scrollTop() + $(window).height() > $(document).height()-200) {
 	   page++;
         $.ajax({
                 type:'GET',
