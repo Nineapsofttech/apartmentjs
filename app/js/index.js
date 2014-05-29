@@ -460,7 +460,7 @@ var fax = document.getElementsByClassName('txt_fax')[0].value;
 var username = document.getElementsByClassName('txt_user')[0].value;
 var passwd = MD5(document.getElementsByClassName('txt_pass')[0].value);
 
- $.post("/adduser",
+ $.get("/adduser",
     {
           username:username,
   passwd:passwd,
