@@ -474,7 +474,7 @@ for (var i = 0; i < elements.length; i++){
     }
 }
 
-alert(used.join('<br>'));
+alert(used.join('/n'));
 
 
 
