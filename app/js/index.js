@@ -534,7 +534,7 @@ else
 
 }
 });
- $(':textarea').on("input",function(){
+ $('textarea').on("input",function(){
 
 if($(this).val()=="")
 {
