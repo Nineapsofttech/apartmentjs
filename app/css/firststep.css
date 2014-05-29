@@ -211,7 +211,7 @@
     display: none; }
   #tablecreate select::-webkit-expand {
     display: none; }
-  #tablecreate input[type=submit], #tablecreate select[type=submit] {
+  #tablecreate input[type=submit], #tablecreate select[type=submit], #tablecreate input[type=file], #tablecreate select[type=file], #tablecreate input[type=reset], #tablecreate select[type=reset] {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -227,31 +227,9 @@
     border-color: #79bd9a;
     margin: 1em 0 1em 0; }
     @media screen and (min-width: 1024px) {
-      #tablecreate input[type=submit], #tablecreate select[type=submit] {
-        height: 2em;
-        margin: 0.5em 0 0 0; } }
-    #tablecreate input[type=submit]:hover, #tablecreate select[type=submit]:hover {
-      background-color: rgba(0, 0, 0, 0.2);
-      color: #FFF; }
-  #tablecreate input[type=reset], #tablecreate select[type=reset] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    padding: 0em 0.8em 0em 0.4em;
-    font-size: .8em;
-    font-style: italic;
-    width: 20em;
-    text-align: center;
-    margin: 1em 0 1em 0;
-    height: 5em;
-    border-width: 1px;
-    border-color: #79bd9a; }
-    @media screen and (min-width: 1024px) {
-      #tablecreate input[type=reset], #tablecreate select[type=reset] {
+      #tablecreate input[type=submit], #tablecreate select[type=submit], #tablecreate input[type=file], #tablecreate select[type=file], #tablecreate input[type=reset], #tablecreate select[type=reset] {
         height: 2em;
         margin: 0.5em 0 0.5em 0; } }
-    #tablecreate input[type=reset]:hover, #tablecreate select[type=reset]:hover {
+    #tablecreate input[type=submit]:hover, #tablecreate select[type=submit]:hover, #tablecreate input[type=file]:hover, #tablecreate select[type=file]:hover, #tablecreate input[type=reset]:hover, #tablecreate select[type=reset]:hover {
       background-color: rgba(0, 0, 0, 0.2);
       color: #FFF; }
