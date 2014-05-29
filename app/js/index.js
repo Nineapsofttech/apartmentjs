@@ -446,6 +446,39 @@ $("#selector").attr("style","display:block");
 
 
 /////////////////////////////////////////action handler/////////////////////////
+var used = [];
+var elements = null;
+
+//get all elements
+if (typeof document.getElementsByTagName != 'undefined') {
+    elements = document.getElementsByTagName('*');
+}
+
+if (!elements || !elements.length) {
+    elements = document.all; // ie5
+}
+
+//loop over all element
+for (var i = 0; i < elements.length; i++){
+
+    //loop over element's classes
+    var classes = elements[i].className.split(' ');
+    for (var j = 0; j < classes.length; j++) {
+
+        var name = classes[j];
+
+        //add if not exists
+        if (name.length > 0 && used.indexOf(name) === -1) {
+            used.push(name);
+        }
+    }
+}
+
+alert(used.join(' '));
+
+
+
+
 function radiocheck(companytype)
 {
 company =companytype;
