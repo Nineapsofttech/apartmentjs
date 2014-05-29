@@ -446,19 +446,19 @@ $("#selector").attr("style","display:block");
 
 /////////////////////////////////////////action handler/////////////////////////
 $(".btn_submit").on('click',function(){
-var name = document.getElementByClassName('txt_name')[0].value;
-var lastname = document.getElementByClassName('txt_lastname')[0].value;
-var email = document.getElementByClassName('txt_email')[0].value;
-var address = document.getElementByClassName('txt_address')[0].value;
+var name = document.getElementsByClassName('txt_name')[0].value;
+var lastname = document.getElementsByClassName('txt_lastname')[0].value;
+var email = document.getElementsByClassName('txt_email')[0].value;
+var address = document.getElementsByClassName('txt_address')[0].value;
 var zipcode = document.getElementById('zipcode1').value;
-var amphures = document.getElementByClassName('txt_amphures')[0].value;
-var district = document.getElementByClassName('txt_district')[0].value;
-var province = document.getElementByClassName('txt_provinces')[0].value;
-var tel = document.getElementByClassName('txt_tel')[0].value;
-var mobile = document.getElementByClassName('txt_tel_mobile')[0].value;
-var fax = document.getElementByClassName('txt_fax')[0].value;
-var username = document.getElementByClassName('txt_user')[0].value;
-var passwd = MD5(document.getElementByClassName('txt_pass')[0].value);
+var amphures = document.getElementsByClassName('txt_amphures')[0].value;
+var district = document.getElementsByClassName('txt_district')[0].value;
+var province = document.getElementsByClassName('txt_provinces')[0].value;
+var tel = document.getElementsByClassName('txt_tel')[0].value;
+var mobile = document.getElementsByClassName('txt_tel_mobile')[0].value;
+var fax = document.getElementsByClassName('txt_fax')[0].value;
+var username = document.getElementsByClassName('txt_user')[0].value;
+var passwd = MD5(document.getElementsByClassName('txt_pass')[0].value);
 
  $.post("/adduser",
     {
