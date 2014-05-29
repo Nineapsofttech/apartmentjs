@@ -83,6 +83,8 @@
   <a href="#">Create Building</a>
   <a href="#">Cost of utilities</a>
   <a href="#">Service</a>
+  <a href="#">Asset</a>
+  <a href="#">Room Type</a>
   <a href="#">Fine</a>
   <a href="#">Document</a>
 </div>
@@ -259,9 +261,84 @@
 </div>
 
 <!--Box4------------------------------------------------>
+<div class="box">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="tablecreate">
+  <tr>
+    <td colspan="2" align="center"><h6>Asset</h6><h5>detail</h5><div id="plus"><img src="img/icon/plus-icon.gif" class="plus_mobile"></div></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="right" bgcolor="#E3E3E3" height="10px"></td>
+  </tr>
+  <tr class="asset_name">
+    <td width="30%" align="right"><h6>Name of Asset:</h6></td>
+    <td width="70%"><input name="txt_name_asset" type="text" size="20" maxlength="100" width="80%" class="name_asset"></td>
+  </tr>
+  <tr class="asset_damages">
+    <td align="right"><h6>Damages :</h6></td>
+    <td><input name="txt_asset_damages" type="text" size="20" maxlength="100" width="80%" class="fee_asset_damages" placeholder="baht"></td>
+  </tr>
+  <tr class="asset_picture">
+    <td align="right"><h6>Picture :</h6></td>
+    <td>
+      <input type="file" class="brw_asset_picture" name="brw_asset_picture" id="brw_asset_picture"></td>
+  </tr>
+  <tr class="asset_detail">
+    <td align="right"><h6>Detail :</h6></td>
+    <td><textarea name="txt_service_detail" rows="6" class="detail_asset"></textarea></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right" bgcolor="#E3E3E3" height="10px"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="btn_next" id="btn_submit" value="Next">
+        <input type="reset" name="btn_cancle" id="btn_cancle" value="Cancle"></td>
+  </tr>
+  
+</table>
+</div>
 
 <!--Box5------------------------------------------------->
-
+<div class="box">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="tablecreate">
+  <tr>
+    <td colspan="2" align="center"><h6>Room Type</h6><h5>detail</h5><div id="plus"><img src="img/icon/plus-icon.gif" class="plus_mobile"></div></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="right" bgcolor="#E3E3E3" height="10px"></td>
+  </tr>
+  <tr class="room_type_name">
+    <td width="30%" align="right"><h6>Type Name :</h6></td>
+    <td width="70%"><input name="txt_room_type" type="text" size="20" maxlength="100" width="80%" class="room_type"></td>
+  </tr>
+  <tr class="room_type_asset">
+    <td align="right"><h6>Asset :</h6></td>
+    <td><input name="room_type_asset" type="checkbox" value="" class="room_type_asset"><p> : Name Asset</p><br><input name="room_type_asset" type="checkbox" value="" class="room_type_asset"><p> : Name Asset</p></td>
+  </tr>
+  <tr class="room_type_service">
+    <td align="right"><h6>Service :</h6></td>
+    <td>
+      <input name="room_type_service" type="checkbox" value="" class="room_type_service"><p> : Name Service</p><br><input name="room_type_service" type="checkbox" value="" class="room_type_service"><p> : Name Service</p></td>
+  </tr>
+  <tr class="room_type_price">
+    <td width="30%" align="right"><h6>Price :</h6></td>
+    <td width="70%"><input name="txt_room_price" type="text" size="20" maxlength="100" width="80%" class="room_type_price" placeholder="baht"></td>
+  </tr>
+  <tr class="asset_detail">
+    <td align="right"><h6>Detail :</h6></td>
+    <td><textarea name="txt_room_type_detail" rows="6" class="detail_asset"></textarea></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right" bgcolor="#E3E3E3" height="10px"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="btn_next" id="btn_submit" value="Next">
+        <input type="reset" name="btn_cancle" id="btn_cancle" value="Cancle"></td>
+  </tr>
+  
+</table>
+</div>
 <!--Box6------------------------------------------------->
 <div class="box">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tablecreate">
