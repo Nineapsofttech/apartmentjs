@@ -80,10 +80,13 @@ html, body {
     width: 70%;
     display: inline; }
     .navigation #menutop a {
-      font-size: 1em;
+      font-size: 3em;
       color: rgba(207, 240, 158, 0.4);
       padding-right: 2em;
       font-weight: 900; }
+      @media screen and (min-width: 1024px) {
+        .navigation #menutop a {
+          font-size: 1em; } }
       .navigation #menutop a:hover {
         color: #cff09e; }
 

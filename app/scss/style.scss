@@ -106,7 +106,9 @@ width:auto;
             width:70%;
             display: inline;
             a{
-                font-size: 1em;
+                @include media($large-screen) {
+                font-size: 1em;}
+                font-size: 3em;
                 color: $footer-link-color;
                 padding-right:2em;
                 font-weight: 900;
