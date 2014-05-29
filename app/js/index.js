@@ -454,7 +454,8 @@ company =companytype;
 $('.txt_user').focusout(
 function()
 {
-$.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},function(data,status){alert(data);});
+  var ele =document.getElementsByClassName('txt_user')[user-1];
+$.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},function(data,status){if(data!="") $(ele).attr("style","border-color:green"); else $(ele).attr("style","border-color:red"); );
 
 }
   );
