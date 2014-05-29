@@ -6,6 +6,7 @@ var flag = 1 ;
 var mapflag=1;
 var page = 1;
 var user = 0;
+var firststep=0;
 var company;
 ////////////////////////////////random img start///////////////////////////////////
 setInterval(function()
@@ -520,6 +521,14 @@ var companyname = document.getElementsByClassName('txt_company_name')[0].value;
 
 });
 
+$('.btn_submit').on('click',function(){
+ var ele =  document.getElementsByClassName('box')[firststep];
+ $(ele).attr("style","display:none");
+firststep++;
+ele =  document.getElementsByClassName('box')[firststep];
+ $(ele).attr("style","display:block");
+
+});
 
   $('input[type=text]').on("input",function(){
 
