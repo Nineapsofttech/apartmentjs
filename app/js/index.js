@@ -549,7 +549,6 @@ var companyname = document.getElementsByClassName('txt_company_name')[0].value;
 }
 else if(window.location.pathname=="/first_step.html"){
 
-  alert(firststep);
   if(firststep!=4){
  var ele =  document.getElementsByClassName('box')[firststep];
  $(ele).attr("style","display:none");
