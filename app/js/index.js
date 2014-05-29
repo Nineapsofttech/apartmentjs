@@ -6,6 +6,7 @@ var flag = 1 ;
 var mapflag=1;
 var page = 1;
 var user = 0;
+var company;
 ////////////////////////////////random img start///////////////////////////////////
 setInterval(function()
 {
@@ -445,21 +446,32 @@ $("#selector").attr("style","display:block");
 
 
 /////////////////////////////////////////action handler/////////////////////////
-$(".btn_submit").on('click',function(){
-var name = document.getElementsByClassName('txt_name')[0].value;
-var lastname = document.getElementsByClassName('txt_lastname')[0].value;
-var email = document.getElementsByClassName('txt_email')[0].value;
-var address = document.getElementsByClassName('txt_address')[0].value;
-var zipcode = document.getElementById('txt_zipcode1').value;
-var amphures = document.getElementsByClassName('txt_amphures')[0].value;
-var district = document.getElementsByClassName('txt_district')[0].value;
-var province = document.getElementsByClassName('txt_provinces')[0].value;
-var tel = document.getElementsByClassName('txt_tel')[0].value;
-var mobile = document.getElementsByClassName('txt_tel_mobile')[0].value;
-var fax = document.getElementsByClassName('txt_fax')[0].value;
-var username = document.getElementsByClassName('txt_user')[0].value;
-var passwd = MD5(document.getElementsByClassName('txt_pass')[0].value.toString());
+function radiocheck(companytype)
+{
+company =companytype;
 
+}
+
+
+$(".btn_submit").on('click',function(){
+  var zipcode;
+var name = document.getElementsByClassName('txt_name')[user-1].value;
+var lastname = document.getElementsByClassName('txt_lastname')[user-1].value;
+var email = document.getElementsByClassName('txt_email')[user-1].value;
+var address = document.getElementsByClassName('txt_address')[user-1].value;
+
+zipcode = document.getElementById('txt_zipcode'+user).value;
+var amphures = document.getElementsByClassName('txt_amphures')[user-1].value;
+var district = document.getElementsByClassName('txt_district')[user-1].value;
+var province = document.getElementsByClassName('txt_provinces')[user-1].value;
+var tel = document.getElementsByClassName('txt_tel')[user-1].value;
+var mobile = document.getElementsByClassName('txt_tel_mobile')[user-1].value;
+var fax = document.getElementsByClassName('txt_fax')[user-1].value;
+var username = document.getElementsByClassName('txt_user')[user-1].value;
+var passwd = MD5(document.getElementsByClassName('txt_pass')[user-1].value.toString());
+var regisnum =document.getElementsByClassName('txt_regis_no')[0].value; 
+var capital = document.getElementsByClassName('txt_registered_capital')[0].value; 
+var companyname = document.getElementsByClassName('txt_company_name')[0].value; 
  $.get("/adduser",
     {
   username:username,
@@ -474,6 +486,10 @@ var passwd = MD5(document.getElementsByClassName('txt_pass')[0].value.toString()
   district:district,
   province:province,
   tel:tel,
+  company:company,
+  regisnum:regisnum,
+  capital:capital,
+  companyname:companyname,
   mobile : mobile,
   fax : fax
     },
@@ -483,8 +499,12 @@ var passwd = MD5(document.getElementsByClassName('txt_pass')[0].value.toString()
 
 });
 
+function check(browser)
+  {
+  document.getElementById("answer").value=browser;
+  }
 
-
+/////////////////////////////////////MD5//////////////////////////////////////
 
 var MD5 = function (string) {
  
