@@ -533,6 +533,7 @@ else
   $(this).attr("style","border-color:green");
 
 }
+});
  $(':textarea').on("input",function(){
 
 if($(this).val()=="")
