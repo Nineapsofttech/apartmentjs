@@ -5,6 +5,14 @@ var mongoose = require('mongoose');
 var Iconv  = require('iconv').Iconv;
 var ObjectId = mongoose.Types.ObjectId;
 var User = require('../models/user.js');
+exports.check = function(req,res)
+{
+
+  User.find({username : req.query.username})exec(function(err,result){res.send(result);});
+}
+
+
+
 exports.add = function(req,res){
   var data;
 

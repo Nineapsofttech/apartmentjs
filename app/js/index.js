@@ -451,16 +451,22 @@ function radiocheck(companytype)
 company =companytype;
 
 }
+$('.txt_user').focusout(
+function()
+{
+
+  
+}
+  );
 
 
 $(".btn_submit").on('click',function(){
-  var zipcode;
+
 var name = document.getElementsByClassName('txt_name')[user-1].value;
 var lastname = document.getElementsByClassName('txt_lastname')[user-1].value;
 var email = document.getElementsByClassName('txt_email')[user-1].value;
 var address = document.getElementsByClassName('txt_address')[user-1].value;
-
-zipcode = document.getElementById('txt_zipcode'+user).value;
+var zipcode = document.getElementById('txt_zipcode'+user).value;
 var amphures = document.getElementsByClassName('txt_amphures')[user-1].value;
 var district = document.getElementsByClassName('txt_district')[user-1].value;
 var province = document.getElementsByClassName('txt_provinces')[user-1].value;
