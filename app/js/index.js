@@ -454,7 +454,7 @@ else if(window.location.pathname=="/first_step.html")
                   else 
                   {
 
-                    window.location.pathname="/index.htnl";
+                    window.location.pathname="/index.html";
                   }
 }
 });
