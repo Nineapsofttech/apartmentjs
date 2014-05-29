@@ -459,7 +459,7 @@ $.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1]
  function(data,status){
   if(data!="") {
     $(ele).attr("style","border-color:red");
-    $(".check_user").attr("style","visibility:visible");
+    $(".check_user").attr("style","visibility:visible;color:red;");
   }
      else 
      {
