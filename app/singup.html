@@ -92,7 +92,9 @@
 <div id="regiscoop">
 <h1>Register Apartment Owner</h1>
 <p style="color:red;">Corporation</p>
-</div></div><div id="allbox"><div id="box1" style="visibility:hidden; display:none;">
+</div></div><div id="allbox">
+<!--BOX1---------------------------------------------------------------------------->
+<div id="box1" style="visibility:hidden; display:none;">
 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
 <tr>
       <td colspan="2" align="center" valign="middle"><h6>สมัครสมาชิกทั่วไป</h6></td>
@@ -103,8 +105,24 @@
       <td width="70%"><div id="confacebook"><img src="img/icon/FBloginbutton.jpg" width="40%"></div></td>
     </tr>
     <tr height="2" >
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6"><h6>Personal information
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"><h6>Username-Password<h6></td>
+    </tr>
+    <tr>
+      <td align="right"><h6>Username : <h6></td>
+      <td><input type="text" name="txt_user" class="txt_user"></td>
+    </tr>
+    <tr>
+      <td align="right"><h6>Password : <h6></td>
+      <td><input type="password" name="txt_pass" class="txt_pass"></td>
+    </tr>
+     <tr>
+      <td align="right"><h6>RePassword : <h6></td>
+      <td><input type="password" name="txt_repass" class="txt_repass"></td>
+    </tr>
+    <tr height="2" >
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"><h6>Personal information
         <h6></td>
     </tr>
       <td align="right"><h6>Name : <h6></td>
@@ -163,10 +181,27 @@
       <td align="right"><h6>Fax : <h6></td>
       <td valign="middle"><input type="text" name="txt_fax" class="txt_fax"></td>
     </tr>
-   
+   <tr height="2" >
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"></td>
+    </tr>    
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="btn_submit" class="btn_submit" value="Submit">
+        <input type="reset" name="btn_cancle" class="btn_cancle" value="Cancle"></td>
+    </tr>
+  </table></div>
+  <!--BOX2---------------------------------------------------------------------------->
+
+  <div id="box2" style="visibility:hidden; display:none;">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
+<tr>
+      <td colspan="2" align="center" valign="middle"><h6>สมัครสมาชิกเจ้าของอพาร์ทเม้นนิติบุคคล</h6></td>
+      </tr>
+    <tr>
     <tr height="2" >
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6"><h6>Username-Password<h6></td>
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"><h6>Username-Password<h6></td>
     </tr>
     <tr>
       <td align="right"><h6>Username : <h6></td>
@@ -180,22 +215,9 @@
       <td align="right"><h6>RePassword : <h6></td>
       <td><input type="password" name="txt_repass" class="txt_repass"></td>
     </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><input type="submit" name="btn_submit" class="btn_submit" value="Submit">
-        <input type="reset" name="btn_cancle" class="btn_cancle" value="Cancle"></td>
-    </tr>
-  </table></div>
-  <div id="box2" style="visibility:hidden; display:none;">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
-<tr>
-      <td colspan="2" align="center" valign="middle"><h6>สมัครสมาชิกเจ้าของอพาร์ทเม้นนิติบุคคล</h6></td>
-      </tr>
-    <tr>
-    
     <tr height="2" >
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6"><h6>Personal information<h6></td>
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"><h6>Personal information<h6></td>
     </tr>
       <td align="right"><h6>Name : <h6></td>
       <td width="70%"><input type="text" name="txt_name" class="txt_name"></td>
@@ -256,8 +278,8 @@
       <td valign="middle"><input type="text" name="txt_fax" class="txt_fax"></td>
     </tr>
     <tr height="2" >
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6"><h6>Company information<h6></td>
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"><h6>Company information<h6></td>
     </tr>
     <tr height="2" >
       <td height="2" align="right"><h6>Type :<h6></td>
@@ -279,8 +301,25 @@
       <td height="2" ><input type="text" name="txt_capital" class="txt_registered_capital"></td>
     </tr>
     <tr height="2" >
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6"><h6>Username-Password<h6></td>
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"></td>
+    </tr> 
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="btn_submit" class="btn_submit" value="Submit">
+        <input type="reset" name="btn_cancle" class="btn_cancle" value="Cancle"></td>
+    </tr>
+  </table></div>
+  <!--BOX3---------------------------------------------------------------------------->
+
+   <div id="box3" style="visibility:hidden; display:none;">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
+<tr>
+      <td colspan="2" align="center" valign="middle"><h6>สมัครสมาชิกเจ้าของอพาร์ทเม้น</h6></td>
+      </tr>
+      <tr height="2" >
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"><h6>Username-Password<h6></td>
     </tr>
     <tr>
       <td align="right"><h6>Username : <h6></td>
@@ -294,20 +333,9 @@
       <td align="right"><h6>RePassword : <h6></td>
       <td><input type="password" name="txt_repass" class="txt_repass"></td>
     </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><input type="submit" name="btn_submit" class="btn_submit" value="Submit">
-        <input type="reset" name="btn_cancle" class="btn_cancle" value="Cancle"></td>
-    </tr>
-  </table></div>
-   <div id="box3" style="visibility:hidden; display:none;">
- <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableregister">
-<tr>
-      <td colspan="2" align="center" valign="middle"><h6>สมัครสมาชิกเจ้าของอพาร์ทเม้น</h6></td>
-      </tr>
       <tr height="2" >
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6"><h6>Personal information
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"><h6>Personal information
         <h6></td>
     </tr>
     <tr>   
@@ -369,29 +397,17 @@
       <td valign="middle"><input type="text" name="txt_fax" class="txt_fax"></td>
     </tr>
     <tr height="2" >
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6"><h6>Company Infomation<h6></td>
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"><h6>Company Infomation<h6></td>
       <tr>
       <td align="right"><h6>Name : <h6></td>
       <td valign="middle"><input name="txt_company_name" type="text" class="txt_company_name" maxlength="100"></td>
     </tr>
     </tr>
     <tr height="2" >
-      <td height="2" bgcolor="#D6D6D6">&nbsp;</td>
-      <td height="2" bgcolor="#D6D6D6"><h6>Username-Password<h6></td>
-    </tr>
-    <tr>
-      <td align="right"><h6>Username : <h6></td>
-      <td><input type="text" name="txt_user" class="txt_user"></td>
-    </tr>
-    <tr>
-      <td align="right"><h6>Password : <h6></td>
-      <td><input type="password" name="txt_pass" class="txt_pass"></td>
-    </tr>
-     <tr>
-      <td align="right"><h6>RePassword : <h6></td>
-      <td><input type="password" name="txt_repass" class="txt_repass"></td>
-    </tr>
+      <td height="2" bgcolor="#E3E3E3">&nbsp;</td>
+      <td height="2" bgcolor="#E3E3E3"></td>
+    </tr> 
     <tr>
       <td>&nbsp;</td>
       <td><input type="submit" name="btn_submit" class="btn_submit" value="Submit">
