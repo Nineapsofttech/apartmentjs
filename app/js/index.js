@@ -455,16 +455,17 @@ $('.txt_user').focusout(
 function()
 {
   var ele =document.getElementsByClassName('txt_user')[user-1];
-$.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},function(data,status){
+$.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},
+ function(data,status){
   if(data!="") 
     $(ele).attr("style","border-color:green");
      else 
       $(ele).attr("style","border-color:red"); 
-  
+
 
 }
   );
-
+});
 
 $(".btn_submit").on('click',function(){
 
