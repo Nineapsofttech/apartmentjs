@@ -30,6 +30,10 @@ exports.add = function(req,res){
   user.mobile = req.query.mobile.split(',');
   user.fax = req.query.fax;
   user.active=0;
+  user.company=req.query.fax,
+  user.regisnum=req.query.fax,
+  user.capital=req.query.fax,
+  user.companyname=req.query.fax,
 
    console.log(user);
 
