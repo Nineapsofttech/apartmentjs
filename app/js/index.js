@@ -457,10 +457,15 @@ function()
   var ele =document.getElementsByClassName('txt_user')[user-1];
 $.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},
  function(data,status){
-  if(data!="") 
-    $(ele).attr("style","border-color:green");
+  if(data!="") {
+    $(ele).attr("style","border-color:red");
+    $(ele).append('<p><font color="red">  มีชื่อผู้ใช้นี้แล้ว</font></p>');
+  }
      else 
-      $(ele).attr("style","border-color:red"); 
+     {
+      $(ele).attr("style","border-color:green"); 
+      $(ele).html("");
+    }
 
 
 }
