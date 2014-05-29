@@ -458,7 +458,7 @@ var tel = document.getElementByClassName('txt_tel')[0].value;
 var mobile = document.getElementByClassName('txt_tel_mobile')[0].value;
 var fax = document.getElementByClassName('txt_fax')[0].value;
 var username = document.getElementByClassName('txt_user')[0].value;
-var passwd = MD5(document.getElementByClassName('txt_pass')[0].value;)
+var passwd = MD5(document.getElementByClassName('txt_pass')[0].value);
 
  $.post("/adduser",
     {
