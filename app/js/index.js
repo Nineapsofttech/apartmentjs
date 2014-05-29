@@ -451,6 +451,11 @@ else if(window.location.pathname=="/first_step.html")
                   ele =  document.getElementsByClassName('box')[firststep];
                    $(ele).attr("style","display:block");
                   }
+                  else 
+                  {
+
+                    window.location.pathname="/index.htnl";
+                  }
 }
 });
 
@@ -534,12 +539,13 @@ var companyname = document.getElementsByClassName('txt_company_name')[0].value;
 }
 else if(window.location.pathname=="/first_step.html"){
 $('.btn_submit').on('click',function(){
+  if(firststep!=4){
  var ele =  document.getElementsByClassName('box')[firststep];
  $(ele).attr("style","display:none");
 firststep++;
 ele =  document.getElementsByClassName('box')[firststep];
  $(ele).attr("style","display:block");
-
+}
 });
 }
 });
