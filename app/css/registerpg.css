@@ -238,7 +238,13 @@
         font-size: 2em; } }
 
 #plus {
-  display: inline; }
+  display: inline;
+  width: 4em;
+  height: auto; }
+  @media screen and (min-width: 1024px) {
+    #plus {
+      width: 1em;
+      height: auto; } }
   #plus img {
     width: 4em;
     height: auto;
