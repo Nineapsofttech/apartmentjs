@@ -454,7 +454,7 @@ company =companytype;
 $('.txt_user').focusout(
 function()
 {
-$.get("/usercheck",{username:var username = document.getElementsByClassName('txt_user')[user-1].value;},function(data,status){alert(data);});
+$.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},function(data,status){alert(data);});
 
 }
   );
