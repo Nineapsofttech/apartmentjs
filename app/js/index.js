@@ -466,6 +466,16 @@ else if(window.location.pathname=="/first_step.html")
 /////////////////////////////////////////action handler/////////////////////////
 
 
+
+
+
+$('.plus_mobile').on("click",function(){
+
+  alert("plus");
+});
+
+
+
 function radiocheck(companytype)
 {
 company =companytype;
