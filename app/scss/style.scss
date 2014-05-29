@@ -108,7 +108,7 @@ width:auto;
             a{
                 @include media($large-screen) {
                 font-size: 1em;}
-                font-size: 3em;
+                font-size: 1.2em;
                 color: $footer-link-color;
                 padding-right:2em;
                 font-weight: 900;
@@ -706,6 +706,13 @@ margin-bottom:0.3em;
         width: 100%;
         height: auto;
         li {
+          a{
+            @include media($large-screen){
+
+              font-size: 1em;
+            } 
+            font-size: 4em;
+          }
         padding-bottom: 0.5em;
           }
 
