@@ -137,6 +137,14 @@ $large-screen:1024px;
         	margin: 0.5em;
 
         }
+        h5{
+        	@extend h6;
+        	color: red;
+        	@include media($large-screen) {
+        		font-size: 0.8em;
+        	}
+        	font-size: 1.5em;
+        }
         
 
         	input {
