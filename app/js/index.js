@@ -442,7 +442,7 @@ $("#box2").attr("style","display:none");
 $("#box3").attr("style","display:none");
 $("#selector").attr("style","display:block");
 }
-else if(window.location,pathname=="/first_step.html")
+else if(window.location.pathname=="/first_step.html")
 {
   if(firststep!=0){
                    var ele =  document.getElementsByClassName('box')[firststep];
