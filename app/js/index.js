@@ -471,7 +471,7 @@ document.getElementsByClassName("box_end")[document.getElementsByClassName("box_
 
 /////////////////////////////////////////action handler/////////////////////////
 
-
+$('.minus_mobile').on("click",remove_service);
 
 
 
@@ -479,7 +479,7 @@ $('.plus_mobile').on("click",function(){
 if(window.location.pathname=="/first_step.html")
 {
 
-    $(".ser_box").append('<tr class="ser_name"><td width="30%" align="right"><h6>Name of Service:</h6></td> <td width="70%"><input name="txt_name_service" type="text" size="20" maxlength="100" width="80%" class="name_service"></td></tr><tr class="ser_fee"><td align="right"><h6>Fee :</h6></td><td><input name="txt_fee" type="text" size="20" maxlength="100" width="80%" class="fee_service" placeholder="unit"></td></tr><tr class="ser_tax"><td align="right"><h6>Tax :</h6></td><td><input name="txt_tax" type="text" maxlength="10" class="fee_service" placeholder="%"></td></tr> <tr class="ser_detail"><td align="right" class="ser_detail"><h6>Detail :</h6></td><td><textarea name="txt_service_detail" rows="6" class="detail_service"></textarea></td></tr><tr class="box_end"><td colspan="2" align="right" bgcolor="#E3E3E3" height="10px"></td></tr>');
+    $(".ser_box").append('tr><td colspan="2" align="center"><h6>Service No. '+document.getElementsByClassName("ser_name").length+'</h6><div id="minus"><img src="img/icon/minus-icon.gif" class="minus_mobile"></div></td></tr><tr class="ser_name"><td width="30%" align="right"><h6>Name of Service:</h6></td> <td width="70%"><input name="txt_name_service" type="text" size="20" maxlength="100" width="80%" class="name_service"></td></tr><tr class="ser_fee"><td align="right"><h6>Fee :</h6></td><td><input name="txt_fee" type="text" size="20" maxlength="100" width="80%" class="fee_service" placeholder="unit"></td></tr><tr class="ser_tax"><td align="right"><h6>Tax :</h6></td><td><input name="txt_tax" type="text" maxlength="10" class="fee_service" placeholder="%"></td></tr> <tr class="ser_detail"><td align="right" class="ser_detail"><h6>Detail :</h6></td><td><textarea name="txt_service_detail" rows="6" class="detail_service"></textarea></td></tr><tr class="box_end"><td colspan="2" align="right" bgcolor="#E3E3E3" height="10px"></td></tr>');
 }
 
 
