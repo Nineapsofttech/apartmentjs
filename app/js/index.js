@@ -469,7 +469,7 @@ document.getElementsByClassName("box_end")[pos].remove();
 document.getElementsByClassName("minus_btn")[pos-1].remove();
 }
 
- $('.minus_mobile').on('click',function(){alert($('.minus_mobile').index($(this)));});
+ $('.minus_mobile').bind('click',function(){alert($('.minus_mobile').index($(this)));});
 /////////////////////////////////////////action handler/////////////////////////
 
 var current_index=0;
