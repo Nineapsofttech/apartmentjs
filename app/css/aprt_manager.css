@@ -111,6 +111,26 @@ html, body {
           font-size: 1em;
           padding: 0.5em;
           margin: 0em; } }
+    .outer-container .layout-right-top .notification_left {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+      height: auto;
+      background-color: #777; }
+      @media screen and (min-width: 1024px) {
+        .outer-container .layout-right-top .notification_left {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%;
+          height: 10em;
+          background-color: #777;
+          overflow: scroll; }
+          .outer-container .layout-right-top .notification_left:last-child {
+            margin-right: 0; } }
+      .outer-container .layout-right-top .notification_left:last-child {
+        margin-right: 0; }
   .outer-container .layout-left-bot {
     margin: 0 0em 1em 0;
     height: auto;
