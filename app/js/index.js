@@ -659,7 +659,17 @@ $("#submit_btn").on('click',function(){
       window.localStorage.date = Date.now();
       $("#loginopen").html("Welcome "+window.localStorage.username);
       $("#loginopen").unbind();
-      hidelogin();
+      $("#submit_btn").blur();
+    $("#menutop").append("<a id='logout'>Logout</a>");
+    var logout = document.getElementById('logout');
+          $(logout).bind('click',function(){
+                    window.localStorage.username = "";
+                    window.localStorage.u_id = "";
+                    window.localStorage.date = "";
+                    $("#loginopen").html("Login");
+                      $("#loginopen").on("click",showlogin);
+
+                     });
       
     }
     else
