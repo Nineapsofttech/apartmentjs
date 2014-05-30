@@ -69,8 +69,15 @@ $(".auto_map_info iframe").attr("height","0px");
 $(".auto_map_info").attr("width","66%");
 $(".auto_map_info iframe").attr("width","66%");
 $("#loginopen").on("click",function(){
-$(".loginfrm").css("visibility","visible");
+  if($(".loginfrm").is(':visible'))
+  {
+showlogin();
+$("#username_txt").blur();
+  }
+  else{
+hidelogin();
 $("#username_txt").focus();
+}
 });
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////function zone////////////////////////////////////////
@@ -647,7 +654,7 @@ alert("click");
   var password = MD5($("#password_txt").val());
 
   $.get("/login",{username:username,secret:password},function(err,data){
-    if(data!=null)
+    if(data!="")
     {
       alert('login success');
     }
