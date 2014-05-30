@@ -537,15 +537,15 @@ $('.txt_user').focusout(
 $(".txt_pass").on("input",function(){
 if($(this).val()!= document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))].value)
  {
-  var repass  document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))];
+  var repass  =document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))];
   $(repass).attr("style","border-color:red");
-  $(this)..attr("style","border-color:red");
+  $(this).attr("style","border-color:red");
  }
  else
  {
-  var repass  document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))];
+  var repass = document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))];
   $(repass).attr("style","border-color:green");
-  $(this)..attr("style","border-color:green");
+  $(this).attr("style","border-color:green");
  }
 
 
@@ -553,16 +553,16 @@ if($(this).val()!= document.getElementsByClassName('txt_repass')[$('.txt_pass').
 $(".txt_repass").on("input",function(){
  if($(this).val()!= document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))].value)
   { 
-    var pass  document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))];
+    var pass = document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))];
   $(pass).attr("style","border-color:red");
-  $(this)..attr("style","border-color:red");
+  $(this).attr("style","border-color:red");
 
   }
 else
 {
- var pass  document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))];
+ var pass = document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))];
   $(pass).attr("style","border-color:green");
-  $(this)..attr("style","border-color:green");
+  $(this).attr("style","border-color:green");
 }
 });
 
