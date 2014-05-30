@@ -659,7 +659,7 @@ $("#submit_btn").on('click',function(){
     else
   
       {
-        alert((Date.now() +"    "+ window.location.date));
+        alert((Date.now()- window.localStorage.date));
   }
   });
 });
