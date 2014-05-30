@@ -12,6 +12,14 @@ var accept=0;
 ////////////////////////////////random img start///////////////////////////////////
 setInterval(function()
 {
+  if(window.location.pathname==="/manager_page.html")
+{
+  
+window.location.pathname="/manager_page.html";
+
+}
+
+
 $(".hero").fadeOut( 1500, function() {
 $(".hero").attr("style",'background:url("css/img/img'+count+'.jpg")');});
 $('.hero').css('display', 'block');
@@ -418,13 +426,7 @@ $(window).scroll(function() {
 
 
 
-    if(window.location.pathname==="/manager_page.html")
-{
-  setInterval(function(){
-window.location.pathname="/manager_page.html";
-}, 10000);
-}
-
+  
 
 
 
