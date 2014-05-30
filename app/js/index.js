@@ -535,11 +535,14 @@ $('.txt_user').focusout(
     });
 
 $(".txt_pass").on("input",function(){
- alert($(this).val());
+if($(this).val()!= document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))].value)
+  alert("notmatch");
+
 
 });
 $(".txt_repass").on("input",function(){
- alert($(this).val());
+ if($(this).val()!= document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))].value)
+  alert("notmatch");
 });
 
 
