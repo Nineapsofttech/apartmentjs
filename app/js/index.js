@@ -641,7 +641,7 @@ company =companytype;
 
 }
 
-$(".submit_btn").on('click',function(){
+$("#submit_btn").on('click',function(){
 
   var username = $("#username_txt").val();
   var password = MD5($("#password_txt").val());
