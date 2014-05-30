@@ -460,7 +460,7 @@ else if(window.location.pathname=="/first_step.html")
 
 function remove_service(ele)
 {
- var pos = $(ele).index($(this))+1;
+ var pos = $(ele).index($(this))+2;
 document.getElementsByClassName("ser_name")[pos].remove();
 document.getElementsByClassName("ser_fee")[pos].remove();
 document.getElementsByClassName("ser_tax")[pos].remove();
