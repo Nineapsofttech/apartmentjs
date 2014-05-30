@@ -646,8 +646,8 @@ $("#submit_btn").on('click',function(){
   var username = $("#username_txt").val();
   var password = MD5($("#password_txt").val());
 
-  $.get("/login",{username:username,secret:password},function(err,data){
-    alert(data);
+  $.get("/login",{username:username,secret:password},function(data,status){
+    //alert(data);
     if(data!="")
     {
       alert('login success');
