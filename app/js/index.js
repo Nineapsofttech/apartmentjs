@@ -508,6 +508,9 @@ else
   });
 
 
+$('#txt_zipcode1').on('input',function(){fetchzip($('#txt_zipcode1'));});
+$('#txt_zipcode2').on('input',function(){fetchzip($('#txt_zipcode2'));});
+$('#txt_zipcode3').on('input',function(){fetchzip($('#txt_zipcode3'));});
 
 }
 
@@ -639,35 +642,6 @@ ele =  document.getElementsByClassName('box')[firststep];
 
 }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
