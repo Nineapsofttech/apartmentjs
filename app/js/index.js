@@ -650,9 +650,9 @@ $("#submit_btn").on('click',function(){
     //alert(data);
     if(data!="")
     {
-      document.cookie.username = data[0].username;
-      document.cookie.u_id = data[0]._id;
-      alert(document.cookie.u_id);
+      window.localStorage.username = data[0].username;
+      window.localStorage.u_id = data[0]._id;
+      alert(window.localStorage.u_id);
     }
     else
   
