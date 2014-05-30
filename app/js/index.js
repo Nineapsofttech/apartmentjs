@@ -435,7 +435,7 @@ user=3;
 
 
 $(".btn_cancle").on('click',function(){
-  if(window.location.pathname=="/singup.html")
+  if(window.location.pathname=="/signup.html")
   {
 $("#box1").attr("style","display:none");
 $("#box2").attr("style","display:none");
@@ -478,32 +478,33 @@ function inputaction()
 {
 
   $('input[type=text]').unbind();
-  $('input[type=text]').bind("input",function(){
+  $('input[type=text]').bind("input",function()
+  {
 
-if($(this).val()=="")
-{
-  $(this).attr("style","border-color:red");
+    if($(this).val()=="")
+    {
+      $(this).attr("style","border-color:red");
 
-}
-else
-{
-  $(this).attr("style","border-color:green");
+    }
+    else
+    {
+      $(this).attr("style","border-color:green");
 
-}
-});
-   $('textarea').unbind();
- $('textarea').bind("input",function(){
+    }
+    });
+       $('textarea').unbind();
+     $('textarea').bind("input",function(){
 
-if($(this).val()=="")
-{
-  $(this).attr("style","border-color:red");
+    if($(this).val()=="")
+    {
+      $(this).attr("style","border-color:red");
 
-}
-else
-{
-  $(this).attr("style","border-color:green");
+    }
+    else
+    {
+      $(this).attr("style","border-color:green");
 
-}
+    }
 
   });
 
@@ -513,25 +514,25 @@ $('#txt_zipcode2').on('input',function(){fetchzip($('#txt_zipcode2'));});
 $('#txt_zipcode3').on('input',function(){fetchzip($('#txt_zipcode3'));});
 
 $('.txt_user').focusout(
-function()
-{
-  var ele =document.getElementsByClassName('txt_user')[user-1];
-$.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},
- function(data,status){
-  if(data!="") {
-    $(ele).attr("style","border-color:red");
-    $(".check_user").attr("style","visibility:visible;color:red;");
-  }
-     else 
-     {
-      $(ele).attr("style","border-color:green"); 
-          $(".check_user").attr("style","visibility:hidden");
+    function()
+    {
+      var ele =document.getElementsByClassName('txt_user')[user-1];
+    $.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},
+     function(data,status){
+      if(data!="") {
+        $(ele).attr("style","border-color:red");
+        $(".check_user").attr("style","visibility:visible;color:red;");
+      }
+         else 
+         {
+          $(ele).attr("style","border-color:green"); 
+              $(".check_user").attr("style","visibility:hidden");
+        }
+
+
     }
-
-
-}
-  );
-});
+      );
+    });
 
 $(".txt_pass").on("input",function(){
 alert($(".txt_pass").index($(this)));
