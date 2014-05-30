@@ -44,7 +44,7 @@ $(document).ready(function(){
 $(".sel_district").attr('disabled','disabled');
 $(".sel_provine").attr('disabled','disabled');
 $(".sel_amphures").attr('disabled','disabled');
-
+inputaction();
 
 //////////////////////////////Moblie controller/////////////////////////////////////////////////////////////////////////
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -474,7 +474,42 @@ document.getElementsByClassName("minus_btn")[pos-1].remove();
 // $('.minus_mobile').bind('click',function(){alert($('.minus_mobile').index($(this)));});
 /////////////////////////////////////////action handler/////////////////////////
 
+function inputaction()
+{
 
+  $('input[type=text]').unbind();
+  $('input[type=text]').bind("input",function(){
+
+if($(this).val()=="")
+{
+  $(this).attr("style","border-color:red");
+
+}
+else
+{
+  $(this).attr("style","border-color:green");
+
+}
+});
+   $('textarea').unbind();
+ $('textarea').bind("input",function(){
+
+if($(this).val()=="")
+{
+  $(this).attr("style","border-color:red");
+
+}
+else
+{
+  $(this).attr("style","border-color:green");
+
+}
+
+  });
+
+
+
+}
 
 
 $('.plus_mobile').on("click",function(){
@@ -515,7 +550,7 @@ if(window.location.pathname=="/first_step.html")
 
  
 }
-
+inputaction();
 
 });
 
@@ -606,36 +641,6 @@ ele =  document.getElementsByClassName('box')[firststep];
 });
 
 
-
-
-
-  $('input[type=text]').on("input",function(){
-
-if($(this).val()=="")
-{
-  $(this).attr("style","border-color:red");
-
-}
-else
-{
-  $(this).attr("style","border-color:green");
-
-}
-});
- $('textarea').on("input",function(){
-
-if($(this).val()=="")
-{
-  $(this).attr("style","border-color:red");
-
-}
-else
-{
-  $(this).attr("style","border-color:green");
-
-}
-
-  });
 
 
 
