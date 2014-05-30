@@ -641,12 +641,28 @@ company =companytype;
 
 }
 
+$(".submit_btn").on('click',function(){
+
+  var username = $("#username_txt").val();
+  var password = MD5($("#password_txt").val());
+
+  $.get("/login",{username:username,password:password},function(err,data){
+    if(data!=null)
+    {
+      alert('login success');
+    }
+    else
+  
+      {
+        alert('login fail');
+  }
+  });
+});
 
 $(".btn_submit").on('click',function(){
 if(window.location.pathname=="/signup.html"){
 
-if(accept==1)
-{
+
 var name = document.getElementsByClassName('txt_name')[user-1].value;
 var lastname = document.getElementsByClassName('txt_lastname')[user-1].value;
 var email = document.getElementsByClassName('txt_email')[user-1].value;
@@ -663,6 +679,13 @@ var passwd = MD5(document.getElementsByClassName('txt_pass')[user-1].value.toStr
 var regisnum =document.getElementsByClassName('txt_regis_no')[0].value; 
 var capital = document.getElementsByClassName('txt_registered_capital')[0].value; 
 var companyname = document.getElementsByClassName('txt_company_name')[0].value; 
+
+
+
+
+
+if(accept==1)
+{
 
  $.get("/adduser",
     {
