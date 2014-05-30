@@ -416,8 +416,9 @@ $(window).scroll(function() {
 
 ////////////////////////////////// page control ///////////////////////////////////
 
+
    setInterval(function(){
-    if(window.location.pathname=="/manage_page.html")
+    if(window.location.pathname==="/manage_page.html")
 {
 window.location.pathname="/manage_page.html";
 }}, 10000);
