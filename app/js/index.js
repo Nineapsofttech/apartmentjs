@@ -453,13 +453,19 @@ else if(window.location.pathname=="/first_step.html")
                   }
                   else 
                   {
-
                     window.location.pathname="/index.html";
                   }
 }
 });
 
-
+function remove_service()
+{
+document.getElementsByClassName("ser_name")[document.getElementsByClassName("ser_name").length-1].remove();
+document.getElementsByClassName("ser_fee")[document.getElementsByClassName("ser_fee").length-1].remove();
+document.getElementsByClassName("ser_tax")[document.getElementsByClassName("ser_tax").length-1].remove();
+document.getElementsByClassName("ser_detail")[document.getElementsByClassName("ser_detail").length-1].remove();
+document.getElementsByClassName("box_end")[document.getElementsByClassName("box_end").length-1].remove();
+}
 
 
 
