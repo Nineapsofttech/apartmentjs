@@ -650,7 +650,9 @@ $("#submit_btn").on('click',function(){
     //alert(data);
     if(data!="")
     {
-      alert('login success');
+      document.cookie.username = data[0].username;
+      document.cookie.u_id = data[0]._id;
+      alert(document.cookie.u_id);
     }
     else
   
@@ -662,7 +664,7 @@ $("#submit_btn").on('click',function(){
 
 $(".btn_submit").on('click',function(){
 if(window.location.pathname=="/signup.html"){
-
+     alert(document.cookie.u_id);
 
 var name = document.getElementsByClassName('txt_name')[user-1].value;
 var lastname = document.getElementsByClassName('txt_lastname')[user-1].value;
