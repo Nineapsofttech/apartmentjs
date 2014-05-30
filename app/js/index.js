@@ -424,7 +424,7 @@ $(window).scroll(function() {
 window.location.pathname="/manager_page.html";
 }, 10000);
 }
-}
+};
 
 
 
