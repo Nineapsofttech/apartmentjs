@@ -108,13 +108,14 @@ $default-line:#79BD9A;
 			}
 			.layout-left-bot{
 				@include media($large-screen) {
-				@include span-columns(4);
+				@include span-columns(2);
 				margin: 0 1em 1em 0;
 				}
 				margin: 0 0em 1em 0;
 				height: $layout-bot-height;
 				background-color:#E6E6E6;
-				//border: 1px solid #000;
+				border: 1px dotted $default-line;
+					border-radius: 5px;
 					p{
 					@include media($large-screen) {
 						font-size: 1em;
@@ -129,14 +130,15 @@ $default-line:#79BD9A;
 				}
 			.layout-right-bot{
 				@include media($large-screen) {
-				@include span-columns(8);
+				@include span-columns(10);
 				@include omega();
 				margin: 0 0em 1em 0;
 				}
 				margin: 0 0em 1em 0;
 				height: $layout-bot-height;
 				background-color:#F2F2F2;
-				//border: 1px solid #000;
+				border: 1px dotted $default-line;
+					border-radius: 5px;
 				p{
 					@include media($large-screen) {
 						font-size: 1em;
