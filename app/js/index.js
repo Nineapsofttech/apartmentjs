@@ -535,10 +535,11 @@ $('.txt_user').focusout(
     });
 
 $(".txt_pass").on("input",function(){
-alert($(".txt_pass").index($(this)));
+ alert($(this).val());
+
 });
 $(".txt_repass").on("input",function(){
-alert($(".txt_repass").index($(this)));
+ alert($(this).val());
 });
 
 
