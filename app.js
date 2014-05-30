@@ -27,6 +27,7 @@ app.all('http://apsoftapi.no-ip.org', function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next();
  });
+app.get("/login",user.login);
 app.get('/usercheck',user.check);
 app.get('/adduser',user.add);
 app.get('/', function (req, res) {
