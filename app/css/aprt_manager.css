@@ -145,6 +145,18 @@ html, body {
         margin: 0 1em 1em 0; }
         .outer-container .layout-left-bot:last-child {
           margin-right: 0; } }
+    .outer-container .layout-left-bot p.main_menu_head {
+      display: block;
+      text-align: center;
+      border-bottom: 1px dotted #79bd9a;
+      font-size: 3em;
+      padding: 0.5em;
+      margin: 0em; }
+      @media screen and (min-width: 1024px) {
+        .outer-container .layout-left-bot p.main_menu_head {
+          font-size: 1em;
+          padding: 0.5em;
+          margin: 0em; } }
     .outer-container .layout-left-bot p.main_menu_left {
       display: inline;
       font-size: 2em;
@@ -152,7 +164,7 @@ html, body {
       margin: 0em; }
       @media screen and (min-width: 1024px) {
         .outer-container .layout-left-bot p.main_menu_left {
-          display: box-inline;
+          display: block;
           font-size: 1em;
           padding: 0.5em;
           margin: 0em; } }
