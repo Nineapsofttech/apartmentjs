@@ -107,7 +107,9 @@ $default-line:#79BD9A;
 				p.content_notification{
 						@extend p.notification_head;
 						padding: 0em 0.5em 0em 0.5em ;
+						
 					}
+
 
 				.notification_left{
 					@include media($large-screen) {
@@ -115,12 +117,15 @@ $default-line:#79BD9A;
 					height: ($layout-top-height)-3em;
 					overflow: auto;
 					margin: 0em;
+					border-bottom:0px;
 					}
+					border-bottom:1px dotted $default-line;
 					height: auto;
 
 				}
 				.notification_right{
 					@extend .notification_left;
+					border-bottom:0px;
 				}
 			}
 			.layout-left-bot{
