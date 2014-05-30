@@ -114,10 +114,13 @@ $default-line:#79BD9A;
 					@include span-columns(6);
 					height: ($layout-top-height)-3em;
 					overflow: auto;
-
+					margin: 0em;
 					}
 					height: auto;
 
+				}
+				.notification_right{
+					@extend .notification_left;
 				}
 			}
 			.layout-left-bot{
