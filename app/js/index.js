@@ -435,7 +435,7 @@ user=3;
 
 
 $(".btn_cancle").on('click',function(){
-  if(window.location.pathname=="/signup.html")
+  if(window.location.pathname=="/singup.html")
   {
 $("#box1").attr("style","display:none");
 $("#box2").attr("style","display:none");
