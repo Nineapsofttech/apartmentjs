@@ -512,6 +512,27 @@ $('#txt_zipcode1').on('input',function(){fetchzip($('#txt_zipcode1'));});
 $('#txt_zipcode2').on('input',function(){fetchzip($('#txt_zipcode2'));});
 $('#txt_zipcode3').on('input',function(){fetchzip($('#txt_zipcode3'));});
 
+$('.txt_user').focusout(
+function()
+{
+  var ele =document.getElementsByClassName('txt_user')[user-1];
+$.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},
+ function(data,status){
+  if(data!="") {
+    $(ele).attr("style","border-color:red");
+    $(".check_user").attr("style","visibility:visible;color:red;");
+  }
+     else 
+     {
+      $(ele).attr("style","border-color:green"); 
+          $(".check_user").attr("style","visibility:hidden");
+    }
+
+
+}
+  );
+});
+
 }
 
 
@@ -564,26 +585,7 @@ function radiocheck(companytype)
 company =companytype;
 
 }
-$('.txt_user').focusout(
-function()
-{
-  var ele =document.getElementsByClassName('txt_user')[user-1];
-$.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1].value},
- function(data,status){
-  if(data!="") {
-    $(ele).attr("style","border-color:red");
-    $(".check_user").attr("style","visibility:visible;color:red;");
-  }
-     else 
-     {
-      $(ele).attr("style","border-color:green"); 
-          $(".check_user").attr("style","visibility:hidden");
-    }
 
-
-}
-  );
-});
 
 $(".btn_submit").on('click',function(){
 if(window.location.pathname=="/signup.html"){
