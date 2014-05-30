@@ -113,17 +113,18 @@ html, body {
           margin: 0em; } }
     .outer-container .layout-right-top p.content_notification {
       padding: 0em 0.5em 0em 0.5em; }
-    .outer-container .layout-right-top .notification_left {
+    .outer-container .layout-right-top .notification_left, .outer-container .layout-right-top .notification_right {
       height: auto; }
       @media screen and (min-width: 1024px) {
-        .outer-container .layout-right-top .notification_left {
+        .outer-container .layout-right-top .notification_left, .outer-container .layout-right-top .notification_right {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 48.82117%;
           height: 7em;
-          overflow: auto; }
-          .outer-container .layout-right-top .notification_left:last-child {
+          overflow: auto;
+          margin: 0em; }
+          .outer-container .layout-right-top .notification_left:last-child, .outer-container .layout-right-top .notification_right:last-child {
             margin-right: 0; } }
   .outer-container .layout-left-bot {
     margin: 0 0em 1em 0;
