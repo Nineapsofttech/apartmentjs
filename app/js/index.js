@@ -472,7 +472,7 @@ document.getElementsByClassName("minus_btn")[pos-1].remove();
 
 /////////////////////////////////////////action handler/////////////////////////
 
-var = current_index=0;
+var current_index=0;
 
 
 $('.plus_mobile').on("click",function(){
