@@ -13,7 +13,7 @@ exports.check = function(req,res)
 
 exports.login = function(req,res)
 {
-User.find({username:req.query.username,passwd:req.query.secret}).exec(function(err.result){res.send(result);});
+User.find({username:req.query.username,passwd:req.query.secret}).exec(function(err,result){res.send(result);});
 
 }
 
