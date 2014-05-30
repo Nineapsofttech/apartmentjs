@@ -9,6 +9,7 @@ var user = 0;
 var firststep=0;
 var company;
 var accept=0;
+var currentdate = Date.now();
 ////////////////////////////////random img start///////////////////////////////////
 setInterval(function()
 {
@@ -652,12 +653,13 @@ $("#submit_btn").on('click',function(){
     {
       window.localStorage.username = data[0].username;
       window.localStorage.u_id = data[0]._id;
-      alert(window.localStorage.u_id);
+      window.localStorage.date = Date.now();
+      alert(window.localStorage.u_id+"  "+window.localStorage.date);
     }
     else
   
       {
-        alert('login fail');
+        alert(window.location.date - currentdate);
   }
   });
 });
