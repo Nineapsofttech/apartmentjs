@@ -168,6 +168,8 @@ html, body {
           font-size: 1em;
           padding: 0.5em;
           margin: 0em; } }
+      .outer-container .layout-left-bot p.main_menu_left:hover {
+        color: rgba(0, 0, 0, 0.4); }
   .outer-container .layout-right-bot {
     margin: 0 0em 1em 0;
     height: auto;
