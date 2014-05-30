@@ -16,34 +16,86 @@ $layout-bot-height:auto;
 		
 	background-color:#FFF;
 	
-			.layout-left-top{@include media($large-screen) {
-			@include span-columns(4);
+			.layout-left-top{
+				@include media($large-screen) {
+				@include span-columns(4);
+				height: $layout-top-height;
+				}
+				
+				background-color:#E6E6E6;
+				height: auto;
+				border: 1px solid #000;
 
-			}
-			background-color:#E6E6E6;
-			height: $layout-top-height;
+				p{
+					@include media($large-screen) {
+						font-size: 1em;
+						padding: 0.5em ;
+						margin: 0em;
+					}
+						font-size: 2em;
+						padding: 0.5em ;
+						margin: 0em;
+				}
 			}
 			.layout-right-top{
 				@include media($large-screen) {
 				@include span-columns(8);
 				@include omega();
+				height: $layout-top-height;
 				}
-			height: $layout-top-height;
-			background-color:#F2F2F2;
+				height: auto;
+				background-color:#F2F2F2;
+				border: 1px solid #000;
+
+				p{
+					@include media($large-screen) {
+						font-size: 1em;
+						padding: 0.5em ;
+						margin: 0em;
+					}
+						font-size: 2em;
+						padding: 0.5em ;
+						margin: 0em;
+				}
+
 			}
-			.layout-left-bot{@include media($large-screen) {
-			@include span-columns(4);
-			}
-			height: $layout-bot-height;
-			background-color:#E6E6E6;
-			}
+			.layout-left-bot{
+				@include media($large-screen) {
+				@include span-columns(4);
+				}
+				height: $layout-bot-height;
+				background-color:#E6E6E6;
+				border: 1px solid #000;
+					p{
+					@include media($large-screen) {
+						font-size: 1em;
+						padding: 0.5em ;
+						margin: 0em;
+					}
+						font-size: 2em;
+						padding: 0.5em ;
+						margin: 0em;
+				}
+
+				}
 			.layout-right-bot{
 				@include media($large-screen) {
 				@include span-columns(8);
 				@include omega();
 				}
 				height: $layout-bot-height;
-			background-color:#F2F2F2;
+				background-color:#F2F2F2;
+				border: 1px solid #000;
+				p{
+					@include media($large-screen) {
+						font-size: 1em;
+						padding: 0.5em ;
+						margin: 0em;
+					}
+						font-size: 2em;
+						padding: 0.5em ;
+						margin: 0em;
+				}
 			}
 	
 }
