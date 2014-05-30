@@ -71,11 +71,11 @@ $(".auto_map_info iframe").attr("width","66%");
 $("#loginopen").on("click",function(){
   if($(".loginfrm").is(':visible'))
   {
-showlogin();
+hidelogin();
 $("#username_txt").blur();
   }
   else{
-hidelogin();
+showlogin();
 $("#username_txt").focus();
 }
 });
