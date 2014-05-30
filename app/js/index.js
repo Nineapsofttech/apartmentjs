@@ -81,10 +81,13 @@ function showlogin(){$(".loginfrm").css("visibility","visible");};
 function hidelogin(){$(".loginfrm").css("visibility","hidden");};
 /////////////////////////////////////////////////////////////////////////////////////////
 
-//$("#password_txt").focus(showlogin);
-//$("#username_txt").focus(showlogin);
-//$("#password_txt").focusout(hidelogin);
-//$("#username_txt").focusout(hidelogin);
+$("#password_txt").focus(showlogin);
+$("#username_txt").focus(showlogin);
+$("#password_txt").focusout(hidelogin);
+$("#username_txt").focusout(hidelogin);
+$("#submit_btn").focus(showlogin);
+$("#submit_btn").focusout(hidelogin);
+
 $("#search_txt").focusout(function(){if(flag==0){minimizemap(); $("#menu_index").show();}});
 $("#search_txt").on("click",function(){expandmap(); $("#menu_index").hide();});
 $(".content1").on({
@@ -656,11 +659,13 @@ $("#submit_btn").on('click',function(){
       window.localStorage.date = Date.now();
       $("#loginopen").html("Welcome "+window.localStorage.username);
       $("#loginopen").unbind();
+      hidelogin();
       
     }
     else
   
       {
+        showlogin();
         alert("please Check username and password");
   }
   });
