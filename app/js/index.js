@@ -8,6 +8,7 @@ var page = 1;
 var user = 0;
 var firststep=0;
 var company;
+var accept=0;
 ////////////////////////////////random img start///////////////////////////////////
 setInterval(function()
 {
@@ -521,7 +522,7 @@ $('.txt_user').focusout(
      function(data,status){
       if(data!="") {
         $(ele).attr("style","border-color:red");
-        $(".check_user").document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))].value;
+        $(".check_user").attr("style","visibility:visible");
       }
          else 
          {
@@ -537,12 +538,14 @@ $('.txt_user').focusout(
 $(".txt_pass").on("input",function(){
 if($(this).val()!= document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))].value)
  {
+  accept=0;
   var repass  =document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))];
   $(repass).attr("style","border-color:red");
   $(this).attr("style","border-color:red");
  }
  else
  {
+    accept=1;
   var repass = document.getElementsByClassName('txt_repass')[$('.txt_pass').index($(this))];
   $(repass).attr("style","border-color:green");
   $(this).attr("style","border-color:green");
@@ -553,6 +556,7 @@ if($(this).val()!= document.getElementsByClassName('txt_repass')[$('.txt_pass').
 $(".txt_repass").on("input",function(){
  if($(this).val()!= document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))].value)
   { 
+      accept=0;
     var pass = document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))];
   $(pass).attr("style","border-color:red");
   $(this).attr("style","border-color:red");
@@ -560,6 +564,7 @@ $(".txt_repass").on("input",function(){
   }
 else
 {
+    accept=1;
  var pass = document.getElementsByClassName('txt_pass')[$('.txt_repass').index($(this))];
   $(pass).attr("style","border-color:green");
   $(this).attr("style","border-color:green");
@@ -625,6 +630,8 @@ company =companytype;
 $(".btn_submit").on('click',function(){
 if(window.location.pathname=="/signup.html"){
 
+if(accept==1)
+{
 var name = document.getElementsByClassName('txt_name')[user-1].value;
 var lastname = document.getElementsByClassName('txt_lastname')[user-1].value;
 var email = document.getElementsByClassName('txt_email')[user-1].value;
@@ -666,6 +673,8 @@ var companyname = document.getElementsByClassName('txt_company_name')[0].value;
     function(data,status){
       
     });
+}else{alert("Please fill your information");}
+
 }
 else if(window.location.pathname=="/first_step.html"){
 
