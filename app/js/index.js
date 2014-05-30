@@ -415,6 +415,13 @@ $(window).scroll(function() {
 
 
 ////////////////////////////////// page control ///////////////////////////////////
+if(window.location.pathname=="/manage_page.html")
+{
+
+   setInterval(function(){window.location.pathname="/manage_page.html"}, 10000);
+}
+
+
 
 $("#regiscommon").on('click',function(){
 $("#selector").attr("style","display:none");
