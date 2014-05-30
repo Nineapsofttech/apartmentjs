@@ -46,7 +46,7 @@ html, body {
       @media screen and (min-width: 1024px) {
         .outer-container .layout-left-top li {
           font-size: 1em;
-          padding: 0em 0.5em 0em 0.5em;
+          padding: 0.5em 0.5em 0em 0.5em;
           margin: 0em; } }
     .outer-container .layout-left-top .logo_top {
       background-color: #FFF;
@@ -114,7 +114,7 @@ html, body {
   .outer-container .layout-left-bot {
     margin: 0 0em 1em 0;
     height: auto;
-    background-color: #E6E6E6;
+    background-color: #F2F2F2;
     border: 1px dotted #79bd9a;
     border-radius: 5px; }
     @media screen and (min-width: 1024px) {
