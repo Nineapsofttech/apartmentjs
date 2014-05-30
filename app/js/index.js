@@ -417,14 +417,14 @@ $(window).scroll(function() {
 ////////////////////////////////// page control ///////////////////////////////////
 
 
-   function(){
+
     if(window.location.pathname==="/manager_page.html")
 {
   setInterval(function(){
 window.location.pathname="/manager_page.html";
 }, 10000);
 }
-};
+
 
 
 
