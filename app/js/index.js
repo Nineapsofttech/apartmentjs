@@ -458,9 +458,9 @@ else if(window.location.pathname=="/first_step.html")
 }
 });
 
-function remove_service(ele)
+function remove_service(pos)
 {
- var pos = $(ele).index($(this))+2;
+ 
 document.getElementsByClassName("ser_name")[pos].remove();
 document.getElementsByClassName("ser_fee")[pos].remove();
 document.getElementsByClassName("ser_tax")[pos].remove();
@@ -486,7 +486,7 @@ if(window.location.pathname=="/first_step.html")
   
    $.each( btn_ele, function( key, value ) {
   $(btn_ele[key]).unbind();
-    $(btn_ele[key]).bind('click',function(){alert(key)});
+    $(btn_ele[key]).bind('click',function(){remove_service(key);});
 });
   
 
