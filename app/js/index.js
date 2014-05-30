@@ -668,7 +668,7 @@ $("#submit_btn").on('click',function(){
                     window.localStorage.date = "";
                     $("#loginopen").html("Login");
                       $("#loginopen").on("click",showlogin);
-                      logout.remove();
+                    document.getElementById('logout').remove();
                      });
       
     }
