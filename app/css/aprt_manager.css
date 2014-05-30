@@ -1,0 +1,24 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: wdb_bangnaregular;
+  font-weight: 400;
+  background-color: #FFF;
+  color: #000;
+  height: auto;
+  width: auto; }
+
+.outer-container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #E3E3E3; }
+  .outer-container:after {
+    content: "";
+    display: table;
+    clear: both; }
