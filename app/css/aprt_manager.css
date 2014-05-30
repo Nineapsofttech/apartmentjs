@@ -4,20 +4,62 @@
   box-sizing: border-box; }
 
 html, body {
-  margin: 0px;
-  padding: 0px;
-  font-family: wdb_bangnaregular;
-  font-weight: 400;
-  background-color: #FFF;
-  color: #000;
-  height: auto;
-  width: auto; }
+  font-family: wdb_bangnaregular; }
 
 .outer-container {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-  background-color: #E3E3E3; }
-  .outer-container:last-child {
-    margin-right: 0; }
+  background-color: #FFF; }
+  @media screen and (min-width: 1024px) {
+    .outer-container {
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto; }
+      .outer-container:after {
+        content: "";
+        display: table;
+        clear: both; } }
+  .outer-container .layout-left-top {
+    background-color: #E6E6E6;
+    height: 10em; }
+    @media screen and (min-width: 1024px) {
+      .outer-container .layout-left-top {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .outer-container .layout-left-top:last-child {
+          margin-right: 0; } }
+  .outer-container .layout-right-top {
+    height: 10em;
+    background-color: #F2F2F2; }
+    @media screen and (min-width: 1024px) {
+      .outer-container .layout-right-top {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        margin-right: 0; }
+        .outer-container .layout-right-top:last-child {
+          margin-right: 0; } }
+  .outer-container .layout-left-bot {
+    height: auto;
+    background-color: #E6E6E6; }
+    @media screen and (min-width: 1024px) {
+      .outer-container .layout-left-bot {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .outer-container .layout-left-bot:last-child {
+          margin-right: 0; } }
+  .outer-container .layout-right-bot {
+    height: auto;
+    background-color: #F2F2F2; }
+    @media screen and (min-width: 1024px) {
+      .outer-container .layout-right-bot {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        margin-right: 0; }
+        .outer-container .layout-right-bot:last-child {
+          margin-right: 0; } }

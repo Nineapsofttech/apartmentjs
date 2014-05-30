@@ -1,18 +1,53 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+$large-screen:1024px;
+$layout-top-height:10em;
+$layout-bot-height:auto;
 //----------------------------------------------------------------------------------------------------------
 	html, body{
-			margin:0px;
-			padding:0px;
 			font-family:wdb_bangnaregular;
-			font-weight:400;
-			background-color:#FFF;
-			color:#000;
-			height:auto;
-			width:auto;
+
 		}
 .outer-container{
-	@include span-columns(12);
-	background-color:#E3E3E3;
+	@include media($large-screen) {
+		@include outer-container;
+		}
+
+		
+	background-color:#FFF;
+	
+			.layout-left-top{@include media($large-screen) {
+			@include span-columns(4);
+
+			}
+			background-color:#E6E6E6;
+			height: $layout-top-height;
+			}
+			.layout-right-top{
+				@include media($large-screen) {
+				@include span-columns(8);
+				@include omega();
+				}
+			height: $layout-top-height;
+			background-color:#F2F2F2;
+			}
+			.layout-left-bot{@include media($large-screen) {
+			@include span-columns(4);
+			}
+			height: $layout-bot-height;
+			background-color:#E6E6E6;
+			}
+			.layout-right-bot{
+				@include media($large-screen) {
+				@include span-columns(8);
+				@include omega();
+				}
+				height: $layout-bot-height;
+			background-color:#F2F2F2;
+			}
+	
 }
+
+
+
 //----------------------------------------------------------------------------------------------------------
