@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 html, body {
-  font-family: wdb_bangnaregular; }
+  font-family: wdb_bangnaregular;
+  overflow: hidden; }
 
 .outer-container {
   background-color: #FFF; }
@@ -97,40 +98,33 @@ html, body {
         display: block;
         margin-right: 2.35765%;
         width: 65.88078%;
-        margin-right: 0;
         height: 10em;
         margin: 0 0 1em 0; }
         .outer-container .layout-right-top:last-child {
           margin-right: 0; } }
-    .outer-container .layout-right-top p {
+    .outer-container .layout-right-top p.notification_head, .outer-container .layout-right-top p.content_notification {
       font-size: 2em;
-      padding: 0.5em;
+      padding: 0.5em 0.5em 0 0.5em;
       margin: 0em; }
       @media screen and (min-width: 1024px) {
-        .outer-container .layout-right-top p {
+        .outer-container .layout-right-top p.notification_head, .outer-container .layout-right-top p.content_notification {
           font-size: 1em;
-          padding: 0.5em;
+          padding: 0.5em 0.5em 0 0.5em;
           margin: 0em; } }
+    .outer-container .layout-right-top p.content_notification {
+      padding: 0em 0.5em 0em 0.5em; }
     .outer-container .layout-right-top .notification_left {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      height: auto;
-      background-color: #777; }
+      height: auto; }
       @media screen and (min-width: 1024px) {
         .outer-container .layout-right-top .notification_left {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 48.82117%;
-          height: 10em;
-          background-color: #777;
-          overflow: scroll; }
+          height: 7em;
+          overflow: auto; }
           .outer-container .layout-right-top .notification_left:last-child {
             margin-right: 0; } }
-      .outer-container .layout-right-top .notification_left:last-child {
-        margin-right: 0; }
   .outer-container .layout-left-bot {
     margin: 0 0em 1em 0;
     height: auto;
