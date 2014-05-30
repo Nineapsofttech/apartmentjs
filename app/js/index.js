@@ -458,14 +458,14 @@ else if(window.location.pathname=="/first_step.html")
 }
 });
 
-function remove_service(pos)
+function remove_service()
 {
-document.getElementsByClassName("ser_name")[pos].remove();
-document.getElementsByClassName("ser_fee")[pos].remove();
-document.getElementsByClassName("ser_tax")[pos].remove();
-document.getElementsByClassName("ser_detail")[pos].remove();
-document.getElementsByClassName("box_end")[pos].remove();
-document.getElementsByClassName("minus_btn")[pos-1].remove();
+document.getElementsByClassName("ser_name")[document.getElementsByClassName("ser_name").length-1].remove();
+document.getElementsByClassName("ser_fee")[document.getElementsByClassName("ser_fee").length-1].remove();
+document.getElementsByClassName("ser_tax")[document.getElementsByClassName("ser_tax").length-1].remove();
+document.getElementsByClassName("ser_detail")[document.getElementsByClassName("ser_detail").length-1].remove();
+document.getElementsByClassName("box_end")[document.getElementsByClassName("box_end").length-1].remove();
+document.getElementsByClassName("minus_btn")[document.getElementsByClassName("minus_btn").length-1].remove();
 }
 
 
@@ -479,9 +479,9 @@ $('.plus_mobile').on("click",function(){
 if(window.location.pathname=="/first_step.html")
 {
 
-    $(".ser_box").append('<tr><td colspan="2" class="minus_btn" align="center"><h6>Service No. '+document.getElementsByClassName("ser_name").length+1+'</h6><div id="minus"><img src="img/icon/minus-icon.gif" class="minus_mobile"></div></td></tr><tr class="ser_name"><td width="30%" align="right"><h6>Name of Service:</h6></td> <td width="70%"><input name="txt_name_service" type="text" size="20" maxlength="100" width="80%" class="name_service"></td></tr><tr class="ser_fee"><td align="right"><h6>Fee :</h6></td><td><input name="txt_fee" type="text" size="20" maxlength="100" width="80%" class="fee_service" placeholder="unit"></td></tr><tr class="ser_tax"><td align="right"><h6>Tax :</h6></td><td><input name="txt_tax" type="text" maxlength="10" class="fee_service" placeholder="%"></td></tr> <tr class="ser_detail"><td align="right" ><h6>Detail :</h6></td><td><textarea name="txt_service_detail" rows="6" class="detail_service"></textarea></td></tr><tr class="box_end"><td colspan="2" align="right" bgcolor="#E3E3E3" height="10px"></td></tr>');
+    $(".ser_box").append('<tr><td colspan="2" class="minus_btn" align="center"><h6>Service No. '+document.getElementsByClassName("ser_name").length+'</h6><div id="minus"><img src="img/icon/minus-icon.gif" class="minus_mobile"></div></td></tr><tr class="ser_name"><td width="30%" align="right"><h6>Name of Service:</h6></td> <td width="70%"><input name="txt_name_service" type="text" size="20" maxlength="100" width="80%" class="name_service"></td></tr><tr class="ser_fee"><td align="right"><h6>Fee :</h6></td><td><input name="txt_fee" type="text" size="20" maxlength="100" width="80%" class="fee_service" placeholder="unit"></td></tr><tr class="ser_tax"><td align="right"><h6>Tax :</h6></td><td><input name="txt_tax" type="text" maxlength="10" class="fee_service" placeholder="%"></td></tr> <tr class="ser_detail"><td align="right" ><h6>Detail :</h6></td><td><textarea name="txt_service_detail" rows="6" class="detail_service"></textarea></td></tr><tr class="box_end"><td colspan="2" align="right" bgcolor="#E3E3E3" height="10px"></td></tr>');
    var btn_ele = document.getElementsByClassName("minus_mobile")[document.getElementsByClassName("minus_mobile").length-1];
-   $(btn_ele).on('click',remove_service(document.getElementsByClassName("ser_name").length-1));
+   $(btn_ele).on('click',remove_service);
 }
 
 
