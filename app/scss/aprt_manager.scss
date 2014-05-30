@@ -3,6 +3,7 @@
 $large-screen:1024px;
 $layout-top-height:10em;
 $layout-bot-height:auto;
+$default-line:#79BD9A;
 //----------------------------------------------------------------------------------------------------------
 	html, body{
 			font-family:wdb_bangnaregular;
@@ -20,11 +21,10 @@ $layout-bot-height:auto;
 				@include media($large-screen) {
 				@include span-columns(4);
 				height: $layout-top-height;
+				margin: 0 1em 1em 0;
 				}
-				
-				background-color:#E6E6E6;
+				margin: 0 0 1em 0;			
 				height: auto;
-				border: 1px solid #000;
 
 				p{
 					@include media($large-screen) {
@@ -36,16 +36,63 @@ $layout-bot-height:auto;
 						padding: 0.5em ;
 						margin: 0em;
 				}
+				li{
+					@include media($large-screen) {
+						font-size: 1em;
+						padding: 0em 0.5em 0em 0.5em;
+						margin: 0em;
+					}
+						font-size: 3em;
+						padding: 0em 0.5em 0em 0.5em;
+						margin: 0em;
+				}
+
+				.logo_top{
+					@include media($large-screen) {
+					@include span-columns(6);
+					height: 100%;
+					}
+					
+					background-color:#FFF;
+					height: 100%;
+					img {
+						@include media($large-screen) {
+							width: 80%;
+							height: auto;
+							margin: 10%;
+						}
+							width: 30%;
+							height: auto;
+							margin: 0.5em 35% 0.5em 35%;
+					}
+				}
+
+				.logo_content{
+					@include media($large-screen) {
+					@include span-columns(6);
+					height: 100%;
+					border: 1px dotted $default-line;
+					border-radius: 5px;
+					}
+					
+					background-color:#FFF;
+					height: 100%;
+					border: 1px dotted $default-line;
+					border-radius: 5px;
+				}
 			}
 			.layout-right-top{
 				@include media($large-screen) {
 				@include span-columns(8);
 				@include omega();
 				height: $layout-top-height;
+				margin: 0 0 1em 0;
 				}
+				margin: 0 0 1em 0;
 				height: auto;
 				background-color:#F2F2F2;
-				border: 1px solid #000;
+				border: 1px dotted $default-line;
+					border-radius: 5px;
 
 				p{
 					@include media($large-screen) {
@@ -62,10 +109,12 @@ $layout-bot-height:auto;
 			.layout-left-bot{
 				@include media($large-screen) {
 				@include span-columns(4);
+				margin: 0 1em 1em 0;
 				}
+				margin: 0 0em 1em 0;
 				height: $layout-bot-height;
 				background-color:#E6E6E6;
-				border: 1px solid #000;
+				//border: 1px solid #000;
 					p{
 					@include media($large-screen) {
 						font-size: 1em;
@@ -82,10 +131,12 @@ $layout-bot-height:auto;
 				@include media($large-screen) {
 				@include span-columns(8);
 				@include omega();
+				margin: 0 0em 1em 0;
 				}
+				margin: 0 0em 1em 0;
 				height: $layout-bot-height;
 				background-color:#F2F2F2;
-				border: 1px solid #000;
+				//border: 1px solid #000;
 				p{
 					@include media($large-screen) {
 						font-size: 1em;
@@ -99,6 +150,8 @@ $layout-bot-height:auto;
 			}
 	
 }
+
+
 
 
 
