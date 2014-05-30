@@ -9,7 +9,7 @@ var user = 0;
 var firststep=0;
 var company;
 var accept=0;
-
+var currentdate = Date.now();
 ////////////////////////////////random img start///////////////////////////////////
 setInterval(function()
 {
@@ -49,7 +49,7 @@ $('.hero').animate({ opacity: 1, top: "-10px" }, 2000);
 ///////////////////////////////////random img end///////////////////////////////////////
 
 $(document).ready(function(){
-var currentdate = Date.now();
+
 ///////////////init////////////////
 $(".sel_district").attr('disabled','disabled');
 $(".sel_provine").attr('disabled','disabled');
