@@ -486,7 +486,22 @@ if(window.location.pathname=="/first_step.html")
   
    $.each( btn_ele, function( key, value ) {
   $(btn_ele[key]).unbind();
+    $(btn_ele[key]).bind('click',function(){
+
+      remove_service(key);
+      var btn_ele = document.getElementsByClassName("minus_mobile");
+  
+   $.each( btn_ele, function( key, value ) {
+  $(btn_ele[key]).unbind();
     $(btn_ele[key]).bind('click',function(){remove_service(key);});
+});
+    var no_ele = document.getElementsByClassName("no");
+  
+   $.each( no_ele, function( key, value ) {
+  $(no_ele[key]).html("Service No."+(key+1));
+
+
+    });
 });
     var no_ele = document.getElementsByClassName("no");
   
