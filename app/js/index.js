@@ -533,6 +533,15 @@ $.get("/usercheck",{username:document.getElementsByClassName('txt_user')[user-1]
   );
 });
 
+$(".txt_pass").on("input",function(){
+alert($(".txt_pass").index($(this)));
+});
+$(".txt_repass").on("input",function(){
+alert($(".txt_repass").index($(this)));
+});
+
+
+
 }
 
 
