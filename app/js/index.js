@@ -69,15 +69,8 @@ $(".auto_map_info iframe").attr("height","0px");
 $(".auto_map_info").attr("width","66%");
 $(".auto_map_info iframe").attr("width","66%");
 $("#loginopen").on("click",function(){
-  if($(".loginfrm").is(':visible'))
-  {
-hidelogin();
-$("#username_txt").blur();
-  }
-  else{
-showlogin();
-$("#username_txt").focus();
-}
+  showlogin();
+
 });
 /////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////function zone////////////////////////////////////////
