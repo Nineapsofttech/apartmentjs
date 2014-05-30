@@ -491,7 +491,7 @@ if(window.location.pathname=="/first_step.html")
     var no_ele = document.getElementsByClassName("no");
   
    $.each( no_ele, function( key, value ) {
-  $(no_ele[key]).html("Service No."+(key+1);
+  $(no_ele[key]).html("Service No."+(key+1));
     
 });
   
