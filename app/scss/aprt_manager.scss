@@ -140,19 +140,35 @@ $default-line:#79BD9A;
 				background-color:#F2F2F2;
 				border: 1px dotted $default-line;
 					border-radius: 5px;
-			
-
-				p.main_menu_left{
+				
+				p.main_menu_head{
+					display:block; 
+					text-align:center;
+					border-bottom: 1px dotted $default-line;
 					@include media($large-screen) {
-						display: box-inline;
 						font-size: 1em;
 						padding: 0.5em ;
 						margin: 0em;
+					}
+						font-size: 3em;
+						padding: 0.5em ;
+						margin: 0em;
+
+				}
+
+				p.main_menu_left{
+					@include media($large-screen) {
+						display: block;
+						font-size: 1em;
+						padding: 0.5em ;
+						margin: 0em;
+						//border-right:0px;
 					}
 					display: inline;
 					font-size: 2em;
 						padding: 0.5em ;
 						margin: 0em;
+						//border-right:1px dotted $default-line;
 				}
 
 				}
