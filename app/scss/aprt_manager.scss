@@ -195,6 +195,26 @@ $default-line:#79BD9A;
 						padding: 0.5em ;
 						margin: 0em;
 				}
+				p.main_menu_head{
+					display:block; 
+					text-align:center;
+					border-bottom: 1px dotted $default-line;
+					@include media($large-screen) {
+						font-size: 1em;
+						padding: 0.5em ;
+						margin: 0em;
+					}
+						font-size: 3em;
+						padding: 0.5em ;
+						margin: 0em;
+
+				}
+				.main_content_head{
+					min-height: 2em;
+					width: 100%;
+					border-bottom: 1px dotted $default-line;
+
+				}
 			}
 	
 }
