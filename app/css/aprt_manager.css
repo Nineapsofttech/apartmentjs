@@ -208,6 +208,7 @@ html, body {
           padding: 0.5em;
           margin: 0em; } }
     .outer-container .layout-right-bot .main_content_head {
+      text-align: center;
       min-height: 2em;
       width: 100%;
       border-bottom: 1px dotted #79bd9a; }
