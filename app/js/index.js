@@ -469,7 +469,7 @@ document.getElementsByClassName("box_end")[pos].remove();
 document.getElementsByClassName("minus_btn")[pos-1].remove();
 }
 
-$('.minus_btn').on('click',function(){alert($(this).index());});
+$('.minus_btn').on('click',function(){alert($('.minus_btn').index($(this)));});
 /////////////////////////////////////////action handler/////////////////////////
 
 
