@@ -238,7 +238,6 @@
         font-size: 2em; } }
 
 #plus, #minus {
-  display: inline;
   width: 4em;
   height: auto; }
   @media screen and (min-width: 1024px) {
