@@ -132,19 +132,25 @@ $default-line:#79BD9A;
 				@include media($large-screen) {
 				@include span-columns(2);
 				margin: 0 1em 1em 0;
+				
 				}
+
 				margin: 0 0em 1em 0;
 				height: $layout-bot-height;
 				background-color:#F2F2F2;
 				border: 1px dotted $default-line;
 					border-radius: 5px;
-					p{
+			
+
+				p.main_menu_left{
 					@include media($large-screen) {
+						display: box-inline;
 						font-size: 1em;
 						padding: 0.5em ;
 						margin: 0em;
 					}
-						font-size: 2em;
+					display: inline;
+					font-size: 2em;
 						padding: 0.5em ;
 						margin: 0em;
 				}

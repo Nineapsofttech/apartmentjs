@@ -145,12 +145,14 @@ html, body {
         margin: 0 1em 1em 0; }
         .outer-container .layout-left-bot:last-child {
           margin-right: 0; } }
-    .outer-container .layout-left-bot p {
+    .outer-container .layout-left-bot p.main_menu_left {
+      display: inline;
       font-size: 2em;
       padding: 0.5em;
       margin: 0em; }
       @media screen and (min-width: 1024px) {
-        .outer-container .layout-left-bot p {
+        .outer-container .layout-left-bot p.main_menu_left {
+          display: box-inline;
           font-size: 1em;
           padding: 0.5em;
           margin: 0em; } }
