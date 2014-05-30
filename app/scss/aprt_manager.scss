@@ -12,7 +12,7 @@
 			width:auto;
 		}
 .outer-container{
-	@include outer-container;
+	@include span-columns(12);
 	background-color:#E3E3E3;
 }
 //----------------------------------------------------------------------------------------------------------

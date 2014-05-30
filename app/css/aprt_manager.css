@@ -14,11 +14,10 @@ html, body {
   width: auto; }
 
 .outer-container {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   background-color: #E3E3E3; }
-  .outer-container:after {
-    content: "";
-    display: table;
-    clear: both; }
+  .outer-container:last-child {
+    margin-right: 0; }
