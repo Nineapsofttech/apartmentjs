@@ -642,11 +642,12 @@ company =companytype;
 }
 
 $("#submit_btn").on('click',function(){
-alert("click");
+
   var username = $("#username_txt").val();
   var password = MD5($("#password_txt").val());
 
   $.get("/login",{username:username,secret:password},function(err,data){
+    alert(data);
     if(data!="")
     {
       alert('login success');
