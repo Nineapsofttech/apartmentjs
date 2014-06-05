@@ -1,0 +1,8 @@
+User-agent: Mediapartners-Google
+Disallow:
+User-agent: *
+Allow: /
+
+sitemap: http://worldresident.net/sitemap.xml
+sitemap: http://worldresident.net/sitemap.xml.gz
+
